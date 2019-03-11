@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-	
+    [SerializeField] GameObject mainCamera;
+    [SerializeField] GameObject playerPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-		
+    void Start() {
+        SpawnPlayer();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void SpawnPlayer() {
+        GameObject _player = Instantiate(playerPrefab);
+        _player.transform.position = new Vector3(0, 0, -10);
+        _player.GetComponent<FPLook>().AttachCamera(mainCamera);
     }
 }
