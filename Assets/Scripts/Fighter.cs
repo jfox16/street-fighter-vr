@@ -14,6 +14,8 @@ public class Fighter : Unit
 
 
 
+    #region UNITY CALLBACKS
+
     void Awake() {
         animator = GetComponent<Animator>();
         fpLook = GetComponent<FPLook>();
@@ -29,6 +31,9 @@ public class Fighter : Unit
             animator.SetTrigger("Kick");
         }
     }
+
+    #endregion
+
 
     public override void Hurt(float damage) {
         health -= damage;
