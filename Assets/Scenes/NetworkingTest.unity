@@ -354,6 +354,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 252, guid: fc5a000ceae8637449c5a0192351f0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1422716289, guid: fc5a000ceae8637449c5a0192351f0a1, type: 3}
       propertyPath: m_Name
       value: Network Fighter
@@ -413,6 +417,10 @@ PrefabInstance:
     - target: {fileID: 413, guid: fc5a000ceae8637449c5a0192351f0a1, type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 593, guid: fc5a000ceae8637449c5a0192351f0a1, type: 3}
+      propertyPath: viewIdField
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc5a000ceae8637449c5a0192351f0a1, type: 3}
