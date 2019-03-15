@@ -22,19 +22,28 @@ public class Fighter : Unit
 
     void Update() {
         if (Input.GetButtonDown("Punch") || Input.GetMouseButtonDown(0)) {
-            Instantiate(punchPrefab, punchPointTransform);
-            animator.SetTrigger("Punch");
+            Invoke("Punch", .1f);
         }
         else if (Input.GetButtonDown("Kick") || Input.GetMouseButtonDown(1)) {
-            animator.SetTrigger("Kick");
+            animator.SetTrigger("Rising_P");
         }
     }
-
+    void Punch()
+    {
+        Debug.Log("punched");
+        Instantiate(punchPrefab, punchPointTransform);
+        animator.SetTrigger("Punch");
+        animator.SetTrigger("Jab");
+    }
     public override void Hurt(float damage) {
         health -= damage;
-        if(health <= 0) Die();
+        Interrupt();
+        if (health <= 0) Die();
     }
-
+    void Interrupt()
+    {   
+        CancelInvoke();
+    }
     void Die() {
         Destroy(gameObject);
     }
