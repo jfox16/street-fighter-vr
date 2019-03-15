@@ -19,12 +19,11 @@ public class Attack : MonoBehaviour
         foreach(Collider collider in targetColliders) {
             Unit _unit = collider.GetComponent<Unit>();
             _unit.Hurt(damage);
-            Debug.Log("Hurt " + collider.gameObject.ToString() + " for " + damage + " damage!");
+            //Debug.Log("Hurt " + collider.gameObject.ToString() + " for " + damage + " damage!");
+            // Creates a visual representation of the hitbox
+            GameObject dhp = Instantiate(debugHitboxPrefab, transform);
+            dhp.transform.localScale = new Vector3(1, 1, 1) * radius;
         }
-
-        // Creates a visual representation of the hitbox
-        GameObject dhp = Instantiate(debugHitboxPrefab, transform);
-        dhp.transform.localScale = new Vector3(1,1,1) * radius;
 
         // Disappear after 0.5 seconds
         Invoke("Die", 0.5f);

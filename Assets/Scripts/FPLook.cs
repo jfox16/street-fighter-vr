@@ -28,7 +28,7 @@ public class FPLook : MonoBehaviour
 
     // Attach a camera to this Fighter for first person view.
     // Returns true if successful, otherwise false.
-    public bool AttachCamera(GameObject camera) {
+    public bool AttachCamera(Camera camera) {
         if (fpCameraTransform == null) {
             // set as new camera
             fpCameraTransform = camera.transform;

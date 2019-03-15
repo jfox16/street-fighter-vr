@@ -95,8 +95,8 @@ ModelImporter:
     - serializedVersion: 16
       name: hd_front_A
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 18
+      firstFrame: 7
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -52,7 +52,7 @@ ModelImporter:
     400044: Toe_L
     400046: Toe_R
     4300000: BlueGuy
-    7400000: move_backward_B2
+    7400000: MoveBackward
     9500000: //RootNode
     13700000: BlueGuy
     2186277476908879412: ImportLogs
@@ -97,7 +97,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: move_backward_B2
+      name: MoveBackward
       takeName: Take 001
       firstFrame: 0
       lastFrame: 48
@@ -107,8 +107,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

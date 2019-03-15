@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class FPMovement : MonoBehaviour
 {
     CharacterController controller;
+    private Animator _animator;
 
-    [SerializeField] float moveSpeed = 10;
+    [SerializeField] float moveSpeed = 2;
+    private float epsilon = 0.000001f;
 
     void Awake() {
         controller = GetComponent<CharacterController>();
+        _animator = GetComponent<Animator>();
     }
 
     void FixedUpdate() {
@@ -24,6 +28,16 @@ public class FPMovement : MonoBehaviour
         // Rotate _moveVec by the rotation of the transform.
         // This will make movement relative to the direction the character is facing.
         _moveVec = transform.rotation * _moveVec;
+
+        if (Math.Abs(_yInput - 0) > epsilon)
+        {
+            _animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            _animator.SetBool("isWalking", false);
+        }
+        _animator.SetFloat("Speed", _yInput);
 
         controller.Move(_moveVec);
     }

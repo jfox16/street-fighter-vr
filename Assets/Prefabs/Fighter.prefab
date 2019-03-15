@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &758816010229814903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6508839345203312520}
+  m_Layer: 0
+  m_Name: Kick Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6508839345203312520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758816010229814903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5898750511507801560}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2577715168997221855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4084324995926824692}
+  m_Layer: 0
+  m_Name: Pick Up Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4084324995926824692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577715168997221855}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.48, z: 1.48}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 5898750511507801560}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5898750510038690412
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5898750511507801560}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &5898750511125021883
 SkinnedMeshRenderer:
@@ -612,9 +672,10 @@ GameObject:
   - component: {fileID: 5898750511507801559}
   - component: {fileID: 5898750511507801563}
   - component: {fileID: 5898750511507801562}
-  m_Layer: 0
+  - component: {fileID: 7547842177740792212}
+  m_Layer: 10
   m_Name: Fighter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -632,8 +693,10 @@ Transform:
   m_Children:
   - {fileID: 5898750510929761006}
   - {fileID: 51729685675641443}
+  - {fileID: 6508839345203312520}
   - {fileID: 5898750511125021880}
   - {fileID: 5898750511598991661}
+  - {fileID: 4084324995926824692}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -689,6 +752,8 @@ MonoBehaviour:
   health: 100
   punchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
     type: 3}
+  kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
+    type: 3}
 --- !u!114 &5898750511507801563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f37d0dfbb33aa4caccf6e440874876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 2
 --- !u!114 &5898750511507801562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,6 +784,20 @@ MonoBehaviour:
   fpCameraAttachPoint: {fileID: 5898750510929761006}
   minimumVert: -45
   maximumVert: 45
+--- !u!114 &7547842177740792212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898750511507801556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3963877b18bca40c2b65e4cf0b2e760a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ballprefab: {fileID: 942323585990836030, guid: 6b573382422fb48d4aa9e29b262ffabd,
+    type: 3}
 --- !u!1 &5898750511539505607
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +857,7 @@ Transform:
   m_Children:
   - {fileID: 5898750511159385670}
   m_Father: {fileID: 5898750511507801560}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5898750511696738923
 GameObject:
