@@ -1716,6 +1716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unity-chan
       objectReference: {fileID: 0}
+    - target: {fileID: 1526373210, guid: 1afb84105992dc4489402680af73eeda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1526373215, guid: 1afb84105992dc4489402680af73eeda, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1758,6 +1762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1526373215, guid: 1afb84105992dc4489402680af73eeda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448651365449088529, guid: 1afb84105992dc4489402680af73eeda,
+        type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

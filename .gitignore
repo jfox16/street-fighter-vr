@@ -52,3 +52,9 @@ crashlytics-build.properties
 
 # VS Code stuff
 .vscode
+
+#Alex
+*.Temp/
+*.Library/
+*.ProjectSettings/
+*.Assembly-CSharp.csproj
