@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
     [SerializeField] float damage = 1;
     [SerializeField] float radius = 1;
     [SerializeField] GameObject debugHitboxPrefab;
+    [SerializeField] float dieTime;
 
     void Start() {
         // Damage units in radius
@@ -26,11 +27,22 @@ public class Attack : MonoBehaviour
         }
 
         // Disappear after 0.5 seconds
-        Invoke("Die", 0.5f);
+        Destroy(gameObject, dieTime);
     }
-
-    void Die() {
-        // Destroys self
-        Destroy(gameObject);
+    private void Update()
+    {
+        
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Something hit");
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.GetType() == typeof(Unit)){
+            Debug.Log("Unit hit");
+        }
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Debug.Log(hit.gameObject.name);
     }
 }

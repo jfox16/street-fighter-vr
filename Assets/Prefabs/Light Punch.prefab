@@ -47,3 +47,4 @@ MonoBehaviour:
   radius: 0.8
   debugHitboxPrefab: {fileID: 4965396825610069489, guid: 7b8ac89f34f35e4468441fcec0356ae2,
     type: 3}
+  dieTime: 0.5

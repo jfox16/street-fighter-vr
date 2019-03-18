@@ -8,19 +8,26 @@ public class Fighter : Unit
 
     [SerializeField] GameObject punchPrefab;
     [SerializeField] GameObject kickPrefab;
+    [SerializeField] GameObject projectilePrefab;
+
+    public int maxProjectiles;
 
     Animator animator;
     FPLook fpLook;
     Transform punchPointTransform;
     Transform kickPointTransform;
-
-
+    Transform projectilePointTransform;
+    public GameObject projectilePoint;
+    public static int numberOfProjectiles;
+    public int cooldown;
+    private float timestamp;
 
     void Awake() {
         animator = GetComponent<Animator>();
         fpLook = GetComponent<FPLook>();
         punchPointTransform = transform.Find("Punch Point");
         kickPointTransform = transform.Find("Kick Point");
+        
     }
 
     void Update() {
@@ -30,18 +37,20 @@ public class Fighter : Unit
             animator.SetBool("Block", false);
         }
 
-        if (Input.GetButtonDown("Punch") || Input.GetMouseButtonDown(0)) {
+        if (Input.GetButtonDown("Punch") || Input.GetMouseButtonDown(0))
+        {
             Instantiate(punchPrefab, punchPointTransform);
-            animator.SetTrigger("Punch");
+            animator.SetTrigger("Jab");
         }
-        else if(Input.GetButtonDown("Punch Left"))
+        else if (Input.GetButtonDown("Punch Left"))
         {
             Instantiate(punchPrefab, punchPointTransform);
             animator.SetTrigger("PunchLeft");
         }
-        else if (Input.GetButtonDown("Kick") || Input.GetMouseButtonDown(1)) {
+        else if (Input.GetButtonDown("Kick") || Input.GetMouseButtonDown(1))
+        {
             Instantiate(kickPrefab, kickPointTransform);
-            animator.SetTrigger("Kick");
+            animator.SetTrigger("Rising_P");
         }
         else if (Input.GetButtonDown("Kick Left"))
         {
@@ -52,6 +61,14 @@ public class Fighter : Unit
         {
             animator.SetBool("Block", true);
         }
+        else if (Input.GetKeyDown(KeyCode.Space) && (numberOfProjectiles < maxProjectiles) && timestamp < Time.time) 
+        {
+            timestamp = Time.time + cooldown;
+            animator.SetTrigger("Spinkick");
+            var newProjectile = Instantiate(projectilePrefab, projectilePoint.transform.position, new Quaternion(0,0,0,0));
+            Debug.Log(numberOfProjectiles++);
+        }
+        //Debug.Log(numberOfProjectiles);
     }
 
     public override void Hurt(float damage) {
@@ -65,5 +82,10 @@ public class Fighter : Unit
 
     void Die() {
         Destroy(gameObject);
+    }
+    public void removeProjectile()
+    {
+        numberOfProjectiles--;
+        Debug.Log(numberOfProjectiles);
     }
 }

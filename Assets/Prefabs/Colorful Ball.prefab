@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 942323585990836026}
   - component: {fileID: 942323585990836025}
   - component: {fileID: 942323585990836024}
-  - component: {fileID: 942323585990836031}
-  - component: {fileID: 1323159482764053357}
+  - component: {fileID: 275891550210571375}
+  - component: {fileID: 3800270877820086197}
   m_Layer: 0
   m_Name: Colorful Ball
   m_TagString: Untagged
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &942323585990836031
+--- !u!135 &275891550210571375
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,12 +87,12 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942323585990836030}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1323159482764053357
+--- !u!114 &3800270877820086197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 942323585990836030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa9ddd4460854d70957bca4914b32ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 10b887497cc42d548b4999b16eafb345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  radius: 1
+  debugHitboxPrefab: {fileID: 4965396825610069489, guid: 7b8ac89f34f35e4468441fcec0356ae2,
+    type: 3}
+  dieTime: 2
   speed: 10
+  player: {fileID: 1526373210, guid: 1afb84105992dc4489402680af73eeda, type: 3}

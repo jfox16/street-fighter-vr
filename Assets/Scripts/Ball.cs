@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
     public float damage = 2.0f;
     public float speed = 10.0f;
 
-    private GameObject _player;
+    [SerializeField] private GameObject _player;
     private Shoot _shoot;
 
     // Start is called before the first frame update
@@ -36,9 +36,6 @@ public class Ball : MonoBehaviour
 
     private void getShoot()
     {
-        GameObject controller = GameObject.Find("Game Controller");
-        GameController g = controller.GetComponent<GameController>();
-        _player = g.getPlayer();
         _shoot = _player.GetComponent<Shoot>();
     }
 }
