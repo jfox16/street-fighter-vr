@@ -54,7 +54,8 @@ crashlytics-build.properties
 .vscode
 
 #Alex
-*.Temp/
-*.Library/
-*.ProjectSettings/
-*.Assembly-CSharp.csproj
+Temp/
+Library/
+ProjectSettings/
+Assembly-CSharp.csproj
+obj/
