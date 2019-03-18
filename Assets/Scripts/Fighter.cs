@@ -42,21 +42,21 @@ public class Fighter : Unit
             Instantiate(punchPrefab, punchPointTransform);
             animator.SetTrigger("Jab");
         }
-        else if (Input.GetButtonDown("Punch Left"))
+        /*else if (Input.GetButtonDown("Punch Left"))
         {
             Instantiate(punchPrefab, punchPointTransform);
             animator.SetTrigger("PunchLeft");
-        }
-        else if (Input.GetButtonDown("Kick") || Input.GetMouseButtonDown(1))
+        }*/
+        else if (Input.GetMouseButtonDown(1))
         {
             Instantiate(kickPrefab, kickPointTransform);
             animator.SetTrigger("Rising_P");
         }
-        else if (Input.GetButtonDown("Kick Left"))
+        /*else if (Input.GetButtonDown("Kick Left"))
         {
             Instantiate(kickPrefab, kickPointTransform);
             animator.SetTrigger("KickLeft");
-        }
+        }*/
         else if (Input.GetKeyDown("1"))
         {
             animator.SetBool("Block", true);
