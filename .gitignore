@@ -56,6 +56,5 @@ crashlytics-build.properties
 #Alex
 Temp/
 Library/
-ProjectSettings/
 Assembly-CSharp.csproj
 obj/
