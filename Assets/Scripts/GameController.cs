@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
     [SerializeField] GameObject playerPrefab;
+    [SerializeField] ParticleSystem sparkles;
 
     void Start() {
         SpawnPlayer();
@@ -19,6 +20,10 @@ public class GameController : MonoBehaviour
     public void SelectPlayer(GameObject prefab, Transform transform)
     {
         Debug.Log(transform.position);
+
+        ParticleSystem fireworks = Instantiate(sparkles, transform.position,transform.rotation);
+        Destroy(fireworks, 0.5f);
+        
         GameObject _player = Instantiate(prefab, transform.position, transform.rotation);
         FPLook fplook = _player.GetComponent<FPLook>();
         Debug.Log(fplook);
