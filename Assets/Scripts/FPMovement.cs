@@ -29,13 +29,13 @@ public class FPMovement : MonoBehaviour
         // This will make movement relative to the direction the character is facing.
         _moveVec = transform.rotation * _moveVec;
 
-        if (Math.Abs(_yInput - 0) > epsilon)
+        if (controller.velocity != Vector3.zero)
         {
-           // _animator.SetBool("isWalking", true);
+            _animator.SetBool("isWalking", true);
         }
         else
         {
-           // _animator.SetBool("isWalking", false);
+            _animator.SetBool("isWalking", false);
         }
         //_animator.SetFloat("Speed", _yInput);
 

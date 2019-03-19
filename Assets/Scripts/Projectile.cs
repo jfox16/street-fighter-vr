@@ -17,6 +17,5 @@ public class Projectile : Attack
     }
     private void OnDestroy()
     {
-        GameObject.Find("Unity-chan(Clone)").GetComponent<Fighter>().removeProjectile();
     }
 }

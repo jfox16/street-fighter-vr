@@ -32,43 +32,6 @@ public class Fighter : Unit
 
     void Update() {
 
-        if (Input.GetKeyUp("1"))
-        {
-            animator.SetBool("Block", false);
-        }
-
-        if (Input.GetButtonDown("Punch") || Input.GetMouseButtonDown(0))
-        {
-            Instantiate(punchPrefab, punchPointTransform);
-            animator.SetTrigger("Jab");
-        }
-        /*else if (Input.GetButtonDown("Punch Left"))
-        {
-            Instantiate(punchPrefab, punchPointTransform);
-            animator.SetTrigger("PunchLeft");
-        }*/
-        else if (Input.GetMouseButtonDown(1))
-        {
-            Instantiate(kickPrefab, kickPointTransform);
-            animator.SetTrigger("Rising_P");
-        }
-        /*else if (Input.GetButtonDown("Kick Left"))
-        {
-            Instantiate(kickPrefab, kickPointTransform);
-            animator.SetTrigger("KickLeft");
-        }*/
-        else if (Input.GetKeyDown("1"))
-        {
-            animator.SetBool("Block", true);
-        }
-        else if (Input.GetKeyDown(KeyCode.Space) && (numberOfProjectiles < maxProjectiles) && timestamp < Time.time) 
-        {
-            timestamp = Time.time + cooldown;
-            animator.SetTrigger("Spinkick");
-            Invoke("SpawnProjectile", 0.3f);
-            Debug.Log(numberOfProjectiles++);
-        }
-        //Debug.Log(numberOfProjectiles);
     }
 
     public override void Hurt(float damage) {
@@ -83,10 +46,7 @@ public class Fighter : Unit
     void Die() {
         Destroy(gameObject);
     }
-    public void SpawnProjectile()
-    {
-        Instantiate(projectilePrefab, projectilePoint.transform.position, new Quaternion(0, 0, 0, 0));
-    }
+   
     public void removeProjectile()
     {
         numberOfProjectiles--;

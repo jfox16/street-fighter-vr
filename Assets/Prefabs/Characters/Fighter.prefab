@@ -267,13 +267,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5898750510929761005}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 1.93, z: -1.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5898750511507801560}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!1 &5898750511002976730
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 5898750511507801563}
   - component: {fileID: 5898750511507801562}
   - component: {fileID: 7547842177740792212}
+  - component: {fileID: 3949570644278707251}
   m_Layer: 10
   m_Name: Fighter
   m_TagString: Player
@@ -754,6 +755,10 @@ MonoBehaviour:
     type: 3}
   kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
     type: 3}
+  projectilePrefab: {fileID: 0}
+  maxProjectiles: 0
+  projectilePoint: {fileID: 0}
+  cooldown: 0
 --- !u!114 &5898750511507801563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,7 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f37d0dfbb33aa4caccf6e440874876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 7
 --- !u!114 &5898750511507801562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -798,6 +803,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ballprefab: {fileID: 942323585990836030, guid: 6b573382422fb48d4aa9e29b262ffabd,
     type: 3}
+--- !u!114 &3949570644278707251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898750511507801556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27720498c537fc24a9b8ae90c4106128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5898750511507801561}
+  lightPunchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
+    type: 3}
+  HeavyPunchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
+    type: 3}
+  kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
+    type: 3}
+  specialPrefab: {fileID: 942323585990836030, guid: 6b573382422fb48d4aa9e29b262ffabd,
+    type: 3}
+  lightPunchTransform: {fileID: 51729685675641443}
+  HeavyPunchTransform: {fileID: 51729685675641443}
+  SpecialTransform: {fileID: 6508839345203312520}
+  cooldown: 2
 --- !u!1 &5898750511539505607
 GameObject:
   m_ObjectHideFlags: 0

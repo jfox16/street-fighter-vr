@@ -46,8 +46,8 @@ public class FPLook : MonoBehaviour
     // Remove the first person camera from this fighter.
     // Returns true if successful, otherwise false.
     public bool RemoveCamera() {
-        if (fpCameraTransform == null) {
-            fpCameraTransform = null;
+        if (fpCameraTransform != null) {
+            AttachCamera(null);
             Cursor.lockState = CursorLockMode.None;
             return true;
         }

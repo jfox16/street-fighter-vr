@@ -16,7 +16,14 @@ public class GameController : MonoBehaviour
         _player.transform.position = new Vector3(0, 0, -10);
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
     }
-
+    public void SelectPlayer(GameObject prefab, Transform transform)
+    {
+        Debug.Log(transform.position);
+        GameObject _player = Instantiate(prefab, transform.position, transform.rotation);
+        FPLook fplook = _player.GetComponent<FPLook>();
+        Debug.Log(fplook);
+        _player.GetComponent<FPLook>().AttachCamera(mainCamera);
+    }
     public GameObject getPlayer()
     {
         return playerPrefab;
