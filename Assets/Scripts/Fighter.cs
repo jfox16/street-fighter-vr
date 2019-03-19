@@ -65,7 +65,7 @@ public class Fighter : Unit
         {
             timestamp = Time.time + cooldown;
             animator.SetTrigger("Spinkick");
-            var newProjectile = Instantiate(projectilePrefab, projectilePoint.transform.position, new Quaternion(0,0,0,0));
+            Invoke("SpawnProjectile", 0.3f);
             Debug.Log(numberOfProjectiles++);
         }
         //Debug.Log(numberOfProjectiles);
@@ -82,6 +82,10 @@ public class Fighter : Unit
 
     void Die() {
         Destroy(gameObject);
+    }
+    public void SpawnProjectile()
+    {
+        Instantiate(projectilePrefab, projectilePoint.transform.position, new Quaternion(0, 0, 0, 0));
     }
     public void removeProjectile()
     {

@@ -58,3 +58,4 @@ Temp/
 Library/
 Assembly-CSharp.csproj
 obj/
+*.sln
