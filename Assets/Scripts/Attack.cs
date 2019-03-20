@@ -33,7 +33,7 @@ public class Attack : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
+        //Debug.Log(other.gameObject);
         Unit _unit = other.gameObject.GetComponent<Unit>();
         // Creates a visual representation of the hitbox
         GameObject dhp = Instantiate(debugHitboxPrefab, transform);
@@ -47,7 +47,7 @@ public class Attack : MonoBehaviour
             if (_unit != null)
             {
                 _unit.Hurt(damage);
-                Debug.Log("Hurt " + other.gameObject.ToString() + " for " + damage + " damage!");
+                //Debug.Log("Hurt " + other.gameObject.ToString() + " for " + damage + " damage!");
             }
             Destroy(gameObject);
         }

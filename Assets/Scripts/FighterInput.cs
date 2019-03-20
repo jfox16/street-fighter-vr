@@ -12,7 +12,8 @@ public class FighterInput : MonoBehaviour
     KeyCode Dodge;
     KeyCode Block;
 
-    [SerializeField] Animator animator;
+    [SerializeField] Animator _animator;
+
     [SerializeField] GameObject lightPunchPrefab;
     [SerializeField] GameObject HeavyPunchPrefab;
     [SerializeField] GameObject kickPrefab;
@@ -24,6 +25,8 @@ public class FighterInput : MonoBehaviour
 
     [SerializeField] float cooldown;
     private float timestamp;
+
+    bool isAttacking;
     void Start()
     {
         LightPunch = KeyCode.Mouse0;
@@ -36,50 +39,54 @@ public class FighterInput : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyUp(Block))
+    void Update() {
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-            animator.SetBool("Block", false);
-        }
-        if (Input.GetKeyDown(LightPunch))
-        {
-            animator.SetTrigger("Light_Punch");
-            Instantiate(lightPunchPrefab, lightPunchTransform);
-        }
 
-        if (Input.GetKeyDown(HeavyPunch)) 
-        {
-            Instantiate(lightPunchPrefab, lightPunchTransform);
-            animator.SetTrigger("Heavy_Punch");
-        }
-        /*else if (Input.GetButtonDown("Punch Left"))
-        {
-            Instantiate(punchPrefab, punchPointTransform);
-            animator.SetTrigger("PunchLeft");
-        }*/
-        else if (Input.GetKeyDown(Kick))
-        {
-            //Instantiate(kickPrefab, kickPointTransform);
-            animator.SetTrigger("Kick");
-        }
-        /*else if (Input.GetButtonDown("Kick Left"))
-        {
-            Instantiate(kickPrefab, kickPointTransform);
-            animator.SetTrigger("KickLeft");
-        }*/
-        else if (Input.GetKeyDown(Block))
-        {
-            animator.SetBool("Block", true);
-        }
-        else if (Input.GetKeyDown(Special) && timestamp < Time.time)
-        {
-            timestamp = Time.time + cooldown;
-            animator.SetTrigger("Special");
-            Invoke("SpawnProjectile", 0.3f);
-        }
 
+            if (Input.GetKeyUp(Block))
+            {
+                _animator.SetBool("Block", false);
+            }
+            if (Input.GetKeyDown(LightPunch))
+            {
+                _animator.SetTrigger("Light_Punch");
+                Instantiate(lightPunchPrefab, lightPunchTransform);
+            }
+
+            if (Input.GetKeyDown(HeavyPunch))
+            {
+                Instantiate(lightPunchPrefab, lightPunchTransform);
+                _animator.SetTrigger("Heavy_Punch");
+            }
+            /*else if (Input.GetButtonDown("Punch Left"))
+            {
+                Instantiate(punchPrefab, punchPointTransform);
+                animator.SetTrigger("PunchLeft");
+            }*/
+            else if (Input.GetKeyDown(Kick))
+            {
+                //Instantiate(kickPrefab, kickPointTransform);
+                _animator.SetTrigger("Kick");
+            }
+            /*else if (Input.GetButtonDown("Kick Left"))
+            {
+                Instantiate(kickPrefab, kickPointTransform);
+                animator.SetTrigger("KickLeft");
+            }*/
+            else if (Input.GetKeyDown(Block))
+            {
+                _animator.SetBool("Block", true);
+            }
+            else if (Input.GetKeyDown(Special) && timestamp < Time.time)
+            {
+                timestamp = Time.time + cooldown;
+                _animator.SetTrigger("Special");
+                Invoke("SpawnProjectile", 0.3f);
+            }
+        }
     }
+        
     void SpawnProjectile()
     {
         Instantiate(specialPrefab, SpecialTransform.transform.position, new Quaternion(0, 0, 0, 0));

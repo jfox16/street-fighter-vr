@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27720498c537fc24a9b8ae90c4106128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 5898750511507801561}
+  _animator: {fileID: 5898750511507801561}
   lightPunchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
     type: 3}
   HeavyPunchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,

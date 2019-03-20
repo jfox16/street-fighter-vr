@@ -22,8 +22,8 @@ public class SpawnPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(other.gameObject.GetComponentInParent<Fighter>().gameObject.GetComponentInChildren<Camera>());
-        GameObject player = other.gameObject.GetComponentInParent<Fighter>().gameObject;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log(player);
         Transform spawnLocation = player.transform;
         Debug.Log(player.transform.position);
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Player"))
