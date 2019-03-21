@@ -11,6 +11,7 @@ public class FighterInput : MonoBehaviour
     KeyCode Special;
     KeyCode Dodge;
     KeyCode Block;
+    KeyCode Crouch;
 
     [SerializeField] Animator _animator;
 
@@ -35,6 +36,7 @@ public class FighterInput : MonoBehaviour
         Special = KeyCode.Space;
         Dodge = KeyCode.LeftShift;
         Block = KeyCode.C;
+        Crouch = KeyCode.LeftShift;
 
     }
 
@@ -77,6 +79,13 @@ public class FighterInput : MonoBehaviour
             else if (Input.GetKeyUp(Block))
             {
                 _animator.SetBool("Block", false);
+            }else if (Input.GetKeyDown(Crouch))
+            {
+                _animator.SetBool("Crouch", true);
+            }
+            else if (Input.GetKeyUp(Crouch))
+            {
+                _animator.SetBool("Crouch", false);
             }
         else if (Input.GetKeyDown(Special) && timestamp < Time.time)
             {
@@ -88,6 +97,7 @@ public class FighterInput : MonoBehaviour
         
     void SpawnProjectile()
     {
-        Instantiate(specialPrefab, SpecialTransform.transform.position, new Quaternion(0, 0, 0, 0));
+        //problem: this will instantiate a new projectile point each time.
+        Instantiate(specialPrefab, SpecialTransform.position, new Quaternion(0,0,0,0));
     }
 }

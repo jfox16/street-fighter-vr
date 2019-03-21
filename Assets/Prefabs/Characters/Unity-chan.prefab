@@ -5257,7 +5257,7 @@ MonoBehaviour:
   lightPunchTransform: {fileID: 1576766651}
   HeavyPunchTransform: {fileID: 1576766651}
   SpecialTransform: {fileID: 2417454959142937349}
-  cooldown: 2
+  cooldown: 0
 --- !u!1 &1572032875
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,9 +11,12 @@ public class PrefabSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Roster.Add("Unity-Chan", UnityChan);
-        Roster.Add("Mecha", Mecha);
-        Roster.Add("Fighter", Fighter);
+        Roster = new Dictionary<string, GameObject>
+        {
+            { "Unity-Chan", UnityChan },
+            { "Mecha", Mecha },
+            { "Fighter", Fighter }
+        };
     }
 
     // Update is called once per frame
