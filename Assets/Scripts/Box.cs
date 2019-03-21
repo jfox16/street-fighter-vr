@@ -12,6 +12,10 @@ public class Box : MonoBehaviour
     private float force = 10.0f;
     private float damage = 2.0f;
 
+    /*
+     * A bug where cannot pick up object all the time even if character is close enough   
+     */   
+
     // Start is called before the first frame update
     void Start()
     {

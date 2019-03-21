@@ -66,8 +66,10 @@ public class Shoot : MonoBehaviour
                 {
                     // shoot the ball
                     _ball = Instantiate(_ballprefab) as GameObject;
+                    // can probably change this since i wanted to shoot from the center of the character
                     _ball.transform.position = transform.TransformPoint(new Vector3(0,1f,1f) * 1.5f);
                     _ball.transform.rotation = transform.rotation;
+                    // add force to the shooting object
                     _ball.GetComponent<Rigidbody>().velocity = _camera.transform.forward * 40;
                 }
 
