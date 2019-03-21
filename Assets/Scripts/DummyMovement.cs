@@ -8,6 +8,7 @@ public class DummyMovement : MonoBehaviour
 {
     [SerializeField] GameObject kickPrefab;
     private GameObject _player;
+    private float currentTime = 0.0f;
     Animator animator;
     Transform kickPointTransform;
 
@@ -29,11 +30,16 @@ public class DummyMovement : MonoBehaviour
         else
         {
             float dist = Vector3.Distance(transform.position, _player.transform.position);
-            if (dist <= 2.0f)
+            if (dist <= 2.0f && currentTime >= 50.0f && !animator.GetBool("Dead"))
             {
+                currentTime = 0.0f;
                 animator.SetTrigger("Kick");
                 Instantiate(kickPrefab, kickPointTransform);
                 //Debug.Log(dist);
+            }
+            else
+            {
+                currentTime++;
             }
         }
     }

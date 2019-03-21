@@ -9,6 +9,7 @@ public class Fighter : Unit
     [SerializeField] GameObject punchPrefab;
     [SerializeField] GameObject kickPrefab;
 
+    CharacterController controller;
     Animator animator;
     FPLook fpLook;
     Transform punchPointTransform;
@@ -17,6 +18,7 @@ public class Fighter : Unit
 
 
     void Awake() {
+        controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         fpLook = GetComponent<FPLook>();
         punchPointTransform = transform.Find("Punch Point");
@@ -57,9 +59,15 @@ public class Fighter : Unit
     public override void Hurt(float damage) {
         if (!animator.GetBool("Block"))
         {
-            health -= damage;
+            health = health - damage;
+            Debug.Log(damage);
         }
-        Debug.Log(health);
+        else
+        {
+            Debug.Log("Blocking");
+            Vector3 _moveBack = transform.forward * -0.75f;
+            controller.Move(_moveBack);
+        }
         if (health <= 0) Die();
     }
 

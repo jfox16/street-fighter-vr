@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DummyAttack : MonoBehaviour
 {
-    [SerializeField] float damage = 1;
-    [SerializeField] float radius = 1;
+    [SerializeField] float damage = 10.0f;
+    [SerializeField] float radius = 1.0f;
 
     void Start()
     {

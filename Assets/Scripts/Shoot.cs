@@ -7,6 +7,8 @@ public class Shoot : MonoBehaviour
     private Camera _camera;
     private Ray _ray;
     private Vector3 pointOffset, endPoint;
+    private float timeToShoot = 30.0f;
+    private float currentTime;
 
     private GameObject _ball;
     [SerializeField] private GameObject _ballprefab;
@@ -20,6 +22,7 @@ public class Shoot : MonoBehaviour
         // Access other components attached to the same object
 
         getCamera();
+        currentTime = 0.0f;
 
 
 
@@ -41,15 +44,13 @@ public class Shoot : MonoBehaviour
 
         // Respond to the mouse button and check that gui isn't being used
 
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space") && currentTime >= timeToShoot)
 
         {
 
             // the middle of screen is half its width and height
 
             Vector3 point = new Vector3(_camera.pixelWidth / 2, _camera.pixelHeight / 2, 0);
-
-            pointOffset = new Vector3(_camera.pixelWidth / 2, _camera.pixelHeight / 2, 1.5f);
 
             // create a ray from that position
             _ray = _camera.ScreenPointToRay(point);
@@ -63,16 +64,19 @@ public class Shoot : MonoBehaviour
             {
                 if(_ball == null)
                 {
+                    // shoot the ball
                     _ball = Instantiate(_ballprefab) as GameObject;
                     _ball.transform.position = transform.TransformPoint(new Vector3(0,1f,1f) * 1.5f);
                     _ball.transform.rotation = transform.rotation;
+                    _ball.GetComponent<Rigidbody>().velocity = _camera.transform.forward * 40;
                 }
 
             }
+            currentTime = 0.0f;
             endPoint = hit.point;
-            Debug.Log(_ray.direction);
 
         }
+        currentTime++;
 
     }
 
@@ -116,9 +120,9 @@ public class Shoot : MonoBehaviour
 
     }
 
-    public Vector3 getPoint()
+    public Vector3 getStartPoint()
     {
-        return pointOffset;
+        return _ray.origin;
     }
 
     public Vector3 getEndPoint()

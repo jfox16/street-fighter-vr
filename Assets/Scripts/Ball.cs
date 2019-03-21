@@ -13,14 +13,17 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        getShoot();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0,0, speed*Time.deltaTime);
-        //transform.position = Vector3.MoveTowards(_shoot.getPoint(), _shoot.getEndPoint(), speed * Time.deltaTime);
+        if(_player == null)
+        {
+            getShoot();
+        }
+        //transform.Translate(0,0, speed*Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
