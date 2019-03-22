@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8f0565f23a2b58541a475bd3c1393052
+guid: 3aeb2539ebbc317438e46d0a827e2390
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -392,47 +392,47 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: body
-    second: {fileID: 2100000, guid: bb570020a8c3bad4bbf803af20e78937, type: 2}
+    second: {fileID: 2100000, guid: 471cbf953bda651428cf0c1e55149db9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: eye_L1
-    second: {fileID: 2100000, guid: 4987862c1c195e74c86994ba4bcbd812, type: 2}
+    second: {fileID: 2100000, guid: f630327ed24cd154db6c5f3c9d5d523c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: eye_R1
-    second: {fileID: 2100000, guid: a87def7cf3654cc43add52e645fee2ce, type: 2}
+    second: {fileID: 2100000, guid: 9c81ee0769a5ed04097eecc1e59c3372, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: eyebase
-    second: {fileID: 2100000, guid: 9bec51fc47eda6047ba5cc01addbf46f, type: 2}
+    second: {fileID: 2100000, guid: 18ec03acc0852f3438a6911f808f9ac1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: eyeline
-    second: {fileID: 2100000, guid: 407f97b032a277c44b753ed1c256a3b8, type: 2}
+    second: {fileID: 2100000, guid: d886553b17c449c4f972db97e0ef855a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: face
-    second: {fileID: 2100000, guid: 4d83bd267b90e934e88637afcd02cb8a, type: 2}
+    second: {fileID: 2100000, guid: 20952cb9f70d67d4f9087a693889695a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: hair
-    second: {fileID: 2100000, guid: 5ebb6caef8207d243a588a574971408c, type: 2}
+    second: {fileID: 2100000, guid: 3a110c0fca2ba4e4dac6ef1ea26c59a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: mat_cheek
-    second: {fileID: 2100000, guid: 5f9d44654b83160428d7c4cf276b3572, type: 2}
+    second: {fileID: 2100000, guid: ec73df5a62ed4ec47a1b8c0b281069b6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: skin1
-    second: {fileID: 2100000, guid: ca131910d5c9a634dbdd38e77111033f, type: 2}
+    second: {fileID: 2100000, guid: bcdddc815d4c6b24e9f20b1cda83e0c8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

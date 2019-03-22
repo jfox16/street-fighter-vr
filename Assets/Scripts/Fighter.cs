@@ -31,16 +31,7 @@ public class Fighter : Unit
     }
 
     void Update() {
-<<<<<<< HEAD
-        if (Input.GetButtonDown("Punch") || Input.GetMouseButtonDown(0)) {
-            Invoke("Punch", .1f);
-        }
-        else if (Input.GetButtonDown("Kick") || Input.GetMouseButtonDown(1)) {
-            animator.SetTrigger("Rising_P");
-        }
-=======
 
->>>>>>> Alex
     }
     void Punch()
     {
@@ -50,22 +41,12 @@ public class Fighter : Unit
         animator.SetTrigger("Jab");
     }
     public override void Hurt(float damage) {
-<<<<<<< HEAD
-        health -= damage;
-        Interrupt();
-        if (health <= 0) Die();
-    }
-    void Interrupt()
-    {   
-        CancelInvoke();
-=======
         if (!animator.GetBool("Block"))
         {
             health -= damage;
         }
         Debug.Log(health);
         if (health <= 0) Die();
->>>>>>> Alex
     }
     void Die() {
         Destroy(gameObject);
