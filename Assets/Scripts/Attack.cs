@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
     [SerializeField] float damage = 1;
     [SerializeField] float radius = 1;
     [SerializeField] GameObject debugHitboxPrefab;
+    [SerializeField] float dieTime;
 
     void Start() {
         // Damage units in radius
@@ -16,22 +17,39 @@ public class Attack : MonoBehaviour
             radius,
             _unitMask
         );
-        foreach(Collider collider in targetColliders) {
+        /*
+        foreach (Collider collider in targetColliders) {
             Unit _unit = collider.GetComponent<Unit>();
             _unit.Hurt(damage);
-            Debug.Log("Hurt " + collider.gameObject.ToString() + " for " + damage + " damage!");
-        }
-
-        // Creates a visual representation of the hitbox
-        GameObject dhp = Instantiate(debugHitboxPrefab, transform);
-        dhp.transform.localScale = new Vector3(1,1,1) * radius;
+            Debug.Log("Hurt " + collider.gameObject.ToString() + " for " + damage + " damage!");  
+        }*/
 
         // Disappear after 0.5 seconds
-        Invoke("Die", 0.5f);
+        Destroy(gameObject, dieTime);
     }
-
-    void Die() {
-        // Destroys self
-        Destroy(gameObject);
+    private void Update()
+    {
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        //Debug.Log(other.gameObject);
+        Unit _unit = other.gameObject.GetComponent<Unit>();
+        // Creates a visual representation of the hitbox
+        GameObject dhp = Instantiate(debugHitboxPrefab, transform);
+        dhp.transform.localScale = new Vector3(1, 1, 1) * radius;
+        if (other.gameObject.tag == ("Player"))
+        {
+            return;
+        }
+        else
+        {
+            if (_unit != null)
+            {
+                _unit.Hurt(damage);
+                //Debug.Log("Hurt " + other.gameObject.ToString() + " for " + damage + " damage!");
+            }
+            Destroy(gameObject);
+        }
     }
 }

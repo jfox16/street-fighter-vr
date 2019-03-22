@@ -28,7 +28,7 @@ public class FPLook : MonoBehaviour
 
     // Attach a camera to this Fighter for first person view.
     // Returns true if successful, otherwise false.
-    public bool AttachCamera(GameObject camera) {
+    public bool AttachCamera(Camera camera) {
         if (fpCameraTransform == null) {
             // set as new camera
             fpCameraTransform = camera.transform;
@@ -46,8 +46,8 @@ public class FPLook : MonoBehaviour
     // Remove the first person camera from this fighter.
     // Returns true if successful, otherwise false.
     public bool RemoveCamera() {
-        if (fpCameraTransform == null) {
-            fpCameraTransform = null;
+        if (fpCameraTransform != null) {
+            AttachCamera(null);
             Cursor.lockState = CursorLockMode.None;
             return true;
         }
