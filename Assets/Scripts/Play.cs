@@ -10,6 +10,14 @@ public class Play : MonoBehaviour
     {
         a = GetComponent<Animator>();
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("collision");
+    }
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Debug.Log(hit.gameObject);
+    }
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Triggered");

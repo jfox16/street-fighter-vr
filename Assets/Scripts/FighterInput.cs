@@ -53,7 +53,6 @@ public class FighterInput : MonoBehaviour
 
             if (Input.GetKeyDown(HeavyPunch))
             {
-                Instantiate(lightPunchPrefab, lightPunchTransform);
                 _animator.SetTrigger("Heavy_Punch");
             }
             /*else if (Input.GetButtonDown("Punch Left"))
