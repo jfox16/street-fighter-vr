@@ -62,3 +62,6 @@ Temp/
 *obj/
 *.sln
 .meta
+
+# Jonathan
+.vscode
