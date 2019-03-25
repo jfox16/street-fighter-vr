@@ -27,9 +27,13 @@ public class GameController : MonoBehaviourPunCallbacks
     }
 
     void Update() {
-        // Restart the scene when Cancel(Esc) is pressed
+        // Unlock cursor when Cancel is pressed
         if (Input.GetButtonDown("Cancel")) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        // Lock cursor when Mouse clicked
+        if (Input.GetMouseButtonDown(0)) {
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 

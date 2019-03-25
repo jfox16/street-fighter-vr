@@ -57,10 +57,10 @@ public class FighterLook : MonoBehaviour
             // reset transform values
             fpCameraTransform.localPosition = Vector3.zero;
             fpCameraTransform.localRotation = Quaternion.identity;
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Confined;
             return true;
         }
-        else 
+        else
             return false;
     }
 
