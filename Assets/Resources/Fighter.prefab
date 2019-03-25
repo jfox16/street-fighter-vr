@@ -610,6 +610,7 @@ GameObject:
   - component: {fileID: 5898750511507801561}
   - component: {fileID: 5898750511507801558}
   - component: {fileID: 5898750511507801559}
+  - component: {fileID: 2981091971613038420}
   - component: {fileID: 5898750511507801563}
   - component: {fileID: 5898750511507801562}
   m_Layer: 9
@@ -686,9 +687,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592a030d5ae5cd94096cc9670de3118b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 0
   health: 100
-  punchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
-    type: 3}
+--- !u!114 &2981091971613038420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898750511507801556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a850d8560efec2148962ba1490d4924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5898750511507801563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,7 +728,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivityHor: 9
   sensitivityVert: 9
-  fpCameraAttachPoint: {fileID: 5898750510929761006}
   minimumVert: -45
   maximumVert: 45
 --- !u!1 &5898750511539505607

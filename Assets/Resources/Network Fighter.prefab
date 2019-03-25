@@ -575,14 +575,15 @@ GameObject:
   - component: {fileID: 541}
   - component: {fileID: 549}
   - component: {fileID: 597}
-  - component: {fileID: 595}
-  - component: {fileID: 594}
+  - component: {fileID: 4408445220176807486}
+  - component: {fileID: 5415018077428887161}
+  - component: {fileID: 1082101019749358412}
   - component: {fileID: 592}
   - component: {fileID: 593}
   - component: {fileID: 596}
   m_Layer: 9
   m_Name: Network Fighter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -654,10 +655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b38f03965ef3e342a1951e55ea7e6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 0
   health: 100
-  punchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
-    type: 3}
---- !u!114 &595
+--- !u!114 &4408445220176807486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -666,11 +666,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6f37d0dfbb33aa4caccf6e440874876, type: 3}
+  m_Script: {fileID: 11500000, guid: f98fdcbf83d38d94da195d76ca956aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
---- !u!114 &594
+--- !u!114 &5415018077428887161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -679,14 +678,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b0bf627719530649b7bede1a3151086, type: 3}
+  m_Script: {fileID: 11500000, guid: 99a19e5c5767c534ca53c1cc38b7a330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivityHor: 9
   sensitivityVert: 9
-  fpCameraAttachPoint: {fileID: 399}
   minimumVert: -45
   maximumVert: 45
+--- !u!114 &1082101019749358412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77dcfc0d6e5a0d498be6f286baba36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
 --- !u!114 &592
 MonoBehaviour:
   m_ObjectHideFlags: 0

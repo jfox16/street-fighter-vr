@@ -14,6 +14,6 @@ public class PhotonNetworkManager : MonoBehaviour
     public void SpawnPlayer() {
         GameObject _player = Instantiate(playerPrefab);
         _player.transform.position = new Vector3(0, 0, -10);
-        _player.GetComponent<FPLook>().AttachCamera(mainCamera);
+        _player.GetComponent<FighterLook>().AttachCamera(mainCamera);
     }
 }
