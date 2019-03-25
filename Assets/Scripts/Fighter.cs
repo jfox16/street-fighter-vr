@@ -57,4 +57,8 @@ public class Fighter : Unit
         numberOfProjectiles--;
         Debug.Log(numberOfProjectiles);
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collided");
+    }
 }

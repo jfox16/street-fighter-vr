@@ -21,8 +21,7 @@ public class GameController : MonoBehaviour
     {
         Debug.Log(transform.position);
 
-        ParticleSystem fireworks = Instantiate(sparkles, transform.position,transform.rotation);
-        Destroy(fireworks, 0.5f);
+        ParticleSystem fireworks = Instantiate(sparkles, transform.position,new Quaternion(0,0,0,0));
         
         GameObject _player = Instantiate(prefab, transform.position, transform.rotation);
         FPLook fplook = _player.GetComponent<FPLook>();
