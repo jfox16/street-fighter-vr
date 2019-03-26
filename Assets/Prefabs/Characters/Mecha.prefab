@@ -1214,8 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 862671727}
-  lightPunchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
-    type: 3}
+  lightPunchPrefab: {fileID: 0}
   HeavyPunchPrefab: {fileID: 0}
   kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
     type: 3}

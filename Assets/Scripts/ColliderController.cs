@@ -10,12 +10,14 @@ public class ColliderController : MonoBehaviour
     [SerializeField] Collider rightLegCollider;
     [SerializeField] Collider leftLegCollider;
     [SerializeField] Collider hurtBox;
+    Animator _animator;
     void Start()
     {
         rightArmCollider.enabled = false;
         leftArmCollider.enabled = false;
         rightLegCollider.enabled = false;
         leftLegCollider.enabled = false;
+        _animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -56,5 +58,15 @@ public class ColliderController : MonoBehaviour
     private void DisableMechaKick()
     {
         rightLegCollider.enabled = false;
+    }
+    private void IsAttacking()
+    {
+        Debug.Log("Attacking");
+        _animator.SetBool("isAttacking", true);
+    }
+    private void NotAttacking()
+    {
+        Debug.Log("Notattacking");
+        _animator.SetBool("isAttacking", false);
     }
 }
