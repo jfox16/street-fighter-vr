@@ -20,6 +20,9 @@ public class FPMovement : MonoBehaviour
         // Read input to _inputVec.
         // _inputVec is a directional vector with a length of 1.
 
+        if (!_animator.GetBool("isAttacking"))
+        {
+
 
             float _xInput = Input.GetAxis("Horizontal");
             float _yInput = Input.GetAxis("Vertical");
@@ -30,16 +33,17 @@ public class FPMovement : MonoBehaviour
             // Rotate _moveVec by the rotation of the transform.
             // This will make movement relative to the direction the character is facing.
             _moveVec = transform.rotation * _moveVec;
-        
-        if (controller.velocity != Vector3.zero)
-        {
-            _animator.SetBool("isWalking", true);
-        }
-        else
-        {
-            _animator.SetBool("isWalking", false);
-        }
-        //_animator.SetFloat("Speed", _yInput);
+
+            if (controller.velocity != Vector3.zero)
+            {
+                _animator.SetBool("isWalking", true);
+            }
+            else
+            {
+                _animator.SetBool("isWalking", false);
+            }
+            //_animator.SetFloat("Speed", _yInput);
             controller.Move(_moveVec);
+        }
     }
 }
