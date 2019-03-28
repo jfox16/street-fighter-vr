@@ -44,7 +44,7 @@ public class FighterInput : MonoBehaviour
     void Update() {
 
 
-            
+           
             if (Input.GetKeyDown(LightPunch))
             {
                 _animator.SetTrigger("Light_Punch");

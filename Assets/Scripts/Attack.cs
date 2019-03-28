@@ -10,7 +10,7 @@ public class Attack : MonoBehaviour
 
   
     void Start() {
-      
+        //Destroy(gameObject, 5f);
     }
     private void Update()
     {
@@ -34,6 +34,7 @@ public class Attack : MonoBehaviour
             {
                 _unit.Hurt(damage);
                 //Debug.Log("Hurt " + other.gameObject.ToString() + " for " + damage + " damage!");
+                gameObject.GetComponent<Collider>().enabled = false;
             }
         }
     }

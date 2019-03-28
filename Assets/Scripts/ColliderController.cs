@@ -11,6 +11,7 @@ public class ColliderController : MonoBehaviour
     [SerializeField] Collider leftLegCollider;
     [SerializeField] Collider hurtBox;
     Animator _animator;
+
     void Start()
     {
         rightArmCollider.enabled = false;
@@ -19,21 +20,43 @@ public class ColliderController : MonoBehaviour
         leftLegCollider.enabled = false;
         _animator = gameObject.GetComponent<Animator>();
     }
-
     // Update is called once per frame
     void Update()
     {
         
     }
-    public void DisableArms()
-    {
-        rightArmCollider.enabled = false;
-    }
-    private void EnableArms()
+    public void EnableRightArm()
     {
         rightArmCollider.enabled = true;
     }
-
+    private void DisableRightArm()
+    {
+        rightArmCollider.enabled = false;
+    }
+    public void EnableLeftArm()
+    {
+        leftArmCollider.enabled = true;
+    }
+    private void DisableLeftArm()
+    {
+        leftArmCollider.enabled = false;
+    }
+    public void EnableLeftLeg()
+    {
+        leftLegCollider.enabled = true;
+    }
+    private void DisableLeftLeg()
+    {
+        leftLegCollider.enabled = false;
+    }
+    public void EnableRightLeg()
+    {
+       rightLegCollider.enabled = true;
+    }
+    private void DisableRightLeg()
+    {
+        rightLegCollider.enabled = false;
+    }
     //Will be decoupled later
     private void EnableMechaLightPunch()
     {
