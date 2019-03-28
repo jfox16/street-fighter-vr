@@ -112,7 +112,7 @@ public class Shoot : MonoBehaviour
     {
         GameObject controller = GameObject.Find("Game Controller");
         GameController g = controller.GetComponent<GameController>();
-        _camera = g.getCamera();
+        // _camera = g.getCamera();
 
     }
 

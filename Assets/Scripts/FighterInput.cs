@@ -72,7 +72,7 @@ public class FighterInput : MonoBehaviour
             }*/
             else if (Input.GetKeyDown(Block))
             {
-                 Debug.Log("Blocoking");
+                 Debug.Log("Blocking");
                 _animator.SetBool("Block", true);
             }
             else if (Input.GetKeyUp(Block))

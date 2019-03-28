@@ -30,6 +30,6 @@ public class SpawnPlayer : MonoBehaviour
         {
             Destroy(go);
         }
-        controller.SelectPlayer(test, spawnLocation);
+        // controller.SelectPlayer(test, spawnLocation);
     }
 }

@@ -54,7 +54,7 @@ public class Box : MonoBehaviour
     private void FindPlayer()
     {
         GameController controller = GetComponent<GameController>();
-        player = controller.getPlayer();
+        // player = controller.GetPlayer();
         theDest = GameObject.Find("Pick Up Point");
     }
 }
