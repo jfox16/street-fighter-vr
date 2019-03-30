@@ -31,40 +31,42 @@ public class CarParts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _carParts = new Dictionary<string, GameObject>();
-        _carParts.Add("body", body);
-        _carParts.Add("dashboard", dashboard);
-        _carParts.Add("doorL", doorL);
-        _carParts.Add("doorR", doorR);
-        _carParts.Add("hood", hood);
-        _carParts.Add("lightGlassL", lightGlassL);
-        _carParts.Add("lightGlassR", lightGlassR);
-        _carParts.Add("roof", roof);
-        _carParts.Add("tailLights", tailLights);
-        _carParts.Add("trunk", trunk);
-        _carParts.Add("windowB", windowB);
-        _carParts.Add("windowF", windowF);
-        _carParts.Add("windowLB", windowLB);
-        _carParts.Add("windowLF", windowLF);
-        _carParts.Add("windowRB", windowRB);
-        _carParts.Add("windowRF", windowRF);
-        _carParts.Add("wheelLB", wheelLB);
-        _carParts.Add("wheelLF", wheelLF);
-        _carParts.Add("wheelRB", wheelRB);
-        _carParts.Add("wheelRF", wheelRF);
-        _carParts.Add("bumperB", bumperB);
-        _carParts.Add("bumperF", bumperF);
+        _carParts = new Dictionary<string, GameObject>
+        {
+            { "body", body },
+            { "dashboard", dashboard },
+            { "doorL", doorL },
+            { "doorR", doorR },
+            { "hood", hood },
+            { "lightGlassL", lightGlassL },
+            { "lightGlassR", lightGlassR },
+            { "roof", roof },
+            { "tailLights", tailLights },
+            { "trunk", trunk },
+            { "windowB", windowB },
+            { "windowF", windowF },
+            { "windowLB", windowLB },
+            { "windowLF", windowLF },
+            { "windowRB", windowRB },
+            { "windowRF", windowRF },
+            { "wheelLB", wheelLB },
+            { "wheelLF", wheelLF },
+            { "wheelRB", wheelRB },
+            { "wheelRF", wheelRF },
+            { "bumperB", bumperB },
+            { "bumperF", bumperF }
+        };
     }
 
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
-        /*GameObject backWindow = carParts["windowB"];
+        GameObject backWindow = carParts["windowB"];
         Rigidbody backWindowRB = backWindow.AddComponent<Rigidbody>();
-        backWindowRB.mass = 0.1f;*/
+        backWindowRB.mass = 0.1f;
         GameObject test1 = _carParts["doorR"];
         Rigidbody t = test1.AddComponent<Rigidbody>();
         t.mass = 0.1f;
-    }
+    }*/
 
     public Dictionary<string, GameObject> getCarParts()
     {

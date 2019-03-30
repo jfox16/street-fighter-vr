@@ -66,6 +66,7 @@ public class Shoot : MonoBehaviour
                     _ball = Instantiate(_ballprefab) as GameObject;
                     _ball.transform.position = transform.TransformPoint(new Vector3(0,1f,1f) * 1.5f);
                     _ball.transform.rotation = transform.rotation;
+                    _ball.GetComponent<Rigidbody>().velocity = _camera.transform.forward * 100;
                 }
 
             }

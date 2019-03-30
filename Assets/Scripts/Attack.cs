@@ -19,7 +19,8 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(other.gameObject);
+        //Debug.Log("colliding" + Time.fixedTime);
+        Debug.Log(other.gameObject);
         Unit _unit = other.gameObject.GetComponent<Unit>();
         // Creates a visual representation of the hitbox
         //GameObject dhp = Instantiate(debugHitboxPrefab, transform);
