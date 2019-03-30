@@ -42,9 +42,8 @@ public class FighterInput : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-
-
-           
+        if (!_animator.GetBool("isAttacking"))
+        {
             if (Input.GetKeyDown(LightPunch))
             {
                 _animator.SetTrigger("Light_Punch");
@@ -72,13 +71,14 @@ public class FighterInput : MonoBehaviour
             }*/
             else if (Input.GetKeyDown(Block))
             {
-                 Debug.Log("Blocoking");
+                Debug.Log("Blocoking");
                 _animator.SetBool("Block", true);
             }
             else if (Input.GetKeyUp(Block))
             {
                 _animator.SetBool("Block", false);
-            }else if (Input.GetKeyDown(Crouch))
+            }
+            else if (Input.GetKeyDown(Crouch))
             {
                 _animator.SetBool("Crouch", true);
             }
@@ -86,12 +86,13 @@ public class FighterInput : MonoBehaviour
             {
                 _animator.SetBool("Crouch", false);
             }
-        else if (Input.GetKeyDown(Special) && timestamp < Time.time)
+            else if (Input.GetKeyDown(Special) && timestamp < Time.time)
             {
                 timestamp = Time.time + cooldown;
                 _animator.SetTrigger("Special");
                 Invoke("SpawnProjectile", 0.3f);
             }
+        }
     }
         
     void SpawnProjectile()

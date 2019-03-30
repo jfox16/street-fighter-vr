@@ -89,7 +89,7 @@ public class ColliderController : MonoBehaviour
     }
     private void NotAttacking()
     {
-        Debug.Log("Notattacking");
+        //Debug.Log("Notattacking");
         _animator.SetBool("isAttacking", false);
     }
 }

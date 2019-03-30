@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     }
 
     public void SpawnPlayer() {
-        GameObject _player = Instantiate(playerPrefab);
+        GameObject _player = Instantiate(playerPrefab, new Vector3( 0 , 0 , 0), new Quaternion(0,0,0,0));
         _player.transform.position = new Vector3(0, 0, -10);
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
     }
