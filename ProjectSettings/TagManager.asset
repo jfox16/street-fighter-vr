@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - Dummy
+  - Box
+  - Unit
   layers:
   - Default
   - TransparentFX
