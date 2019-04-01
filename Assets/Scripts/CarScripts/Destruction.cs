@@ -21,7 +21,7 @@ public class Destruction : MonoBehaviour
     {
         g = GameObject.Find("CarParts");
         g1 = GameObject.Find("Game Controller");
-        carHealth = 2000.0f;
+        carHealth = 300.0f;
         s = g.gameObject.GetComponent<CarParts>();
         timer = g1.gameObject.GetComponent<Timer>();
         playerScore = 0;

@@ -41,15 +41,21 @@ public class Fighter : Unit
         animator.SetTrigger("Jab");
     }
     public override void Hurt(float damage) {
-        if (!animator.GetBool("Block"))
+        if (animator.GetBool("Block"))
         {
-            health -= damage;
+            health -= damage * 0.5f;
+            Debug.Log(health);
         }
-        Debug.Log(health);
+        else
+        {
+            animator.SetTrigger("Hurt");
+            health -= damage;
+            Debug.Log(health);
+        }
         if (health <= 0) Die();
     }
     void Die() {
-        Destroy(gameObject);
+        animator.SetTrigger("Die");
     }
    
     public void removeProjectile()

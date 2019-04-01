@@ -21,7 +21,6 @@ public class Timer : MonoBehaviour
         red = new Color(1.0f, 0.0f, 0.0f, 1.0f);
         text = WinOrLose.gameObject.GetComponent<Text>();
         text.color = trans;
-        text.text = "Nice Try!";
     }
 
     // Update is called once per frame
@@ -33,6 +32,7 @@ public class Timer : MonoBehaviour
         }
         else if(!carDead && seconds >= maxTime)
         {
+            text.text = "Nice Try!";
             text.color = Color.Lerp(text.color, red, 2.0f * Time.deltaTime);
         }
         myText.GetComponent<Text>().text = ((int)(maxTime - seconds)).ToString();

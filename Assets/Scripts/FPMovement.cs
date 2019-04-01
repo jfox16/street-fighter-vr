@@ -5,14 +5,13 @@ using System;
 
 public class FPMovement : MonoBehaviour
 {
-    CharacterController controller;
+    [SerializeField] CharacterController controller;
     private Animator _animator;
     bool canMove;
     [SerializeField] float moveSpeed = 2;
     private float epsilon = 0.000001f;
 
     void Awake() {
-        controller = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
         canMove = true;
     }

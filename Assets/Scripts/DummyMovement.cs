@@ -7,16 +7,17 @@ using UnityEngine.AI;
 public class DummyMovement : MonoBehaviour
 {
     [SerializeField] GameObject kickPrefab;
+    [SerializeField] GameObject kickpoint;
     private GameObject _player;
     Animator animator;
-    Transform kickPointTransform;
+    [SerializeField] Transform kickPointTransform;
+    float cooldown;
 
     // Start is called before the first frame update
     void Start()
     {
         //getPlayer();
         animator = GetComponent<Animator>();
-        kickPointTransform = transform.Find("KickPoint");
     }
 
     // Update is called once per frame
@@ -29,11 +30,12 @@ public class DummyMovement : MonoBehaviour
         else
         {
             float dist = Vector3.Distance(transform.position, _player.transform.position);
-            if (dist <= 2.0f)
+            if (dist <= 2.0f && (cooldown <= Time.time))
             {
+                cooldown = Time.time + 2.0f;
                 animator.SetTrigger("Kick");
                 Instantiate(kickPrefab, kickPointTransform);
-                //Debug.Log(dist);
+                Debug.Log(dist);
             }
         }
     }
