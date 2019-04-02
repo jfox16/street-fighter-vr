@@ -6160,7 +6160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 870286742}
-  playerPrefab: {fileID: 1526373210, guid: 1afb84105992dc4489402680af73eeda, type: 3}
+  playerPrefab: {fileID: 862671726, guid: eedb125466ea04149ab16edc4d63b4b1, type: 3}
   sparkles: {fileID: 378159788545362333, guid: bdea04fdc98a7bd4896b6d3cde2a9a17, type: 3}
 --- !u!4 &1553777040
 Transform:

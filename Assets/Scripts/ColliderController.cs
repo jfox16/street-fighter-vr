@@ -10,28 +10,53 @@ public class ColliderController : MonoBehaviour
     [SerializeField] Collider rightLegCollider;
     [SerializeField] Collider leftLegCollider;
     [SerializeField] Collider hurtBox;
+    Animator _animator;
+
     void Start()
     {
         rightArmCollider.enabled = false;
         leftArmCollider.enabled = false;
         rightLegCollider.enabled = false;
         leftLegCollider.enabled = false;
+        _animator = gameObject.GetComponent<Animator>();
     }
-
     // Update is called once per frame
     void Update()
     {
         
     }
-    public void DisableArms()
-    {
-        rightArmCollider.enabled = false;
-    }
-    private void EnableArms()
+    public void EnableRightArm()
     {
         rightArmCollider.enabled = true;
     }
-
+    private void DisableRightArm()
+    {
+        rightArmCollider.enabled = false;
+    }
+    public void EnableLeftArm()
+    {
+        leftArmCollider.enabled = true;
+    }
+    private void DisableLeftArm()
+    {
+        leftArmCollider.enabled = false;
+    }
+    public void EnableLeftLeg()
+    {
+        leftLegCollider.enabled = true;
+    }
+    private void DisableLeftLeg()
+    {
+        leftLegCollider.enabled = false;
+    }
+    public void EnableRightLeg()
+    {
+       rightLegCollider.enabled = true;
+    }
+    private void DisableRightLeg()
+    {
+        rightLegCollider.enabled = false;
+    }
     //Will be decoupled later
     private void EnableMechaLightPunch()
     {
@@ -56,5 +81,15 @@ public class ColliderController : MonoBehaviour
     private void DisableMechaKick()
     {
         rightLegCollider.enabled = false;
+    }
+    private void IsAttacking()
+    {
+        Debug.Log("Attacking");
+        _animator.SetBool("isAttacking", true);
+    }
+    private void NotAttacking()
+    {
+        //Debug.Log("Notattacking");
+        _animator.SetBool("isAttacking", false);
     }
 }
