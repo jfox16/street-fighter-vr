@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// To use an Attack, Instantiate it and then Initialize it with a team.
 public class Attack : MonoBehaviour
 {
     [SerializeField] float damage = 1;
