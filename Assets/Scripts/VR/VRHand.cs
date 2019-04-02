@@ -5,6 +5,9 @@ using UnityEngine.XR;
 
 public class VRHand : MonoBehaviour
 {
+
+
+
     [HideInInspector] public Unit.Team team;
 
     public enum Hand {Left, Right}
@@ -25,11 +28,10 @@ public class VRHand : MonoBehaviour
     [SerializeField] GameObject fireballPrefab;
     [SerializeField] Vector3 fireballDirection;
     Transform fireballPointTransform;
-    Projectile fireball = null; // Current charging fireball
+    Fireball fireball = null; // Current charging fireball
     bool isCharging = false;
-    float chargeLevel = 0;
-    float chargeRate = 0.1f;
-    float maxFireballScale = 5;
+
+
 
 
 
@@ -55,6 +57,7 @@ public class VRHand : MonoBehaviour
         lastPos = transform.position;
     }
 
+    // OnTriggerEnter is just punching logic. Will only punch if you're punching fast enough.
     void OnTriggerEnter(Collider other) {
         int _damage = (int) (powerVec.magnitude * 10);
         // Debug.Log("PUNCH POWER: " + powerVec.magnitude);
@@ -71,17 +74,19 @@ public class VRHand : MonoBehaviour
 
             _hittable.Hit(_damage);
 
-            // Rumble
+            // Rumble on hit
             if (hand == Hand.Left) {
-                InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).SendHapticImpulse(0, 0.8f, 0.2f);
+                InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).SendHapticImpulse(1, 0.8f, 0.2f);
             }
             else {
-                InputDevices.GetDeviceAtXRNode(XRNode.RightHand).SendHapticImpulse(0, 0.8f, 0.2f);
+                InputDevices.GetDeviceAtXRNode(XRNode.RightHand).SendHapticImpulse(1, 0.8f, 0.2f);
             }
         }
     }
 
     #endregion
+
+
 
 
 
@@ -98,13 +103,21 @@ public class VRHand : MonoBehaviour
     void Charge() {
         if (isCharging) {
             if (fireball == null) {
-                fireball = Instantiate(fireballPrefab, fireballPointTransform).GetComponent<Projectile>();
+                fireball = Instantiate(fireballPrefab, fireballPointTransform).GetComponent<Fireball>();
                 fireball.Initialize(team);
-                chargeLevel = 0;
+            }
+            fireball.SetCharging(true);
+            // Rumble when charging
+            if (hand == Hand.Left) {
+                InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).SendHapticImpulse(0, 0.2f+fireball.chargeLevel*0.4f, 0.1f);
+            }
+            else {
+                InputDevices.GetDeviceAtXRNode(XRNode.RightHand).SendHapticImpulse(0, 0.2f+fireball.chargeLevel*0.4f, 0.1f);
             }
         }
         else {
             if (fireball != null) {
+                fireball.SetCharging(false);
                 fireball.transform.parent = null;
                 fireball.Launch(transform.rotation * fireballDirection);
                 fireball = null;
@@ -123,6 +136,8 @@ public class VRHand : MonoBehaviour
     }
 
     #endregion
+
+
 
 
 

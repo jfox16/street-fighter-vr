@@ -12,7 +12,7 @@ public class Attack : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         Hittable _hittable = other.GetComponent<Hittable>();
 

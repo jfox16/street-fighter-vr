@@ -19,12 +19,6 @@ public class VRFighter : Unit
     void Update() {
         leftHand.SetCharging(Input.GetButton("X"));
         rightHand.SetCharging(Input.GetButton("A"));
-        if (Input.GetButton("X")) {
-            InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).SendHapticImpulse(0, 0.5f, 0.1f);
-        }
-        if (Input.GetButton("A")) {
-            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).SendHapticImpulse(0, 0.5f, 0.1f);
-        }
     }
 
     public override void Hit(float damage) {
