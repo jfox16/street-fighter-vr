@@ -40,7 +40,7 @@ public class Fighter : Unit
         animator.SetTrigger("Punch");
         animator.SetTrigger("Jab");
     }
-    public override void Hurt(float damage) {
+    public override void Hit(float damage) {
         if (animator.GetBool("Block"))
         {
             health -= damage * 0.5f;

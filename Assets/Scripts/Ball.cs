@@ -28,7 +28,7 @@ public class Ball : MonoBehaviour
         if (other.tag.Equals("Dummy"))
         {
             RedGuy _unit = other.GetComponent<RedGuy>();
-            _unit.Hurt(damage);
+            _unit.Hit(damage);
             //Debug.Log("Hurt " + other.gameObject.ToString() + " for " + damage + " damage!");
         }
         Destroy(this.gameObject);

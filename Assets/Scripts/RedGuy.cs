@@ -14,7 +14,7 @@ public class RedGuy : Unit
         animator.SetBool("Dead", false);
     }
 
-    public override void Hurt(float damage) {
+    public override void Hit(float damage) {
         _health -= damage;
         // check if the health is 0
         if(_health <= epsilon)

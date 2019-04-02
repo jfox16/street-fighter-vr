@@ -1,18 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
-public class VRFighter : MonoBehaviour
+/* VRFighter acts as a controller for the two VRHands. */
+public class VRFighter : Unit
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] VRHand leftHand, rightHand;
+
+    float health = 100;
+
+    void Awake() {
+        team = Team.Red;
+        leftHand.team = team;
+        rightHand.team = team;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        leftHand.SetCharging(Input.GetButton("X"));
+        rightHand.SetCharging(Input.GetButton("A"));
+        if (Input.GetButton("X")) {
+            InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).SendHapticImpulse(0, 0.5f, 0.1f);
+        }
+        if (Input.GetButton("A")) {
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).SendHapticImpulse(0, 0.5f, 0.1f);
+        }
+    }
+
+    public override void Hit(float damage) {
+        health -= damage;
     }
 }

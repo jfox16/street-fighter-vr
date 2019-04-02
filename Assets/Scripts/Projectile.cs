@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Projectile : Attack
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float moveSpeed;
+    Vector3 moveDir = Vector3.zero;
+    Rigidbody rigidbody;
 
-    public GameObject player;
-    // Update is called once per frame
-    private void Awake()
-    {
+    void Awake() {
+        rigidbody = GetComponent<Rigidbody>();
     }
-    void Update()
-    {
-        this.gameObject.transform.Translate(0, 0, speed * Time.deltaTime);
+
+    void FixedUpdate() {
+        rigidbody.velocity = moveDir * moveSpeed * Time.deltaTime * 100f;
     }
-    private void OnDestroy()
-    {
+
+    public void Launch(Vector3 moveDir) {
+        this.moveDir = Vector3.ClampMagnitude(moveDir, 1);
     }
 }

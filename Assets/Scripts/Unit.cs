@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Unit : MonoBehaviour
+public abstract class Unit : Hittable
 {
-    public abstract void Hurt(float damage);
+    public enum Team {Neutral=0, Red, Blue}
+    public Team team;
 }

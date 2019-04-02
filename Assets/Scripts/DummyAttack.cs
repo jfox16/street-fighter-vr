@@ -19,7 +19,7 @@ public class DummyAttack : MonoBehaviour
         foreach (Collider collider in targetColliders)
         {
             Fighter _unit = collider.GetComponent<Fighter>();
-            _unit.Hurt(damage);
+            _unit.Hit(damage);
             //Debug.Log("Hurt " + collider.gameObject.ToString() + " for " + damage + " damage!");
         }
 
