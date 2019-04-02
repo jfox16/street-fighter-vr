@@ -8,6 +8,7 @@ public class SpawnPlayer : MonoBehaviour
     [SerializeField] GameController controller;
     [SerializeField] PrefabSelection playerSelector;
     public GameObject test;
+    public string charName;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +32,6 @@ public class SpawnPlayer : MonoBehaviour
             Destroy(go);
         }
         controller.SelectPlayer(test, spawnLocation);
+        PlayerPrefs.SetString("CharacterSelection", charName);
     }
 }

@@ -5,10 +5,16 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
-    [SerializeField] GameObject playerPrefab;
+    //[SerializeField] GameObject playerPrefab;
+    private GameObject playerPrefab;
     [SerializeField] ParticleSystem sparkles;
+    private PrefabSelection playerSelection;
+    private GameObject g;
 
     void Start() {
+        g = GameObject.Find("Player Selector");
+        playerSelection = g.gameObject.GetComponent<PrefabSelection>();
+        playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Unity-Chan")];
         SpawnPlayer();
     }
 
@@ -28,6 +34,8 @@ public class GameController : MonoBehaviour
         Debug.Log(fplook);
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
     }
+
+    // getPlayer() is called on Box.cs
     public GameObject getPlayer()
     {
         return playerPrefab;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4514125, g: 0.5008821, b: 0.57223153, a: 1}
+  m_IndirectSpecularColor: {r: 0.45141292, g: 0.50088274, b: 0.5722319, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2119,6 +2119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kickPrefab: {fileID: 898589676504919046, guid: ec11b72681fec4154a4db4de49e0457d,
     type: 3}
+  kickpoint: {fileID: 0}
+  kickPointTransform: {fileID: 0}
 --- !u!114 &480257365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3098,7 +3100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5374f5241fce242da8588ac8e34193ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextName: 
+  nextName: CarCrusher
 --- !u!65 &588681824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3695,6 +3697,7 @@ MonoBehaviour:
   controller: {fileID: 1553777039}
   playerSelector: {fileID: 368852217}
   test: {fileID: 5898750511507801556, guid: 0b3bdd92444c4314b948d2230a0f6ef6, type: 3}
+  charName: Fighter
 --- !u!4 &731321851
 Transform:
   m_ObjectHideFlags: 0
@@ -4189,6 +4192,7 @@ MonoBehaviour:
   controller: {fileID: 1553777039}
   playerSelector: {fileID: 368852217}
   test: {fileID: 862671726, guid: eedb125466ea04149ab16edc4d63b4b1, type: 3}
+  charName: Mecha
 --- !u!143 &862671729
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4450,6 +4454,7 @@ MonoBehaviour:
   controller: {fileID: 1553777039}
   playerSelector: {fileID: 368852217}
   test: {fileID: 1526373210, guid: 1afb84105992dc4489402680af73eeda, type: 3}
+  charName: Unity-Chan
 --- !u!4 &962468989
 Transform:
   m_ObjectHideFlags: 0
@@ -6496,7 +6501,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 870286742}
-  playerPrefab: {fileID: 1526373210, guid: 1afb84105992dc4489402680af73eeda, type: 3}
   sparkles: {fileID: 378159788545362333, guid: bdea04fdc98a7bd4896b6d3cde2a9a17, type: 3}
 --- !u!4 &1553777040
 Transform:

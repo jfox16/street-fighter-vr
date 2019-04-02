@@ -24,4 +24,9 @@ public class PrefabSelection : MonoBehaviour
     {
         
     }
+
+    public Dictionary<string, GameObject> getRoster()
+    {
+        return Roster;
+    }
 }
