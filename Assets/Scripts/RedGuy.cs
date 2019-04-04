@@ -25,5 +25,6 @@ public class RedGuy : Unit
         {
             animator.SetTrigger("Hurt");
         }
+        Debug.Log(_health);
     }
 }

@@ -26,7 +26,6 @@ public class Destruction : MonoBehaviour
         timer = g1.gameObject.GetComponent<Timer>();
         playerScore = 0;
         brokenAlready = false;
-
         trans = new Color(0.0f, 0.0f, 1.0f, 0.0f);
         blue = new Color(0.0f, 0.0f, 1.0f, 1.0f);
         text = WinOrLose.gameObject.GetComponent<Text>();

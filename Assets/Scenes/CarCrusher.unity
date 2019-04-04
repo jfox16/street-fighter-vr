@@ -1721,7 +1721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154807825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45540482, y: 1.02, z: 8.98}
+  m_LocalPosition: {x: -0.45540482, y: 3.97, z: 8.98}
   m_LocalScale: {x: 1, y: 7.11, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2008,6 +2008,7 @@ GameObject:
   - component: {fileID: 1418028520}
   - component: {fileID: 1418028519}
   - component: {fileID: 1418028518}
+  - component: {fileID: 1418028522}
   m_Layer: 0
   m_Name: ScoreBoard
   m_TagString: Untagged
@@ -2088,6 +2089,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1418028522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418028517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964deba08a79d461eb041b42424cb76b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HiScore1: {fileID: 53414744}
+  HiScore2: {fileID: 195294603}
+  HiScore3: {fileID: 931169908}
+  HiScore4: {fileID: 1859926101}
+  HiScore5: {fileID: 834293878}
+  d: {fileID: 271628309}
+  t: {fileID: 1708483197}
 --- !u!1 &1549124305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 038d698227cbe3541bbad6b1b4dc3d40,
@@ -2415,6 +2435,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myText: {fileID: 1370642022}
   WinOrLose: {fileID: 1600132811}
+  score: {fileID: 1716601132}
+  car: {fileID: 271628308}
+  carParts: {fileID: 1614074130}
 --- !u!1 &1716601132
 GameObject:
   m_ObjectHideFlags: 0

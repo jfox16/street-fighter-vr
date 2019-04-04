@@ -25,7 +25,7 @@ public class ColliderController : MonoBehaviour
     {
         
     }
-    public void EnableRightArm()
+    public void Arm()
     {
         rightArmCollider.enabled = true;
     }
@@ -49,7 +49,7 @@ public class ColliderController : MonoBehaviour
     {
         leftLegCollider.enabled = false;
     }
-    public void EnableRightLeg()
+    public void Leg()
     {
        rightLegCollider.enabled = true;
     }

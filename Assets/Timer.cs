@@ -6,13 +6,19 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     private float seconds, maxTime;
-    public GameObject myText, WinOrLose;
+    public GameObject myText, WinOrLose, score, car, carParts;
     private Text text;
     private bool carDead;
+    private Destruction s;
+    private CarPartsHealth s1;
     Color trans, red;
     // Start is called before the first frame update
     void Start()
     {
+    
+        s = car.gameObject.GetComponent<Destruction>();
+        s1 = carParts.GetComponent<CarPartsHealth>();
+
         seconds = 0;
         maxTime = 10;
         carDead = false;
@@ -34,6 +40,10 @@ public class Timer : MonoBehaviour
         {
             text.text = "Nice Try!";
             text.color = Color.Lerp(text.color, red, 2.0f * Time.deltaTime);
+            int playerScore = s.getScore();
+            score.GetComponent<Text>().text = "Player Score: " + playerScore.ToString();
+            s.enabled = false;
+            s1.enabled = false;
         }
         myText.GetComponent<Text>().text = ((int)(maxTime - seconds)).ToString();
     }
@@ -42,4 +52,11 @@ public class Timer : MonoBehaviour
     {
         this.carDead = carDead;
     }
+
+    public int getSecondsLeft()
+    {
+        return (int)(maxTime - seconds);
+    }
+
+
 }
