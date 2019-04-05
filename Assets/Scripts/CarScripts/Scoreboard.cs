@@ -16,6 +16,12 @@ public class Scoreboard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Just for resetting the scoreboard
+      /*PlayerPrefs.DeleteKey("FirstPlace");
+        PlayerPrefs.DeleteKey("SecondPlace");
+        PlayerPrefs.DeleteKey("ThirdPlace");
+        PlayerPrefs.DeleteKey("ForthPlace");
+        PlayerPrefs.DeleteKey("FifthPlace");*/
         scores = new int[5]{PlayerPrefs.GetInt("FirstPlace", 0), PlayerPrefs.GetInt("SecondPlace", 0), PlayerPrefs.GetInt("ThirdPlace", 0), PlayerPrefs.GetInt("ForthPlace", 0), PlayerPrefs.GetInt("FifthPlace", 0)};
         HiScore1.GetComponent<Text>().text = "#1: " + scores[0];
         HiScore2.GetComponent<Text>().text = "#2: " + scores[1];

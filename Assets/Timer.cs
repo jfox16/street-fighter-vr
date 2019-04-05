@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
         s1 = carParts.GetComponent<CarPartsHealth>();
 
         seconds = 0;
-        maxTime = 10;
+        maxTime = 180;
         carDead = false;
 
         trans = new Color(0.0f, 0.0f, 1.0f, 0.0f);
