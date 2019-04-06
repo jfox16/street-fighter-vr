@@ -18,7 +18,7 @@ public class GameController : MonoBehaviourPunCallbacks
     #region UNITY CALLBACKS
 
     void Awake() {
-        offlinePlayerPrefab = (GameObject)Resources.Load("Fighter");
+        offlinePlayerPrefab = (GameObject)Resources.Load("Blue Guy");
 
         // Adds this class as a callback target for PUN Networking
         PhotonNetwork.NetworkingClient.AddCallbackTarget(this);
@@ -74,7 +74,7 @@ public class GameController : MonoBehaviourPunCallbacks
         This will properly initialize it on the network. Also, instead of using direct prefab
         reference, this method takes the name of the prefab as a string, and the prefab will 
         be retrieved from the Assets/Resources folder. */
-        GameObject player = PhotonNetwork.Instantiate("Network Fighter", playerSpawnPosition, Quaternion.identity);
+        GameObject player = PhotonNetwork.Instantiate("Network Blue Guy", playerSpawnPosition, Quaternion.identity);
         Debug.Log("Player spawned!");
         // Attach main camera to player's as first person view
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");

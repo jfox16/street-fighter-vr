@@ -27,7 +27,7 @@ public class FighterMove : MonoBehaviour
         // inputVec is a directional vector with a length of 1.
         float _xInput = Input.GetAxis("Horizontal");
         float _yInput = Input.GetAxis("Vertical");
-        inputVec = new Vector3(_xInput, 0, _yInput).normalized;
+        inputVec = Vector3.ClampMagnitude(new Vector3(_xInput, 0, _yInput), 1);
     }
 
     protected void Move() {

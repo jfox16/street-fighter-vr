@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class FighterAct : MonoBehaviour
 {
+
     protected Animator animator;
+    protected Fighter fighter;
+
+    [SerializeField] Attack rightHandAttack;
 
 
 
@@ -12,6 +16,8 @@ public class FighterAct : MonoBehaviour
 
     protected void Awake() {
         animator = GetComponent<Animator>();
+        fighter = GetComponent<Fighter>();
+        rightHandAttack.ownerTeam = fighter.team;
     }
 
     protected void Update() {
@@ -22,7 +28,7 @@ public class FighterAct : MonoBehaviour
 
     
 
-    #region OTHER METHODS
+    #region PRIVATE METHODS
 
     // Reads player input and performs action
     protected void ReadInput() {
@@ -35,12 +41,24 @@ public class FighterAct : MonoBehaviour
     }
 
     protected void PerformPunch() {
-        Debug.Log(gameObject.name + " punches!");
         animator.SetTrigger("Punch");
     }
     protected void PerformKick() {
-        Debug.Log(gameObject.name + " kicks!");
         animator.SetTrigger("Kick");
+    }
+
+    #endregion
+
+
+
+    #region PUBLIC METHODS
+
+    public void EnableRightHand() {
+        rightHandAttack.SetEnabled(true);
+    }
+
+    public void DisableRightHand() {
+        rightHandAttack.SetEnabled(false);
     }
 
     #endregion

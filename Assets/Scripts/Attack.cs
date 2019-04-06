@@ -4,34 +4,27 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    // ownerTeam must be set to use Attack
+    public Unit.Team ownerTeam;
     [SerializeField] float damage = 1;
-    [SerializeField] float radius = 1;
-    [SerializeField] GameObject debugHitboxPrefab;
+    
+    new Collider collider;
 
-    void Start() {
-        // Damage units in radius
-        int _unitMask = LayerMask.GetMask("Unit");
-        Collider[] targetColliders = Physics.OverlapSphere(
-            transform.position,
-            radius,
-            _unitMask
-        );
-        foreach(Collider collider in targetColliders) {
-            Unit _unit = collider.GetComponent<Unit>();
-            _unit.Hurt(damage);
-            Debug.Log("Hurt " + collider.gameObject.ToString() + " for " + damage + " damage!");
-        }
-
-        // Creates a visual representation of the hitbox
-        GameObject dhp = Instantiate(debugHitboxPrefab, transform);
-        dhp.transform.localScale = new Vector3(1,1,1) * radius;
-
-        // Disappear after 0.5 seconds
-        Invoke("Die", 0.5f);
+    void Awake() {
+        collider = GetComponent<Collider>();
+        collider.enabled = false;
     }
 
-    void Die() {
-        // Destroys self
-        Destroy(gameObject);
+    void OnTriggerEnter(Collider other) {
+        Unit _unit = other.GetComponent<Unit>();
+
+        Debug.Log("Hurting a Unit");
+        if (_unit == null || _unit.team == ownerTeam) return;
+        _unit.Hurt(damage);
+        collider.enabled = false;
+    } 
+
+    public void SetEnabled(bool enabled) {
+        collider.enabled = enabled;
     }
 }
