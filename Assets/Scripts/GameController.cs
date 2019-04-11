@@ -6,6 +6,8 @@ using Photon.Pun;
 
 public class GameController : MonoBehaviourPunCallbacks
 {
+    public static GameController Instance;
+
     [SerializeField] Vector3 playerSpawnPosition = new Vector3(0, 0, -10);
     [SerializeField] string roomName = "Test Room";
 
@@ -13,11 +15,15 @@ public class GameController : MonoBehaviourPunCallbacks
 
     GameObject offlinePlayerPrefab;
 
+    public List<Spawner> spawners = new List<Spawner>();
+
 
 
     #region UNITY CALLBACKS
 
     void Awake() {
+        Instance = this;
+
         offlinePlayerPrefab = (GameObject)Resources.Load("Blue Guy");
 
         // Adds this class as a callback target for PUN Networking
@@ -67,6 +73,10 @@ public class GameController : MonoBehaviourPunCallbacks
     override public void OnJoinedRoom() {
         Debug.Log("Connected to room! Spawning player...");
         SpawnNetworkPlayer();
+
+        foreach(Spawner spawner in spawners) {
+            PhotonNetwork.Instantiate(spawner.resourceName, spawner.transform.position, Quaternion.identity);
+        }
     }
 
     void SpawnNetworkPlayer() {

@@ -11,4 +11,14 @@ public class NetworkFighter : Fighter
         photonView = GetComponent<PhotonView>();
         base.Awake();
     }
+
+    public override void Hurt(float damage) {
+        photonView.RPC("ClientHurt", RpcTarget.All, damage);
+    }
+
+    [PunRPC]
+    public void ClientHurt(float damage) {
+        Debug.Log(gameObject + " IS HURT " + damage);
+        animator.SetTrigger("Hurt");
+    }
 }

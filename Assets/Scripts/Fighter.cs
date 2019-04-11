@@ -6,9 +6,10 @@ public class Fighter : Unit
 {
 
     [SerializeField] protected float health = 100;
+    protected Animator animator;
 
     protected void Awake() {
-        // Nothing yet
+        animator = GetComponent<Animator>();
     }
 
     public override void Hurt(float damage) {

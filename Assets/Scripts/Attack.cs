@@ -10,12 +10,12 @@ public class Attack : MonoBehaviour
     
     new Collider collider;
 
-    void Awake() {
+    protected void Awake() {
         collider = GetComponent<Collider>();
         collider.enabled = false;
     }
 
-    void OnTriggerEnter(Collider other) {
+    protected void OnTriggerEnter(Collider other) {
         Unit _unit = other.GetComponent<Unit>();
 
         Debug.Log("Hurting a Unit");
