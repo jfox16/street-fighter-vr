@@ -21,7 +21,7 @@ public class Destruction : MonoBehaviour
     {
         g = GameObject.Find("CarParts");
         g1 = GameObject.Find("Game Controller");
-        carHealth = 300.0f;
+        carHealth = 500.0f;
         s = g.gameObject.GetComponent<CarParts>();
         timer = g1.gameObject.GetComponent<Timer>();
         playerScore = 0;
@@ -38,7 +38,6 @@ public class Destruction : MonoBehaviour
     {
         if(carHealth <= 0.0f && !brokenAlready)
         {
-            //Debug.Log(s.getCarParts().Count);
             breakAllParts();
             brokenAlready = true;
         }
@@ -53,20 +52,19 @@ public class Destruction : MonoBehaviour
     {
         foreach(GameObject item in s.getCarParts().Values)
         {
-            if(item.GetComponent<CarPartsHealth>() != null)
+            item.GetComponent<CarPartsHealth>().setBroken(true);
+            if (item.GetComponent<Rigidbody>().isKinematic)
             {
-                item.GetComponent<CarPartsHealth>().setBroken(true);
-            }
-            if (item.GetComponent<Rigidbody>() == null)
-            {
-                Rigidbody t = item.gameObject.AddComponent<Rigidbody>();
+                Rigidbody t = item.gameObject.GetComponent<Rigidbody>();
+                t.isKinematic = false;
                 t.mass = 0.1f;
                 float randomDir = Random.Range(-1.0f, 1.0f);
                 t.AddForce((item.transform.forward + item.transform.up) * 3.0f * randomDir);
             }
         }
         timer.setCarDead(true);
-        playerScore += 500;
+        int victoryPoints = 150 + (timer.getSecondsLeft() * 2);
+        playerScore += victoryPoints;
     }
 
     public float getHealth()
