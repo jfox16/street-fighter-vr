@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5374f5241fce242da8588ac8e34193ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextName: 
+  nextName: Arena
 --- !u!65 &174173060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1234,6 +1234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303328428727255000, guid: 03a6d9b89c9f74c719d2fffdd5b63666,
+        type: 3}
+      propertyPath: nextName
+      value: Arena
       objectReference: {fileID: 0}
     - target: {fileID: 2868686808685275587, guid: 03a6d9b89c9f74c719d2fffdd5b63666,
         type: 3}
