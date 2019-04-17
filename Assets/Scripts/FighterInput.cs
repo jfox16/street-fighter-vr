@@ -15,8 +15,8 @@ public class FighterInput : MonoBehaviour
 
     [SerializeField] Animator _animator;
 
-    [SerializeField] GameObject lightPunchPrefab;
-    [SerializeField] GameObject HeavyPunchPrefab;
+    //[SerializeField] GameObject lightPunchPrefab;
+    //[SerializeField] GameObject HeavyPunchPrefab;
     [SerializeField] GameObject kickPrefab;
     [SerializeField] GameObject specialPrefab;
 
@@ -47,7 +47,7 @@ public class FighterInput : MonoBehaviour
             if (Input.GetKeyDown(LightPunch))
             {
                 _animator.SetTrigger("Light_Punch");
-                Instantiate(lightPunchPrefab, lightPunchTransform);
+               // Instantiate(lightPunchPrefab, lightPunchTransform);
             }
 
             if (Input.GetKeyDown(HeavyPunch))

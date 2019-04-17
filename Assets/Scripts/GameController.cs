@@ -14,7 +14,8 @@ public class GameController : MonoBehaviour
     void Start() {
         g = GameObject.Find("Player Selector");
         playerSelection = g.gameObject.GetComponent<PrefabSelection>();
-        playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Unity-Chan")];
+        PlayerPrefs.DeleteKey("CharacterSelection");
+        playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
         SpawnPlayer();
     }
 

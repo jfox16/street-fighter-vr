@@ -22,7 +22,7 @@ public class Fighter : Unit
     public static int numberOfProjectiles;
     public int cooldown;
     private float timestamp;
-    public GameObject healthBar;
+    //public GameObject healthBar;
     void Awake() {
         animator = GetComponent<Animator>();
         fpLook = GetComponent<FPLook>();
@@ -70,6 +70,6 @@ public class Fighter : Unit
     }
     public void  HealthBar(float h)
     {
-        healthBar.transform.localScale = new Vector3(h, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+        //healthBar.transform.localScale = new Vector3(h, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 }
