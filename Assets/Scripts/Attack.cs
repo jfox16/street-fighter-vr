@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    [SerializeField] float damage = 1;
+    public float damage = 1;
     [SerializeField] GameObject debugHitboxPrefab;
     [SerializeField] float dieTime;
     private int ownerID;
   
-    void Start() {
+    void  Start() {
         // Destroy(gameObject, 2f);
         // null ptr when dummy attacks
-        ownerID = gameObject.GetComponentInParent<Fighter>().gameObject.GetInstanceID();
-    }
-    private void Update()
-    {
-        
+        if (GetComponentInParent<Fighter>() != null)
+        {
+            ownerID = gameObject.GetComponentInParent<Fighter>().gameObject.GetInstanceID();
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("colliding" + Time.fixedTime);
-        //Debug.Log(other.gameObject);
         Unit _unit = other.gameObject.GetComponent<Unit>();
         // Creates a visual representation of the hitbox
         //GameObject dhp = Instantiate(debugHitboxPrefab, transform);

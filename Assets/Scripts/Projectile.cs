@@ -10,14 +10,16 @@ public class Projectile : Attack
     // Update is called once per frame
     private void Awake()
     {
-
+        Destroy(this.gameObject, 3f);
     }
     void Update()
     {
         // delete rigidbody on ball
         this.gameObject.transform.Translate(0, 0, speed * Time.deltaTime);
     }
-    private void OnDestroy()
+    private new void OnTriggerEnter(Collider other)
     {
+        base.OnTriggerEnter(other);
+        Destroy(this.gameObject);
     }
 }

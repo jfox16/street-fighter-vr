@@ -672,7 +672,6 @@ GameObject:
   - component: {fileID: 5898750511507801559}
   - component: {fileID: 5898750511507801563}
   - component: {fileID: 5898750511507801562}
-  - component: {fileID: 7547842177740792212}
   - component: {fileID: 3949570644278707251}
   - component: {fileID: 5744025071023416723}
   m_Layer: 10
@@ -791,20 +790,6 @@ MonoBehaviour:
   fpCameraAttachPoint: {fileID: 5898750510929761006}
   minimumVert: -45
   maximumVert: 45
---- !u!114 &7547842177740792212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5898750511507801556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3963877b18bca40c2b65e4cf0b2e760a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ballprefab: {fileID: 942323585990836030, guid: 6b573382422fb48d4aa9e29b262ffabd,
-    type: 3}
 --- !u!114 &3949570644278707251
 MonoBehaviour:
   m_ObjectHideFlags: 0

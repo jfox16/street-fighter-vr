@@ -71,7 +71,6 @@ public class FighterInput : MonoBehaviour
             }*/
             else if (Input.GetKeyDown(Block))
             {
-                Debug.Log("Blocoking");
                 _animator.SetBool("Block", true);
             }
             else if (Input.GetKeyUp(Block))
@@ -90,7 +89,25 @@ public class FighterInput : MonoBehaviour
             {
                 timestamp = Time.time + cooldown;
                 _animator.SetTrigger("Special");
-                Invoke("SpawnProjectile", 0.3f);
+
+                Camera _camera;
+                Ray _ray;
+                Vector3 pointOffset, endPoint;
+                GameObject controller = GameObject.Find("Game Controller");
+                GameController g = controller.GetComponent<GameController>();
+                _camera = g.getCamera();
+                GameObject _ball;
+                timestamp = Time.time + cooldown;
+                _animator.SetTrigger("Special");
+                {
+
+                    // check if the ray hit an object that is visible to the camera
+                    
+                        _ball = Instantiate(specialPrefab) as GameObject;
+                        _ball.transform.position = lightPunchTransform.position;
+                        _ball.transform.rotation = transform.rotation;
+
+                }
             }
         }
     }
