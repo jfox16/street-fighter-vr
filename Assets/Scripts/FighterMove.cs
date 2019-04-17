@@ -11,7 +11,7 @@ public class FighterMove : MonoBehaviour
     // inputVec is a unit vector containing input direction
     Vector3 inputVec = Vector3.zero; 
     // moveVec is the distance and direction that Fighter will move this frame.
-    Vector3 moveVec = Vector3.zero;
+    public  Vector3 moveVec = Vector3.zero;
 
     protected void Awake() {
         controller = GetComponent<CharacterController>();

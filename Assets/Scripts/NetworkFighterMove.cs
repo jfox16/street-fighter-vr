@@ -20,4 +20,17 @@ public class NetworkFighterMove : FighterMove
             Move();
         }
     }
+    
+    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            stream.SendNext(moveVec);
+        }
+        else
+        {
+            moveVec = (Vector3)stream.ReceiveNext();
+        }
+    }
+    
 }

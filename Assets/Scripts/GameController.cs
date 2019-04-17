@@ -73,9 +73,12 @@ public class GameController : MonoBehaviourPunCallbacks
     override public void OnJoinedRoom() {
         Debug.Log("Connected to room! Spawning player...");
         SpawnNetworkPlayer();
-
-        foreach(Spawner spawner in spawners) {
-            PhotonNetwork.Instantiate(spawner.resourceName, spawner.transform.position, Quaternion.identity);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            foreach (Spawner spawner in spawners)
+            {
+                PhotonNetwork.Instantiate(spawner.resourceName, spawner.transform.position, Quaternion.identity);
+            }
         }
     }
 
