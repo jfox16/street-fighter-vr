@@ -10,7 +10,7 @@ public class Projectile : Attack
     // Update is called once per frame
     private void Awake()
     {
-
+        Destroy(this.gameObject, 3f);
     }
     void Update()
     {
