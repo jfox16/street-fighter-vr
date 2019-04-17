@@ -15,7 +15,9 @@ public class Projectile : Attack
     {
         this.gameObject.transform.Translate(0, 0, speed * Time.deltaTime);
     }
-    private void OnDestroy()
+    private new void OnTriggerEnter(Collider other)
     {
+        base.OnTriggerEnter(other);
+        Destroy(this.gameObject);
     }
 }

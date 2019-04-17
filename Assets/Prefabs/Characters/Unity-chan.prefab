@@ -5232,7 +5232,7 @@ MonoBehaviour:
     type: 3}
   maxProjectiles: 3
   projectilePoint: {fileID: 9033437222606234604}
-  cooldown: 1
+  cooldown: 3
 --- !u!143 &6997074758515764105
 CharacterController:
   m_ObjectHideFlags: 0

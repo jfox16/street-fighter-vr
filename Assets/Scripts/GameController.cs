@@ -19,7 +19,6 @@ public class GameController : MonoBehaviour
     }
     public void SelectPlayer(GameObject prefab, Transform transform)
     {
-        Debug.Log(transform.position);
 
         ParticleSystem fireworks = Instantiate(sparkles, transform.position,new Quaternion(0,0,0,0));
         
