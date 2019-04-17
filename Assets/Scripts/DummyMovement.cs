@@ -35,7 +35,7 @@ public class DummyMovement : MonoBehaviour
                 cooldown = Time.time + 2.0f;
                 animator.SetTrigger("Kick");
                 Instantiate(kickPrefab, kickPointTransform);
-                Debug.Log(dist);
+                //Debug.Log(dist);
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ public class Fighter : Unit
     [SerializeField] GameObject punchPrefab;
     [SerializeField] GameObject kickPrefab;
     [SerializeField] GameObject projectilePrefab;
+
 
     public int maxProjectiles;
 
@@ -21,7 +22,7 @@ public class Fighter : Unit
     public static int numberOfProjectiles;
     public int cooldown;
     private float timestamp;
-
+    //public GameObject healthBar;
     void Awake() {
         animator = GetComponent<Animator>();
         fpLook = GetComponent<FPLook>();
@@ -31,7 +32,7 @@ public class Fighter : Unit
     }
 
     void Update() {
-
+        HealthBar(health / 100);
     }
     void Punch()
     {
@@ -50,7 +51,7 @@ public class Fighter : Unit
         {
             animator.SetTrigger("Hurt");
             health -= damage;
-            Debug.Log(health);
+
         }
         if (health <= 0) Die();
     }
@@ -66,5 +67,9 @@ public class Fighter : Unit
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Collided");
+    }
+    public void  HealthBar(float h)
+    {
+        //healthBar.transform.localScale = new Vector3(h, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 }

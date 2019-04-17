@@ -13,8 +13,8 @@ public class PrefabSelection : MonoBehaviour
     {
         Roster = new Dictionary<string, GameObject>
         {
-            { "Unity-Chan", UnityChan },
             { "Mecha", Mecha },
+            { "Unity-Chan", UnityChan },
             { "Fighter", Fighter }
         };
     }
@@ -23,5 +23,10 @@ public class PrefabSelection : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public Dictionary<string, GameObject> getRoster()
+    {
+        return Roster;
     }
 }

@@ -5209,6 +5209,12 @@ MonoBehaviour:
   health: 100
   punchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
     type: 3}
+  kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
+    type: 3}
+  projectilePrefab: {fileID: 0}
+  maxProjectiles: 0
+  projectilePoint: {fileID: 0}
+  cooldown: 0
 --- !u!1 &1572032875
 GameObject:
   m_ObjectHideFlags: 0
