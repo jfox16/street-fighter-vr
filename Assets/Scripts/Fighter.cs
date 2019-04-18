@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Fighter : Unit
 {
-    [SerializeField] float health = 100;
+    public float health = 100;
 
     [SerializeField] GameObject punchPrefab;
     [SerializeField] GameObject kickPrefab;
     [SerializeField] GameObject projectilePrefab;
-
+    [SerializeField] FlashScript flash;
 
     public int maxProjectiles;
 
@@ -22,54 +22,42 @@ public class Fighter : Unit
     public static int numberOfProjectiles;
     public int cooldown;
     private float timestamp;
-    //public GameObject healthBar;
     void Awake() {
         animator = GetComponent<Animator>();
         fpLook = GetComponent<FPLook>();
         punchPointTransform = transform.Find("Punch Point");
         kickPointTransform = transform.Find("Kick Point");
+        flash = GameObject.Find("Flash").GetComponent<FlashScript>();
         
-    }
-
-    void Update() {
-        HealthBar(health / 100);
-    }
-    void Punch()
-    {
-        Debug.Log("punched");
-        Instantiate(punchPrefab, punchPointTransform);
-        animator.SetTrigger("Punch");
-        animator.SetTrigger("Jab");
     }
     public override void Hurt(float damage) {
         if (animator.GetBool("Block"))
         {
             health -= damage * 0.5f;
-            Debug.Log(health);
         }
         else
         {
             animator.SetTrigger("Hurt");
             health -= damage;
-
+            flash.PlayerHit();
+        }
+        Debug.Log(health);
+        if (health < 0)
+        {
+            health = 0;
         }
         if (health <= 0) Die();
     }
     void Die() {
         animator.SetTrigger("Die");
     }
-   
-    public void removeProjectile()
+    public float getHealth()
     {
-        numberOfProjectiles--;
-        Debug.Log(numberOfProjectiles);
+        return health;
     }
-    private void OnCollisionEnter(Collision collision)
+    public void resetFighter()
     {
-        Debug.Log("Collided");
-    }
-    public void  HealthBar(float h)
-    {
-        //healthBar.transform.localScale = new Vector3(h, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+        health = 100;
+        animator.SetTrigger("Idle");
     }
 }

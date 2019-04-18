@@ -7,10 +7,12 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera mainCamera;
     //[SerializeField] GameObject playerPrefab;
     private GameObject playerPrefab;
+    [SerializeField] GameObject healthbar;
     [SerializeField] ParticleSystem sparkles;
     private PrefabSelection playerSelection;
     private GameObject g;
-
+    private Fighter fighter;
+        
     void Start() {
         g = GameObject.Find("Player Selector");
         playerSelection = g.gameObject.GetComponent<PrefabSelection>();
@@ -21,8 +23,12 @@ public class GameController : MonoBehaviour
 
     public void SpawnPlayer() {
         GameObject _player = Instantiate(playerPrefab, new Vector3( 0 , 0 , 0), new Quaternion(0,0,0,0));
+        Fighter fighter = _player.GetComponent<Fighter>();
         _player.transform.position = new Vector3(0, 0, -10);
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
+        healthbar.GetComponent<Bar>().setCamera(mainCamera);
+        healthbar.GetComponent<Bar>().setFighter(fighter);
+        fighter.resetFighter();
     }
     public void SelectPlayer(GameObject prefab, Transform transform)
     {
