@@ -5,7 +5,8 @@ using UnityEngine;
 public class Bar : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject Camera;
+    public Camera Camera;
+    public Fighter fighter;
     void Start()
     {
         
@@ -14,6 +15,21 @@ public class Bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // gameObject.transform = new Vector2()
+        //Debug.Log("health " + fighter.getHealth());
+        float health = fighter.getHealth() / 100;
+        //Debug.Log("health " + health);
+        // gameObject.transform = new Vector2()
+        GameObject greenHealth = transform.Find("Health").gameObject;
+        greenHealth.transform.localScale = new Vector3(health, greenHealth.transform.localScale.y, greenHealth.transform.localScale.z);
     }
+    public void setCamera(Camera c)
+    {
+        Camera = c;
+    }
+    public void setFighter(Fighter f)
+    {
+        fighter = f;
+    }
+
+
 }

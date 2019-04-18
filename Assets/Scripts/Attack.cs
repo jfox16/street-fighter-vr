@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float damage = 1;
+    public float damage = 20;
     [SerializeField] GameObject debugHitboxPrefab;
     [SerializeField] float dieTime;
     private int ownerID;
   
-    void  Start() {
+    void Awake() {
         // Destroy(gameObject, 2f);
         // null ptr when dummy attacks
         if (GetComponentInParent<Fighter>() != null)

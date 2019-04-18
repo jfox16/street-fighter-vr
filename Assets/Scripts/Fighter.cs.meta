@@ -3,7 +3,12 @@ guid: 592a030d5ae5cd94096cc9670de3118b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - punchPrefab: {instanceID: 0}
+  - kickPrefab: {instanceID: 0}
+  - projectilePrefab: {instanceID: 0}
+  - flash: {fileID: 3716558504145743228, guid: 20345cb0c15021b4dbd948a937597d4f, type: 3}
+  - projectilePoint: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

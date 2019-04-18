@@ -58,5 +58,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  debugHitboxPrefab: {fileID: 0}
+  debugHitboxPrefab: {fileID: 4965396825610069489, guid: 7b8ac89f34f35e4468441fcec0356ae2,
+    type: 3}
   dieTime: 0
