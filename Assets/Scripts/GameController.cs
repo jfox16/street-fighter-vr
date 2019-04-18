@@ -90,10 +90,10 @@ public class GameController : MonoBehaviourPunCallbacks
         be retrieved from the Assets/Resources folder. */
         GameObject player;
         if (PhotonNetwork.IsMasterClient) {
-            player = PhotonNetwork.Instantiate("Network Blue Guy", playerSpawnPosition, Quaternion.identity);
+            player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
         }
         else {
-            player = PhotonNetwork.Instantiate("Network Red Guy", playerSpawnPosition, Quaternion.identity);
+            player = PhotonNetwork.Instantiate("Network Red Guy", new Vector3(5, 0, -10), Quaternion.Euler(0, -90, 0));
         }
         Debug.Log("Player spawned!");
         // Attach main camera to player's as first person view
