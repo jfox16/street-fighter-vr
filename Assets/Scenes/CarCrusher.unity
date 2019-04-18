@@ -1033,7 +1033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ec5ea567c094f39a7ce3ab2aa058fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 125
+  health: 25
   points: 94
 --- !u!64 &531612547
 MeshCollider:
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ec5ea567c094f39a7ce3ab2aa058fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 125
+  health: 20
   points: 94
 --- !u!64 &1289707851
 MeshCollider:
