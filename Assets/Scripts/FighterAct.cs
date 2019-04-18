@@ -9,6 +9,7 @@ public class FighterAct : MonoBehaviour
     protected Fighter fighter;
 
     [SerializeField] Attack rightHandAttack;
+    [SerializeField] Attack rightFootAttack;
 
 
 
@@ -59,6 +60,14 @@ public class FighterAct : MonoBehaviour
 
     public void DisableRightHand() {
         rightHandAttack.SetEnabled(false);
+    }
+
+    public void EnableRightFoot() {
+        rightFootAttack.SetEnabled(true);
+    }
+
+    public void DisableRightFoot() {
+        rightFootAttack.SetEnabled(false);
     }
 
     #endregion

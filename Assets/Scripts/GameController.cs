@@ -10,8 +10,8 @@ public class GameController : MonoBehaviourPunCallbacks
 
     [SerializeField] Vector3 playerSpawnPosition = new Vector3(0, 0, -10);
     [SerializeField] string roomName = "Test Room";
-
     [SerializeField] GameObject spawnButtons;
+    [SerializeField] GameObject healthbar;
 
     GameObject offlinePlayerPrefab;
 
@@ -23,6 +23,7 @@ public class GameController : MonoBehaviourPunCallbacks
 
     void Awake() {
         Instance = this;
+        healthbar.SetActive(false);
 
         offlinePlayerPrefab = (GameObject)Resources.Load("Blue Guy");
 
@@ -77,7 +78,7 @@ public class GameController : MonoBehaviourPunCallbacks
         {
             foreach (Spawner spawner in spawners)
             {
-                PhotonNetwork.Instantiate(spawner.resourceName, spawner.transform.position, Quaternion.identity);
+                PhotonNetwork.Instantiate(spawner.resourceName, spawner.transform.position, spawner.transform.rotation);
             }
         }
     }
@@ -87,11 +88,20 @@ public class GameController : MonoBehaviourPunCallbacks
         This will properly initialize it on the network. Also, instead of using direct prefab
         reference, this method takes the name of the prefab as a string, and the prefab will 
         be retrieved from the Assets/Resources folder. */
-        GameObject player = PhotonNetwork.Instantiate("Network Blue Guy", playerSpawnPosition, Quaternion.identity);
+        GameObject player;
+        if (PhotonNetwork.IsMasterClient) {
+            player = PhotonNetwork.Instantiate("Network Blue Guy", playerSpawnPosition, Quaternion.identity);
+        }
+        else {
+            player = PhotonNetwork.Instantiate("Network Red Guy", playerSpawnPosition, Quaternion.identity);
+        }
         Debug.Log("Player spawned!");
         // Attach main camera to player's as first person view
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         player.GetComponent<FighterLook>().AttachCamera(mainCamera);
+        
+        healthbar.SetActive(true);
+        healthbar.GetComponent<Bar>().setFighter(player.GetComponent<Fighter>());
     }
 
 
@@ -106,6 +116,8 @@ public class GameController : MonoBehaviourPunCallbacks
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         player.GetComponent<FighterLook>().AttachCamera(mainCamera);
 
+        healthbar.SetActive(true);
+        healthbar.GetComponent<Bar>().setFighter(player.GetComponent<Fighter>());
         spawnButtons.SetActive(false);
     }
 

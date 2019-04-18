@@ -1,9 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class NetworkFighter : Fighter
+public class NetworkPunchingBag : Fighter
 {
     protected PhotonView photonView;
 
@@ -15,7 +15,6 @@ public class NetworkFighter : Fighter
     public override void Hurt(float damage) {
         if (photonView.IsMine) {
             photonView.RPC("ClientHurt", RpcTarget.All, damage);
-            ScreenFlash.PlayerHit();
         }
     }
 

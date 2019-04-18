@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fighter : Unit
 {
 
-    [SerializeField] protected float health = 100;
+    public float health = 100;
     protected Animator animator;
 
     protected void Awake() {
@@ -15,6 +15,7 @@ public class Fighter : Unit
     public override void Hurt(float damage) {
         health -= damage;
         if(health <= 0) Die();
+        ScreenFlash.PlayerHit();
     }
 
     protected void Die() {
