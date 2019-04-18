@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 0}
+  fighter: {fileID: 0}
 --- !u!1 &4455096841570644567
 GameObject:
   m_ObjectHideFlags: 0

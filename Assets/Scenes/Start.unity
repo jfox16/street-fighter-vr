@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3683291, g: 0.37410185, b: 0.34908095, a: 1}
+  m_IndirectSpecularColor: {r: 0.36832896, g: 0.3741018, b: 0.34908098, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -119,11 +119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1668173189}
     m_Modifications:
-    - target: {fileID: 4455096841541462767, guid: f68603b6912074c9da5a166d18c2d4dc,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -182,12 +177,12 @@ PrefabInstance:
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9
+      value: -500
       objectReference: {fileID: 0}
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 213
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
@@ -202,22 +197,22 @@ PrefabInstance:
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4455096841541462803, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
@@ -244,20 +239,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4455096841541462800, guid: f68603b6912074c9da5a166d18c2d4dc,
+    - target: {fileID: 4455096841541462767, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_Name
+      value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455096841541462767, guid: f68603b6912074c9da5a166d18c2d4dc,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4455096841541462801, guid: f68603b6912074c9da5a166d18c2d4dc,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4455096841541462766, guid: f68603b6912074c9da5a166d18c2d4dc,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4455096841570644566, guid: f68603b6912074c9da5a166d18c2d4dc,
         type: 3}
@@ -318,6 +308,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455096841541462800, guid: f68603b6912074c9da5a166d18c2d4dc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455096841541462801, guid: f68603b6912074c9da5a166d18c2d4dc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455096841541462766, guid: f68603b6912074c9da5a166d18c2d4dc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f68603b6912074c9da5a166d18c2d4dc, type: 3}
