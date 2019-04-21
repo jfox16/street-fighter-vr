@@ -62,7 +62,7 @@ public class CarPartsHealth : Unit
         {
             Hurt(5.0f);
             s.setHealth(s.getHealth() - 5.0f);
-            Debug.Log(s.getHealth());
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/CarMetal", this.gameObject.transform.position);
             //Debug.Log(health + " " + this.gameObject.ToString());
         }
     }

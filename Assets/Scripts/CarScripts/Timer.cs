@@ -7,20 +7,20 @@ public class Timer : MonoBehaviour
 {
     private float seconds, maxTime;
     public GameObject myText, WinOrLose, score, car, carParts;
+    private GameObject soundPlayer;
     private Text text;
-    private bool carDead;
+    private bool carDead, loserPlayed;
     private Destruction s;
-    private CarPartsHealth s1;
     Color trans, red;
     // Start is called before the first frame update
     void Start()
     {
-    
+        soundPlayer = GameObject.Find("SoundPlayer");
+
         s = car.gameObject.GetComponent<Destruction>();
-        s1 = carParts.GetComponent<CarPartsHealth>();
 
         seconds = 0;
-        maxTime = 180;
+        maxTime = 30;
         carDead = false;
 
         trans = new Color(0.0f, 0.0f, 1.0f, 0.0f);
@@ -43,7 +43,11 @@ public class Timer : MonoBehaviour
             int playerScore = s.getScore();
             score.GetComponent<Text>().text = "Player Score: " + playerScore.ToString();
             s.enabled = false;
-            s1.enabled = false;
+            if (!loserPlayed)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/Loser", soundPlayer.transform.position);
+                loserPlayed = true;
+            }
         }
         myText.GetComponent<Text>().text = ((int)(maxTime - seconds)).ToString();
     }

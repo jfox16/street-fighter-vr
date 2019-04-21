@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -16,9 +17,9 @@ public class GameController : MonoBehaviour
     void Start() {
         g = GameObject.Find("Player Selector");
         playerSelection = g.gameObject.GetComponent<PrefabSelection>();
-        PlayerPrefs.DeleteKey("CharacterSelection");
         playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
         SpawnPlayer();
+        playSound(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void SpawnPlayer() {
@@ -50,5 +51,21 @@ public class GameController : MonoBehaviour
     public Camera getCamera()
     {
         return mainCamera;
+    }
+
+    private void playSound(int sceneIndex)
+    {
+        if(sceneIndex == 2)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/RoundOne", this.gameObject.transform.position);
+        }
+        else if (sceneIndex == 3)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/RoundTwo", this.gameObject.transform.position);
+        }
+        else if (sceneIndex == 4)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/RoundFinal", this.gameObject.transform.position);
+        }
     }
 }
