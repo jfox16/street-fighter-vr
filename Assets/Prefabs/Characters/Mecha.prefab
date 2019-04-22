@@ -1150,6 +1150,7 @@ MonoBehaviour:
     type: 3}
   projectilePrefab: {fileID: 942323585990836030, guid: 6b573382422fb48d4aa9e29b262ffabd,
     type: 3}
+  flash: {fileID: 0}
   maxProjectiles: 0
   projectilePoint: {fileID: 2405833531104785312}
   cooldown: 0
@@ -1197,8 +1198,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 862671727}
-  lightPunchPrefab: {fileID: 0}
-  HeavyPunchPrefab: {fileID: 0}
   kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
     type: 3}
   specialPrefab: {fileID: 2405833531104785312}
@@ -2903,7 +2902,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  debugHitboxPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
+    type: 3}
   dieTime: 0
 --- !u!1 &2405833531104785312
 GameObject:
@@ -2994,7 +2994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  debugHitboxPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
+    type: 3}
   dieTime: 0
 --- !u!1 &6448568871122850565
 GameObject:
@@ -3055,7 +3056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  debugHitboxPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
+    type: 3}
   dieTime: 0
 --- !u!1 &6479161994433136838
 GameObject:
@@ -3116,7 +3118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  debugHitboxPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
+    type: 3}
   dieTime: 0
 --- !u!1 &7212064245090964688
 GameObject:
