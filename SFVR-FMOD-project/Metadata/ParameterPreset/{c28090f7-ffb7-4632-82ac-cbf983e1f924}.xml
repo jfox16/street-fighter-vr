@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{c28090f7-ffb7-4632-82ac-cbf983e1f924}">
+        <property name="name">
+            <value>jab</value>
+        </property>
+        <relationship name="folder">
+            <destination>{31b938ad-4b7c-4c68-ba5c-fe278b71ad37}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{ca6b8ea4-41dd-46c9-b3d6-a7012422d67d}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{ca6b8ea4-41dd-46c9-b3d6-a7012422d67d}">
+        <property name="maximum">
+            <value>2</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
