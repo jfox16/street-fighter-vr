@@ -5,8 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public float damage = 20;
-    //[SerializeField] GameObject debugHitboxPrefab;
-    [SerializeField] GameObject sparkPrefab;
+    [SerializeField] GameObject debugHitboxPrefab;
     [SerializeField] float dieTime;
     private int ownerID;
   
@@ -28,14 +27,8 @@ public class Attack : MonoBehaviour
         //Debug.Log("Hurt " + other.gameObject.ToString() + " for " + damage + " damage!");
         if (_unit != null && _unit.gameObject.GetInstanceID() != ownerID)
             {
-                // fix a bug
-                if(Time.timeSinceLevelLoad > 2)
-                {
-                    Instantiate(sparkPrefab, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), new Quaternion(0, 0, 0, 0));
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", gameObject.GetComponentInParent<Fighter>().gameObject.transform.position);
-                    _unit.Hurt(damage);
-                    gameObject.GetComponent<Collider>().enabled = false;
-                }
+                _unit.Hurt(damage);
+                gameObject.GetComponent<Collider>().enabled = false;
             }
     }
 }

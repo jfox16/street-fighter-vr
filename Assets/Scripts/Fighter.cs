@@ -15,7 +15,6 @@ public class Fighter : Unit
 
     Animator animator;
     FPLook fpLook;
-
     Transform punchPointTransform;
     Transform kickPointTransform;
     Transform projectilePointTransform;
@@ -26,7 +25,6 @@ public class Fighter : Unit
     void Awake() {
         animator = GetComponent<Animator>();
         fpLook = GetComponent<FPLook>();
-
         punchPointTransform = transform.Find("Punch Point");
         kickPointTransform = transform.Find("Kick Point");
         flash = GameObject.Find("Flash").GetComponent<FlashScript>();

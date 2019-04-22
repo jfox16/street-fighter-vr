@@ -7,8 +7,8 @@ public class Destruction : MonoBehaviour
 {
     private int playerScore;
     private float carHealth;
-    private GameObject g, g1, soundPlayer;
-    public GameObject scoreText, WinOrLose, cheer;
+    private GameObject g, g1;
+    public GameObject scoreText, WinOrLose;
     private Text text;
     private CarParts s;
     private Timer timer;
@@ -21,8 +21,7 @@ public class Destruction : MonoBehaviour
     {
         g = GameObject.Find("CarParts");
         g1 = GameObject.Find("Game Controller");
-        soundPlayer = GameObject.Find("SoundPlayer");
-        carHealth = 30.0f;
+        carHealth = 500.0f;
         s = g.gameObject.GetComponent<CarParts>();
         timer = g1.gameObject.GetComponent<Timer>();
         playerScore = 0;
@@ -66,8 +65,6 @@ public class Destruction : MonoBehaviour
         timer.setCarDead(true);
         int victoryPoints = 150 + (timer.getSecondsLeft() * 2);
         playerScore += victoryPoints;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/Winner", soundPlayer.transform.position);
-        cheer.SetActive(true);
     }
 
     public float getHealth()

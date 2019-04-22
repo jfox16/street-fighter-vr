@@ -8397,7 +8397,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
-  healthbar: {fileID: 0}
   sparkles: {fileID: 378159788545362333, guid: bdea04fdc98a7bd4896b6d3cde2a9a17, type: 3}
 --- !u!1 &7219899273561869228
 GameObject:
