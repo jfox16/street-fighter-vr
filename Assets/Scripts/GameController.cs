@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
+    [SerializeField] Camera miniMapCamera;
     //[SerializeField] GameObject playerPrefab;
     private GameObject playerPrefab;
     [SerializeField] GameObject healthbar;
@@ -29,6 +30,8 @@ public class GameController : MonoBehaviour
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
         healthbar.GetComponent<Bar>().setCamera(mainCamera);
         healthbar.GetComponent<Bar>().setFighter(fighter);
+        miniMapCamera.GetComponent<Minimap>().setFighter(fighter);
+
         fighter.resetFighter();
     }
     public void SelectPlayer(GameObject prefab, Transform transform)
@@ -38,6 +41,7 @@ public class GameController : MonoBehaviour
         
         GameObject _player = Instantiate(prefab, transform.position, transform.rotation);
         FPLook fplook = _player.GetComponent<FPLook>();
+        Minimap minimap = _player.GetComponent<Minimap>();
         Debug.Log(fplook);
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
     }
