@@ -10,10 +10,12 @@ public class GameController : MonoBehaviour
     //[SerializeField] GameObject playerPrefab;
     private GameObject playerPrefab;
     [SerializeField] GameObject healthbar;
+    [SerializeField] GameObject healthbartop;
     [SerializeField] ParticleSystem sparkles;
     private PrefabSelection playerSelection;
     private GameObject g;
     private Fighter fighter;
+    [SerializeField] GameObject Sphere;
         
     void Start() {
         g = GameObject.Find("Player Selector");
@@ -31,7 +33,8 @@ public class GameController : MonoBehaviour
         healthbar.GetComponent<Bar>().setCamera(mainCamera);
         healthbar.GetComponent<Bar>().setFighter(fighter);
         miniMapCamera.GetComponent<Minimap>().setFighter(fighter);
-
+        Sphere.GetComponent<Sphere>().setFighter(fighter);
+        healthbartop.GetComponent<healthbar>().setFighter(fighter);
         fighter.resetFighter();
     }
     public void SelectPlayer(GameObject prefab, Transform transform)
