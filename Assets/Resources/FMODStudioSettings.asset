@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: SFVR-FMOD-project/SFVR-FMOD-project.fspro
-  SourceProjectPathUnformatted: SFVR-FMOD-project/SFVR-FMOD-project.fspro
-  SourceBankPathUnformatted: SFVR-FMOD-project/Build
+  sourceProjectPath: SFVR-FMOD-project\SFVR-FMOD-project.fspro
+  SourceProjectPathUnformatted: SFVR-FMOD-project\SFVR-FMOD-project.fspro
+  SourceBankPathUnformatted: SFVR-FMOD-project\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

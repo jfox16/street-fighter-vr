@@ -8,7 +8,7 @@ public class Destruction : MonoBehaviour
     private int playerScore;
     private float carHealth;
     private GameObject g, g1, soundPlayer;
-    public GameObject scoreText, WinOrLose, cheer;
+    public GameObject scoreText, WinOrLose, cheer, explosion, smoke;
     private Text text;
     private CarParts s;
     private Timer timer;
@@ -66,6 +66,8 @@ public class Destruction : MonoBehaviour
         timer.setCarDead(true);
         int victoryPoints = 150 + (timer.getSecondsLeft() * 2);
         playerScore += victoryPoints;
+        Instantiate(explosion, this.transform.position + new Vector3(0,2,0), new Quaternion(0, 0, 0, 0));
+        StartCoroutine(SpawnSmoke());
         FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/Winner", soundPlayer.transform.position);
         cheer.SetActive(true);
     }
@@ -88,6 +90,12 @@ public class Destruction : MonoBehaviour
     public void setScore(int score)
     {
         this.playerScore = score;
+    }
+
+    IEnumerator SpawnSmoke()
+    {
+        yield return new WaitForSeconds(2);
+        smoke.SetActive(true);
     }
 
 
