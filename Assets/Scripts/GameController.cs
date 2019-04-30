@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
+using Photon.Realtime;
+using System.Linq;
 
-public class GameController : MonoBehaviourPunCallbacks
+public class GameController : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
     public static GameController Instance;
 
@@ -13,24 +15,48 @@ public class GameController : MonoBehaviourPunCallbacks
     [SerializeField] GameObject spawnButtons;
     [SerializeField] GameObject healthbar;
 
+
     GameObject offlinePlayerPrefab;
 
     public List<Spawner> spawners = new List<Spawner>();
-
+    public int currentScene;
+    public int room;
 
 
     #region UNITY CALLBACKS
 
     void Awake() {
-        Instance = this;
+        if (GameController.Instance == null)
+        {
+            Instance = this;
+        }
+        else if(GameController.Instance != null)
+        {
+            Destroy(GameController.Instance.gameObject);
+            GameController.Instance = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
+
         healthbar.SetActive(false);
 
         offlinePlayerPrefab = (GameObject)Resources.Load("Blue Guy");
 
-        // Adds this class as a callback target for PUN Networking
+         //Adds this class as a callback target for PUN Networking
         PhotonNetwork.NetworkingClient.AddCallbackTarget(this);
         // Sets the app's Id for PUN Networking
         PhotonNetwork.NetworkingClient.AppId = PhotonNetwork.PhotonServerSettings.AppSettings.AppIdRealtime;
+    }
+    void Start()
+    {
+        
+        SpawnNetworkPlayer();
+        if (PhotonNetwork.IsMasterClient)
+        {
+            foreach (Spawner spawner in spawners)
+            {
+                PhotonNetwork.Instantiate(spawner.resourceName, spawner.transform.position, spawner.transform.rotation);
+            }
+        }
     }
 
     void Update() {
@@ -46,20 +72,6 @@ public class GameController : MonoBehaviourPunCallbacks
 
     #endregion
 
-
-
-    #region PUN CALLBACKS
-
-    void ConnectToServer() {
-        Debug.Log("Connecting to server...");
-        // Connects to server, automatically choosing the one with lowest ping
-        PhotonNetwork.ConnectToBestCloudServer();
-    }
-
-    #endregion
-
-
-
     override public void OnConnectedToMaster() {
         Debug.Log("Connected to server! Joining or creating room " + roomName + "...");
         /* Joins a room named roomName, or creates one if it doesn't exist.
@@ -71,16 +83,35 @@ public class GameController : MonoBehaviourPunCallbacks
         );
     }
 
+    void OnSceneFinishLoading(Scene scene, LoadSceneMode mode)
+    {
+        currentScene = scene.buildIndex;
+
+    }
+
+    public override void OnEnable()
+    {
+        base.OnEnable();
+       // PhotonNetwork.RemoveCallbackTarget(this);
+        SceneManager.sceneLoaded += OnSceneFinishLoading;
+    }
+
+
+    public override void OnDisable()
+    {
+        base.OnDisable();
+      //  PhotonNetwork.RemoveCallbackTarget(this);
+        SceneManager.sceneLoaded -= OnSceneFinishLoading;
+
+    }
+
     override public void OnJoinedRoom() {
+        base.OnJoinedRoom();
         Debug.Log("Connected to room! Spawning player...");
-        SpawnNetworkPlayer();
-        if (PhotonNetwork.IsMasterClient)
-        {
-            foreach (Spawner spawner in spawners)
-            {
-                PhotonNetwork.Instantiate(spawner.resourceName, spawner.transform.position, spawner.transform.rotation);
-            }
-        }
+          
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+        StartGame();
     }
 
     void SpawnNetworkPlayer() {
@@ -104,6 +135,11 @@ public class GameController : MonoBehaviourPunCallbacks
         healthbar.GetComponent<Bar>().setFighter(player.GetComponent<Fighter>());
     }
 
+    void StartGame()
+    {
+        if (PhotonNetwork.IsMasterClient)
+            PhotonNetwork.LoadLevel(1);
+    }
 
 
     #region PUBLIC METHODS
@@ -122,7 +158,6 @@ public class GameController : MonoBehaviourPunCallbacks
     }
 
     public void ConnectAndSpawnNetworkPlayer() {
-        ConnectToServer();
         spawnButtons.SetActive(false);
     }
 
