@@ -67,6 +67,6 @@ public class PhotonLobby : GameController
     {
         cancelButton.SetActive(false);
         button.SetActive(true);
-        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LeaveRoom();  // leaves room
     }
 }
