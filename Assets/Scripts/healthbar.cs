@@ -14,6 +14,7 @@ public class healthbar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (fighter == null) return;
         gameObject.transform.position = new Vector3(fighter.transform.position.x, fighter.transform.position.y+2, fighter.transform.position.z);
         //Debug.Log(gameObject.transform.position);
 

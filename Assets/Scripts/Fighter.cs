@@ -29,7 +29,6 @@ public class Fighter : Unit
 
         punchPointTransform = transform.Find("Punch Point");
         kickPointTransform = transform.Find("Kick Point");
-        flash = GameObject.Find("Flash").GetComponent<FlashScript>();
         
     }
     public override void Hurt(float damage) {
@@ -41,7 +40,6 @@ public class Fighter : Unit
         {
             animator.SetTrigger("Hurt");
             health -= damage;
-            flash.PlayerHit();
         }
         Debug.Log(health);
         if (health < 0)

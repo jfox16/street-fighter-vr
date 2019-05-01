@@ -42,6 +42,10 @@ public class FighterInput : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        if (VRInputHandler.GetInput("Punch Forward")) {
+            Debug.Log("Reading a punch!");
+            _animator.SetTrigger("Light_Punch");
+        }
         if (!_animator.GetBool("isAttacking"))
         {
             if (Input.GetKeyDown(LightPunch))

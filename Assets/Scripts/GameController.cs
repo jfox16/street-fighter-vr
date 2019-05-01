@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    GameController Instance;
+    public static GameObject clientPlayer;
+
     [SerializeField] Camera mainCamera;
     [SerializeField] Camera miniMapCamera;
-    //[SerializeField] GameObject playerPrefab;
     private GameObject playerPrefab;
     [SerializeField] GameObject healthbar;
     [SerializeField] GameObject healthbartop;
@@ -16,6 +18,10 @@ public class GameController : MonoBehaviour
     private GameObject g;
     private Fighter fighter;
     [SerializeField] GameObject Sphere;
+
+    void Awake() {
+        Instance = this;
+    }
         
     void Start() {
         g = GameObject.Find("Player Selector");
@@ -27,14 +33,15 @@ public class GameController : MonoBehaviour
 
     public void SpawnPlayer() {
         GameObject _player = Instantiate(playerPrefab, new Vector3( 0 , 0 , 0), new Quaternion(0,0,0,0));
+        clientPlayer = _player;
         Fighter fighter = _player.GetComponent<Fighter>();
         _player.transform.position = new Vector3(0, 0, -10);
-        _player.GetComponent<FPLook>().AttachCamera(mainCamera);
-        healthbar.GetComponent<Bar>().setCamera(mainCamera);
-        healthbar.GetComponent<Bar>().setFighter(fighter);
-        miniMapCamera.GetComponent<Minimap>().setFighter(fighter);
-        Sphere.GetComponent<Sphere>().setFighter(fighter);
-        healthbartop.GetComponent<healthbar>().setFighter(fighter);
+        // // _player.GetComponent<FPLook>().AttachCamera(mainCamera);
+        // healthbar.GetComponent<Bar>().setCamera(mainCamera);
+        // healthbar.GetComponent<Bar>().setFighter(fighter);
+        // miniMapCamera.GetComponent<Minimap>().setFighter(fighter);
+        // Sphere.GetComponent<Sphere>().setFighter(fighter);
+        // healthbartop.GetComponent<healthbar>().setFighter(fighter);
         fighter.resetFighter();
     }
     public void SelectPlayer(GameObject prefab, Transform transform)
