@@ -789,6 +789,9 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 1
     Name: Kick
+  - Type: 9
+    SynchronizeType: 0
+    Name: Hurt
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0

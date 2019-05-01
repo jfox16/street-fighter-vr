@@ -642,6 +642,7 @@ GameObject:
   - component: {fileID: 2981091971613038420}
   - component: {fileID: 5898750511507801563}
   - component: {fileID: 5898750511507801562}
+  - component: {fileID: 7524407524462930628}
   m_Layer: 9
   m_Name: Blue Guy
   m_TagString: Untagged
@@ -730,6 +731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightHandAttack: {fileID: 1010552171757669725}
+  rightFootAttack: {fileID: 0}
 --- !u!114 &5898750511507801563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,6 +745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  moveVec: {x: 0, y: 0, z: 0}
 --- !u!114 &5898750511507801562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,6 +762,25 @@ MonoBehaviour:
   sensitivityVert: 9
   minimumVert: -45
   maximumVert: 45
+--- !u!114 &7524407524462930628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898750511507801556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9290674bf374b48a2f54b57682a4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 0, y: 0, z: -10}
+  roomName: Test Room
+  spawnButtons: {fileID: 0}
+  healthbar: {fileID: 0}
+  spawners: []
+  currentScene: 0
+  room: 0
 --- !u!1 &5898750511539505607
 GameObject:
   m_ObjectHideFlags: 0

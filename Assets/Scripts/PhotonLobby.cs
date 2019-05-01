@@ -27,15 +27,12 @@ public class PhotonLobby : GameController
     {
         print("Player has been connected to photon master server");
         PhotonNetwork.AutomaticallySyncScene = true;
-        button.SetActive(true);
 
     }
 
     public void OnButtonClick()
     {
-        button.SetActive(false);
-        cancelButton.SetActive(true);
-        PhotonNetwork.JoinRandomRoom();
+        CreateRoom();
 
     }
     public override void OnJoinRandomFailed(short returnCode, string message)
@@ -49,7 +46,7 @@ public class PhotonLobby : GameController
     {
         int randomRoomName = Random.Range(0, 10000);
         RoomOptions roomOPs = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = 2 };
-        PhotonNetwork.CreateRoom("Test Room", roomOPs);
+        PhotonNetwork.CreateRoom("Test Room" + 99999, roomOPs);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -62,7 +59,14 @@ public class PhotonLobby : GameController
     {
         
     }
-
+    public void OnClickCharacterPick(int whichCharacter)
+    {
+        if (PlayerInfo.PI != null)
+        {
+            PlayerInfo.PI.selectedCharacter = whichCharacter;
+            PlayerPrefs.SetInt("My Character", whichCharacter);
+        }
+    }
     public void OnCancelButtonClick()
     {
         cancelButton.SetActive(false);

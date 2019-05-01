@@ -14,6 +14,7 @@ public class GameController : MonoBehaviourPunCallbacks, IInRoomCallbacks
     [SerializeField] string roomName = "Test Room";
     [SerializeField] GameObject spawnButtons;
     [SerializeField] GameObject healthbar;
+    private PhotonView photon;
 
 
     GameObject offlinePlayerPrefab;
@@ -21,6 +22,7 @@ public class GameController : MonoBehaviourPunCallbacks, IInRoomCallbacks
     public List<Spawner> spawners = new List<Spawner>();
     public int currentScene;
     public int room;
+    private int index;
 
 
     #region UNITY CALLBACKS
@@ -30,10 +32,13 @@ public class GameController : MonoBehaviourPunCallbacks, IInRoomCallbacks
         {
             Instance = this;
         }
-        else if(GameController.Instance != null)
+        else 
         {
-            Destroy(GameController.Instance.gameObject);
-            GameController.Instance = this;
+            if ((GameController.Instance != null))
+            {
+                Destroy(GameController.Instance.gameObject);
+                GameController.Instance = this;
+            }
         }
         DontDestroyOnLoad(this.gameObject);
 
@@ -58,6 +63,7 @@ public class GameController : MonoBehaviourPunCallbacks, IInRoomCallbacks
             }
         }
     }
+
 
     void Update() {
         // Unlock cursor when Cancel is pressed
@@ -111,21 +117,24 @@ public class GameController : MonoBehaviourPunCallbacks, IInRoomCallbacks
           
         if (!PhotonNetwork.IsMasterClient)
             return;
-        StartGame();
+       StartGame();
     }
 
-    void SpawnNetworkPlayer() {
+    public void SpawnNetworkPlayer() {
         /* When instantiating an object on the network, use PhotonNetwork.Instantiate instead.
         This will properly initialize it on the network. Also, instead of using direct prefab
         reference, this method takes the name of the prefab as a string, and the prefab will 
         be retrieved from the Assets/Resources folder. */
         GameObject player;
-        if (PhotonNetwork.IsMasterClient) {
-            player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
-        }
-        else {
+
+        if (PlayerInfo.PI.selectedCharacter == 0)
             player = PhotonNetwork.Instantiate("Network Red Guy", new Vector3(5, 0, -10), Quaternion.Euler(0, -90, 0));
-        }
+
+        else if (PlayerInfo.PI.selectedCharacter == 1)
+            player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
+        else
+            player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
+        
         Debug.Log("Player spawned!");
         // Attach main camera to player's as first person view
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
