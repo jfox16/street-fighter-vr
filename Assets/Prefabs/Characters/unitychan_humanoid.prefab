@@ -898,7 +898,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551310717093461546}
-  m_LocalRotation: {x: 0.5562991, y: 0.41471618, z: 0.11796325, w: 0.71037066}
+  m_LocalRotation: {x: 0.55629915, y: 0.41471618, z: 0.117963254, w: 0.71037066}
   m_LocalPosition: {x: -0.08505328, y: -1.6764368e-16, z: 1.1990408e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1189,7 +1189,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551310717093461558}
-  m_LocalRotation: {x: 0.0027491862, y: -0.061828945, z: 0.004609379, w: 0.9980723}
+  m_LocalRotation: {x: 0.0027491865, y: -0.061828945, z: 0.0046093795, w: 0.9980723}
   m_LocalPosition: {x: -0.016096681, y: 0.000118210985, z: -0.00045832127}
   m_LocalScale: {x: 1.0000032, y: 1.0000025, z: 1.000002}
   m_Children:
@@ -6725,18 +6725,12 @@ Animator:
   m_GameObject: {fileID: 551310717093462008}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
-  m_Controller: {fileID: 22100000, guid: 6d9a5127ac53f7347b0fbf6ad3439547, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7a1a14f6f92b1f34e848ef74d030a30b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightFoot'\n\tTransform
-    'Character1_LeftFoot'\n\tTransform 'Character1_RightUpLeg'\n\tTransform 'Character1_LeftUpLeg'\n\tTransform
-    'Character1_RightShoulder'\n\tTransform 'Character1_LeftLeg'\n\tTransform 'Character1_LeftArm'\n\tTransform
-    'Character1_Neck'\n\tTransform 'Character1_RightLeg'\n\tand more ...\n\tFrom animation
-    clip 'HeavyP_2'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -6789,7 +6783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 8923596875710792062}
-  moveSpeed: 3
+  moveSpeed: 4
 --- !u!143 &8923596875710792062
 CharacterController:
   m_ObjectHideFlags: 0

@@ -21,7 +21,8 @@ public class GameController : MonoBehaviour
     void Start() {
         g = GameObject.Find("Player Selector");
         playerSelection = g.gameObject.GetComponent<PrefabSelection>();
-        //playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
+        // gives me bug
+        playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
         Debug.Log(playerPrefab);
         if(playerPrefab == null)
         {
