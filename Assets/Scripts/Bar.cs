@@ -15,6 +15,7 @@ public class Bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (fighter == null) return;
         //Debug.Log("health " + fighter.getHealth());
         float health = fighter.getHealth() / 100;
         //Debug.Log("health " + health);
