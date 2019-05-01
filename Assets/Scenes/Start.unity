@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.36832896, g: 0.3741018, b: 0.34908098, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.36832973, g: 0.37410218, b: 0.3490813, a: 1}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1223,6 +1227,12 @@ PrefabInstance:
       propertyPath: miniMapCamera
       value: 
       objectReference: {fileID: 1027672394}
+    - target: {fileID: 7219899273550653979, guid: d7a526efd7a334a0395728577278ba70,
+        type: 3}
+      propertyPath: defaultPlayer
+      value: 
+      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
+        type: 3}
     - target: {fileID: 3886235345921041400, guid: d7a526efd7a334a0395728577278ba70,
         type: 3}
       propertyPath: m_IsActive
@@ -1248,11 +1258,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 7219899271869495526, guid: d7a526efd7a334a0395728577278ba70,
         type: 3}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 7219899272017559765, guid: d7a526efd7a334a0395728577278ba70,
+        type: 3}
+      propertyPath: fighterPrefab
+      value: 
+      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
+        type: 3}
+    - target: {fileID: 7219899272017559765, guid: d7a526efd7a334a0395728577278ba70,
+        type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
+        type: 3}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a526efd7a334a0395728577278ba70, type: 3}
 --- !u!1 &1210440390

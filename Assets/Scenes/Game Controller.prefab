@@ -6832,10 +6832,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f335e444d732cad44a9d0566675a47b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fighterPrefab: {fileID: 1526373210, guid: 1afb84105992dc4489402680af73eeda, type: 3}
+  fighterPrefab: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
+    type: 3}
   controller: {fileID: 7219899273550653979}
   playerSelector: {fileID: 7219899272365774701}
-  test: {fileID: 1526373210, guid: 1afb84105992dc4489402680af73eeda, type: 3}
+  test: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0, type: 3}
   charName: Unity-Chan
 --- !u!1 &7219899273027973214
 GameObject:
@@ -8400,6 +8401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   miniMapCamera: {fileID: 0}
+  defaultPlayer: {fileID: 0}
   healthbar: {fileID: 0}
   healthbartop: {fileID: 7916789617823804010}
   sparkles: {fileID: 378159788545362333, guid: bdea04fdc98a7bd4896b6d3cde2a9a17, type: 3}

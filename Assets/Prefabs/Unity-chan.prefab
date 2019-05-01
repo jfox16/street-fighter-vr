@@ -1725,7 +1725,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501074723}
-  m_LocalRotation: {x: 0.0027491862, y: -0.061828945, z: 0.004609379, w: 0.9980723}
+  m_LocalRotation: {x: 0.0027491865, y: -0.061828945, z: 0.0046093795, w: 0.9980723}
   m_LocalPosition: {x: -0.016096681, y: 0.000118210985, z: -0.00045832127}
   m_LocalScale: {x: 1.0000032, y: 1.0000025, z: 1.000002}
   m_Children:
@@ -5137,7 +5137,7 @@ Animator:
   m_GameObject: {fileID: 1526373210}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a7ad49df78a89c94da215784cfb987ba, type: 3}
-  m_Controller: {fileID: 9100000, guid: 53383c83dfcb60e49ae25d068c254028, type: 2}
+  m_Controller: {fileID: 22100000, guid: 6d9a5127ac53f7347b0fbf6ad3439547, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5176,6 +5176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f37d0dfbb33aa4caccf6e440874876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
   moveSpeed: 10
 --- !u!114 &1526373212
 MonoBehaviour:
@@ -5207,12 +5208,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  punchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
-    type: 3}
-  kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
-    type: 3}
-  projectilePrefab: {fileID: 0}
-  maxProjectiles: 0
+  special: 0
+  specialCost: 10
+  fighterid: 0
+  damageModifier: 1
   projectilePoint: {fileID: 0}
   cooldown: 0
 --- !u!1 &1572032875

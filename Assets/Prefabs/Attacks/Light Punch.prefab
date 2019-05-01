@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  specialGain: 25
+  hitParticle: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
+    type: 3}
   debugHitboxPrefab: {fileID: 4965396825610069489, guid: 7b8ac89f34f35e4468441fcec0356ae2,
     type: 3}
   dieTime: 0.5

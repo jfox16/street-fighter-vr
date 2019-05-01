@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+<<<<<<< HEAD
   - {fileID: 114081987167627522}
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114088568028165770}
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   EditorEvents:
   - {fileID: 114480287559127852}
   - {fileID: 114230732082153766}
@@ -58,10 +63,17 @@ MonoBehaviour:
   - {fileID: 114910286395065312}
   - {fileID: 114146639052647406}
   MasterBanks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
   StringsBanks:
   - {fileID: 114081987167627522}
   stringsBankWriteTime: 636914749890000000
+=======
+  - {fileID: 114470852480680844}
+  StringsBanks:
+  - {fileID: 114088568028165770}
+  stringsBankWriteTime: 636922577529220851
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   cacheVersion: 3
 --- !u!114 &114009246512633484
 MonoBehaviour:
@@ -166,7 +178,11 @@ MonoBehaviour:
   Path: event:/SFX/Characters/Unity-chan/Footsteps
   guid: 8bcc856646fdb846b27676d141e990b3
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -272,7 +288,11 @@ MonoBehaviour:
   Path: event:/SFX/Characters/Cammy/Special
   guid: a25b48e552b68340a75d89b1e108bcc1
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -303,6 +323,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &114073561368827512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Alex Ha\Desktop\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636922619390887915
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3155232
+  Exists: 1
 --- !u!114 &114075881133014894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +381,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Ambience/CityAmb
   guid: 262cc4263cc4df4eb9647f9fb2691772
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -381,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: SFVR-FMOD-project\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636914743982684358
+  lastModified: 636922577529220851
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -445,7 +489,11 @@ MonoBehaviour:
   Path: event:/Music/Japan
   guid: bfdb5b488608644dad8430f40990b10c
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -491,7 +539,11 @@ MonoBehaviour:
   Path: event:/VO/Characters/Mecha/Quips
   guid: 775a35f319e8cb4b9286415c20b650ed
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -514,7 +566,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/SpecialMeterFull
   guid: d328ae3401deab4bb9650af017539d03
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -560,7 +616,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Fighting/Kick
   guid: f682ca7ed7dc74469d12436e9ca90216
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -637,6 +697,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1020
+--- !u!114 &114158926413124680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\almondjoys\Desktop\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636922577529470865
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3155232
+  Exists: 0
 --- !u!114 &114166681160754176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,7 +866,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Fighting/Jab
   guid: 0194b2ecdd612647809efcd1815d7be3
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -809,7 +893,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Ambience/JapanAmb
   guid: d7e1a4e70c5d034ca8a6d4d61af2e19d
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -901,7 +989,11 @@ MonoBehaviour:
   Path: event:/VO/Characters/Unity-chan/Quips
   guid: b6aa8dc8b080b54b860b8564d6a7cb52
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -947,7 +1039,11 @@ MonoBehaviour:
   Path: event:/SFX/UI-SFX/UI-select
   guid: 317f571429d05c4091487926072e09ff
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -993,7 +1089,11 @@ MonoBehaviour:
   Path: event:/SFX/UI-SFX/UI-cancel
   guid: 59822659bb37c742a145e4e8bf568aff
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1085,7 +1185,11 @@ MonoBehaviour:
   Path: event:/VO/Characters/Cammy/Grunts
   guid: 2b6bd1c4c664e54abaab6998581a7535
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1131,7 +1235,11 @@ MonoBehaviour:
   Path: event:/Music/MenuMusic
   guid: e3c2d92bf68f2c45aa54d34bf8150bf7
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1177,7 +1285,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Fighting/Punch
   guid: 16c82cc8e51da44abde4a19d17213591
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1399,7 +1511,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Fighting/PlayerFallToGround
   guid: 445778e588ba4746a9f0978cbfbfeb8c
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1407,6 +1523,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &114470852480680844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\almondjoys\Desktop\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636922577529470865
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3155232
+  Exists: 1
 --- !u!114 &114473677355599906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,7 +1581,11 @@ MonoBehaviour:
   Path: event:/VO/Announcer/Loser
   guid: 83650ea7c7873349b1166e7ce15f2675
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1468,7 +1608,11 @@ MonoBehaviour:
   Path: event:/VO/Announcer/RoundFinal
   guid: 009038efb0104141ab5ea861b9841319
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1560,7 +1704,11 @@ MonoBehaviour:
   Path: event:/SFX/Characters/Cammy/Footsteps
   guid: e98cbb8503cfbd498262a336cf51a64f
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1652,7 +1800,11 @@ MonoBehaviour:
   Path: event:/VO/Characters/Cammy/Quips
   guid: 65e95eb26838224e84e6da61bd9def60
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1928,7 +2080,11 @@ MonoBehaviour:
   Path: event:/SFX/Characters/Mecha/Special
   guid: af567acf810a1643becd9ae153da89d1
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1974,7 +2130,11 @@ MonoBehaviour:
   Path: event:/VO/Announcer/Winner
   guid: 5469b9025c06284fa9ad01ff55ce7f62
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2020,7 +2180,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Fighting/CarMetal
   guid: d037b0ddd2bd5e40936646c0125b9594
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2043,7 +2207,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Fighting/Block
   guid: dfa9a31ffa55d44f9636e7da5ca1358c
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2066,7 +2234,11 @@ MonoBehaviour:
   Path: event:/VO/Characters/Mecha/Grunts
   guid: 43c792fcbc134941b3f4c434464774d2
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2135,7 +2307,11 @@ MonoBehaviour:
   Path: event:/VO/Announcer/SelectCharacter
   guid: f0f741f861b12747ac1dbd7696eb7de9
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2204,7 +2380,11 @@ MonoBehaviour:
   Path: event:/VO/Announcer/RoundTwo
   guid: 141054fabd23b54687e2e36de1bd1fc4
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2227,7 +2407,11 @@ MonoBehaviour:
   Path: event:/VO/Announcer/RoundThree
   guid: e123a5f67b0b6d48a48779292aa9480e
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2273,7 +2457,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Fighting/ChargeSpecial
   guid: 027f22e407cd164884f4d62c8443f9f4
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2388,7 +2576,11 @@ MonoBehaviour:
   Path: event:/SFX/Characters/Mecha/Footsteps
   guid: 1f699a819f7a2740a53eff2718f2409b
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2434,7 +2626,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/TimeUp
   guid: 80a910d6440a6d42bd2700d4817df013
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2503,7 +2699,11 @@ MonoBehaviour:
   Path: event:/Music/Arena
   guid: 9297307d6c91cd4ea4567f9d28c18c83
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2526,7 +2726,11 @@ MonoBehaviour:
   Path: event:/VO/Characters/Unity-chan/Grunts
   guid: 4972773c8ff4b5489c4b617c6fa90faf
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2753,7 +2957,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/Ambience/ArenaAmb
   guid: f21ebaf7dff7ae42bde366df0f26a144
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -2845,7 +3053,11 @@ MonoBehaviour:
   Path: event:/Music/SelectCharacter
   guid: 3126c18f074e5c4cba70fc907b1c4548
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2868,7 +3080,11 @@ MonoBehaviour:
   Path: event:/SFX/Characters/Unity-chan/Special
   guid: 80649d67172a4c45b7c59c50d6c5c6fa
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2911,7 +3127,11 @@ MonoBehaviour:
   Path: event:/VO/Announcer/RoundOne
   guid: 9f1274959b306d43ba5d848c3517d93a
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2957,7 +3177,11 @@ MonoBehaviour:
   Path: event:/Music/BonusMusic
   guid: 4a42eee57cb62f4b868d791d83bed79f
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -2980,7 +3204,11 @@ MonoBehaviour:
   Path: event:/Music/City
   guid: cf9fabac88c9194fb4fae32cf9c65af3
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3003,7 +3231,11 @@ MonoBehaviour:
   Path: event:/VO/Announcer/KO
   guid: 34cc26e0f89b074ca801a972029bb4f7
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3095,7 +3327,11 @@ MonoBehaviour:
   Path: event:/SFX/Environment/VictoryCheering
   guid: 4143defdd75ad2448a7c281fd361816d
   Banks:
+<<<<<<< HEAD
   - {fileID: 114952742308270056}
+=======
+  - {fileID: 114470852480680844}
+>>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

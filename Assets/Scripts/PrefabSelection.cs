@@ -14,9 +14,11 @@ public class PrefabSelection : MonoBehaviour
         Roster = new Dictionary<string, GameObject>
         {
             { "Mecha", Mecha },
-            { "Unity-Chan", UnityChan },
+            { "unitychan_humanoid", UnityChan },
             { "Fighter", Fighter }
         };
+
+        PlayerPrefs.SetString("CharacterSelection", "Mecha");
     }
 
     // Update is called once per frame
