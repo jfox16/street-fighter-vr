@@ -16,7 +16,7 @@ public class Bar : MonoBehaviour
     void Update()
     {
         //Debug.Log("health " + fighter.getHealth());
-        float health = fighter.getHealth() / 100;
+        float health = fighter.health / 100;
         //Debug.Log("health " + health);
         // gameObject.transform = new Vector2()
         GameObject greenHealth = transform.Find("Health").gameObject;

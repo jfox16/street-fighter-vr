@@ -5,10 +5,12 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public float damage = 20;
+    public float specialGain = 25;
+    [SerializeField] GameObject hitParticle;
     [SerializeField] GameObject debugHitboxPrefab;
     [SerializeField] float dieTime;
     private int ownerID;
-  
+    
     void Awake() {
         // Destroy(gameObject, 2f);
         // null ptr when dummy attacks
@@ -25,10 +27,10 @@ public class Attack : MonoBehaviour
         //GameObject dhp = Instantiate(debugHitboxPrefab, transform);
         //dhp.transform.localScale = new Vector3(1, 1, 1) * radius;
         //Debug.Log("Hurt " + other.gameObject.ToString() + " for " + damage + " damage!");
-        if (_unit != null && _unit.gameObject.GetInstanceID() != ownerID)
-            {
-                _unit.Hurt(damage);
-                gameObject.GetComponent<Collider>().enabled = false;
-            }
+        if (_unit != null && _unit.gameObject.GetInstanceID() != ownerID){
+                    Instantiate(hitParticle, this.gameObject.transform.position,this.gameObject.transform.rotation);
+                    _unit.Hurt(damage);
+                    gameObject.GetComponent<Collider>().enabled = false;
+        }
     }
 }

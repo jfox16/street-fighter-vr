@@ -4,30 +4,16 @@ using UnityEngine;
 
 public class Fighter : Unit
 {
-    public float health = 100;
-
-    [SerializeField] GameObject punchPrefab;
-    [SerializeField] GameObject kickPrefab;
-    [SerializeField] GameObject projectilePrefab;
-    [SerializeField] FlashScript flash;
-
-    public int maxProjectiles;
+    public float health = 1000000;
+    public float special = 0;
+    public float specialCost = 10;
+    public int fighterid;
+    public float damageModifier = 1.0f;
 
     Animator animator;
-    FPLook fpLook;
-    Transform punchPointTransform;
-    Transform kickPointTransform;
-    Transform projectilePointTransform;
-    public GameObject projectilePoint;
-    public static int numberOfProjectiles;
-    public int cooldown;
-    private float timestamp;
     void Awake() {
         animator = GetComponent<Animator>();
-        fpLook = GetComponent<FPLook>();
-        punchPointTransform = transform.Find("Punch Point");
-        kickPointTransform = transform.Find("Kick Point");
-        flash = GameObject.Find("Flash").GetComponent<FlashScript>();
+        //flash = GameObject.Find("Flash").GetComponent<FlashScript>();
         
     }
     public override void Hurt(float damage) {
@@ -39,7 +25,7 @@ public class Fighter : Unit
         {
             animator.SetTrigger("Hurt");
             health -= damage;
-            flash.PlayerHit();
+         //   flash.PlayerHit();
         }
         Debug.Log(health);
         if (health < 0)
@@ -51,13 +37,20 @@ public class Fighter : Unit
     void Die() {
         animator.SetTrigger("Die");
     }
-    public float getHealth()
-    {
-        return health;
-    }
-    public void resetFighter()
+    public void ResetFighterHealth()
     {
         health = 100;
         animator.SetTrigger("Idle");
+    }
+    public void gainSpecial(float val)
+    {
+        special += val;
+        if(special > 100f)
+        {
+            special = 100f;
+        }else if ( special < 0)
+        {
+            special = 0;
+        }
     }
 }

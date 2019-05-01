@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
         healthbar.GetComponent<Bar>().setCamera(mainCamera);
         healthbar.GetComponent<Bar>().setFighter(fighter);
-        fighter.resetFighter();
+        fighter.ResetFighterHealth();
     }
     public void SelectPlayer(GameObject prefab, Transform transform)
     {

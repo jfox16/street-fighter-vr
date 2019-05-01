@@ -12,7 +12,6 @@ public class ColliderController : MonoBehaviour
     [SerializeField] Collider hurtBox;
     Animator _animator;
 
-
     void Awake()
     {
         rightArmCollider.enabled = false;

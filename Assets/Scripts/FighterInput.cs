@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FighterInput : MonoBehaviour
+public abstract class FighterInput : MonoBehaviour
 {
     // Start is called before the first frame update
     KeyCode LightPunch;
@@ -13,23 +13,12 @@ public class FighterInput : MonoBehaviour
     KeyCode Block;
     KeyCode Crouch;
 
-    [SerializeField] Animator _animator;
+    public Animator _animator;
+    protected Fighter _fighter;
 
-    //[SerializeField] GameObject lightPunchPrefab;
-    //[SerializeField] GameObject HeavyPunchPrefab;
-    [SerializeField] GameObject kickPrefab;
-    [SerializeField] GameObject specialPrefab;
-
-    [SerializeField] Transform lightPunchTransform;
-    [SerializeField] Transform HeavyPunchTransform;
-    [SerializeField] Transform SpecialTransform;
-
-    [SerializeField] float cooldown;
-    private float timestamp;
-
-    bool isAttacking;
     void Start()
     {
+        _fighter = this.gameObject.GetComponent<Fighter>();
         LightPunch = KeyCode.Mouse0;
         HeavyPunch = KeyCode.Mouse1;
         Kick = KeyCode.LeftControl;
@@ -41,7 +30,9 @@ public class FighterInput : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    protected void Update()
+    {
+        /*
         if (!_animator.GetBool("isAttacking"))
         {
             if (Input.GetKeyDown(LightPunch))
@@ -58,17 +49,19 @@ public class FighterInput : MonoBehaviour
             {
                 Instantiate(punchPrefab, punchPointTransform);
                 animator.SetTrigger("PunchLeft");
-            }*/
+            }*//*
             else if (Input.GetKeyDown(Kick))
             {
                 //Instantiate(kickPrefab, kickPointTransform);
                 _animator.SetTrigger("Kick");
-            }
-            /*else if (Input.GetButtonDown("Kick Left"))
-            {
-                Instantiate(kickPrefab, kickPointTransform);
-                animator.SetTrigger("KickLeft");
             }*/
+               /*else if (Input.GetButtonDown("Kick Left"))
+               {
+                   Instantiate(kickPrefab, kickPointTransform);
+                   animator.SetTrigger("KickLeft");
+               }*/
+
+        /*
             else if (Input.GetKeyDown(Block))
             {
                 _animator.SetBool("Block", true);
@@ -85,11 +78,12 @@ public class FighterInput : MonoBehaviour
             {
                 _animator.SetBool("Crouch", false);
             }
-            else if (Input.GetKeyDown(Special) && timestamp < Time.time)
+            else if (Input.GetKeyDown(Special) && timestamp < Time.time )
+      
             {
+
                 timestamp = Time.time + cooldown;
                 _animator.SetTrigger("Special");
-
                 Camera _camera;
                 Ray _ray;
                 Vector3 pointOffset, endPoint;
@@ -98,23 +92,39 @@ public class FighterInput : MonoBehaviour
                 _camera = g.getCamera();
                 GameObject _ball;
                 timestamp = Time.time + cooldown;
-                _animator.SetTrigger("Special");
-                {
-
-                    // check if the ray hit an object that is visible to the camera
-                    
                         _ball = Instantiate(specialPrefab) as GameObject;
                         _ball.transform.position = lightPunchTransform.position;
                         _ball.transform.rotation = transform.rotation;
-
-                }
+            }
+        }
+        */
+        if (!_animator.GetBool("isAttacking"))
+        {
+            if (Input.GetKeyDown(LightPunch))
+            {
+                punch();
+            }
+            else if (Input.GetKeyDown(Kick))
+            {
+                Debug.Log("kick");
+                kick();
+            }
+            else if (Input.GetKeyDown(Block))
+            {
+                _animator.SetBool("Block", true);
+            }
+            else if (Input.GetKeyUp(Block))
+            {
+                _animator.SetBool("Block", false);
+            }
+            else if (Input.GetKeyDown(Special))
+            {
+                special();
             }
         }
     }
-        
-    void SpawnProjectile()
-    {
-        //problem: this will instantiate a new projectile point each time.
-        Instantiate(specialPrefab, SpecialTransform.position, new Quaternion(0,0,0,0));
-    }
+
+    public abstract void punch();
+    public abstract void kick();
+    public abstract void special();
 }
