@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{28a0d98e-3fe2-460f-bf1a-f7d0ba15497c}">
+        <property name="name">
+            <value>robomanSteps</value>
+        </property>
+        <relationship name="folder">
+            <destination>{31b938ad-4b7c-4c68-ba5c-fe278b71ad37}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{38a04945-de53-41a6-91e4-46d3a5453fce}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{38a04945-de53-41a6-91e4-46d3a5453fce}">
+        <property name="maximum">
+            <value>2</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
