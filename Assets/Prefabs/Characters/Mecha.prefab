@@ -2904,7 +2904,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  debugHitboxPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
+    type: 3}
   dieTime: 0
 --- !u!1 &2405833531104785312
 GameObject:
@@ -3027,7 +3028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  debugHitboxPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
+    type: 3}
   dieTime: 0
 --- !u!1 &6448568871122850565
 GameObject:
@@ -3088,7 +3090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  debugHitboxPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
+    type: 3}
   dieTime: 0
 --- !u!1 &6479161994433136838
 GameObject:
@@ -3149,7 +3152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  debugHitboxPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
+    type: 3}
   dieTime: 0
 --- !u!1 &7212064245090964688
 GameObject:

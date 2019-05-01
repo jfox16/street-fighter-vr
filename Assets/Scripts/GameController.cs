@@ -1,24 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
+    [SerializeField] Camera miniMapCamera;
     //[SerializeField] GameObject playerPrefab;
     private GameObject playerPrefab;
     [SerializeField] GameObject healthbar;
+    [SerializeField] GameObject healthbartop;
     [SerializeField] ParticleSystem sparkles;
     private PrefabSelection playerSelection;
     private GameObject g;
     private Fighter fighter;
+    [SerializeField] GameObject Sphere;
         
     void Start() {
         g = GameObject.Find("Player Selector");
         playerSelection = g.gameObject.GetComponent<PrefabSelection>();
-        PlayerPrefs.DeleteKey("CharacterSelection");
         playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
         SpawnPlayer();
+        playSound(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void SpawnPlayer() {
@@ -28,6 +32,9 @@ public class GameController : MonoBehaviour
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
         healthbar.GetComponent<Bar>().setCamera(mainCamera);
         healthbar.GetComponent<Bar>().setFighter(fighter);
+        miniMapCamera.GetComponent<Minimap>().setFighter(fighter);
+        Sphere.GetComponent<Sphere>().setFighter(fighter);
+        healthbartop.GetComponent<healthbar>().setFighter(fighter);
         fighter.resetFighter();
     }
     public void SelectPlayer(GameObject prefab, Transform transform)
@@ -37,6 +44,7 @@ public class GameController : MonoBehaviour
         
         GameObject _player = Instantiate(prefab, transform.position, transform.rotation);
         FPLook fplook = _player.GetComponent<FPLook>();
+        Minimap minimap = _player.GetComponent<Minimap>();
         Debug.Log(fplook);
         _player.GetComponent<FPLook>().AttachCamera(mainCamera);
     }
@@ -50,5 +58,21 @@ public class GameController : MonoBehaviour
     public Camera getCamera()
     {
         return mainCamera;
+    }
+
+    private void playSound(int sceneIndex)
+    {
+        if(sceneIndex == 2)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/RoundOne", this.gameObject.transform.position);
+        }
+        else if (sceneIndex == 3)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/RoundTwo", this.gameObject.transform.position);
+        }
+        else if (sceneIndex == 4)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/RoundFinal", this.gameObject.transform.position);
+        }
     }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{4686040f-7c12-4b5f-a143-81e45b7d4995}">
+        <property name="assetPath">
+            <value>SFVR_SFX_Punch_03.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.3965532879818594</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{a47d820e-4027-4ffd-b751-a122874883a4}</destination>
+        </relationship>
+    </object>
+</objects>

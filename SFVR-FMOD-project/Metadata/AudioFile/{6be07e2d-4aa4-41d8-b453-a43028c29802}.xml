@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{6be07e2d-4aa4-41d8-b453-a43028c29802}">
+        <property name="assetPath">
+            <value>SFVR_SFX_Mecha_Footstep_01.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.56274999999999997</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{a47d820e-4027-4ffd-b751-a122874883a4}</destination>
+        </relationship>
+    </object>
+</objects>

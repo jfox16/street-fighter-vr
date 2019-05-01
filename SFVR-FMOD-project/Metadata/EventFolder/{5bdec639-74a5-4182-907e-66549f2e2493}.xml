@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EventFolder" id="{5bdec639-74a5-4182-907e-66549f2e2493}">
+        <property name="name">
+            <value>Unity-chan</value>
+        </property>
+        <relationship name="folder">
+            <destination>{d9562f0a-e8b8-4058-a3b7-c7c1c5d81e80}</destination>
+        </relationship>
+    </object>
+</objects>
