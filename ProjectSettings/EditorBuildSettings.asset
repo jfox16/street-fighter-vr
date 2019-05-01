@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Hero.unity
     guid: b571177a346654c9ea27fd64b646407d
   - enabled: 1
-    path: Assets/Scenes/CarCrusher.unity
+    path: Assets/Scenes/Levels/CarCrusher.unity
     guid: 5ae88cd43e42c47619c6714f3a6612b9
   - enabled: 1
-    path: Assets/Scenes/Arena.unity
+    path: Assets/Scenes/Levels/Arena.unity
     guid: 371ab0688b9cc49a8a600ad38dbcaafe
   - enabled: 1
-    path: Assets/Scenes/Japan.unity
+    path: Assets/Scenes/Levels/Japan.unity
     guid: 5b64da5ad86d64af8b905d17f65de89d
   - enabled: 1
-    path: Assets/Scenes/City.unity
+    path: Assets/Scenes/Levels/City.unity
     guid: 499afeba5855b4120a1b1ec519d692ac
   m_configObjects: {}
