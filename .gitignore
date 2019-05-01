@@ -61,7 +61,11 @@ Temp/
 *Assembly-CSharp.csproj
 *obj/
 *.sln
-.meta
+.log
+/Assets/FMODStudioCache.asset
+/Assets/FMODStudioCache.asset.meta
+fmod.log
+fmod_editor.log
 
 # Jonathan
 .vscode

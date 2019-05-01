@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2093472535909526326}
   - component: {fileID: 3794225067264115177}
   - component: {fileID: 5852258673232473867}
+  - component: {fileID: 8855103812589676555}
   m_Layer: 0
   m_Name: Dummy Kick
   m_TagString: Untagged
@@ -58,6 +59,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  debugHitboxPrefab: {fileID: 4965396825610069489, guid: 7b8ac89f34f35e4468441fcec0356ae2,
+  sparkPrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
     type: 3}
-  dieTime: 0
+  hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
+    type: 3}
+  ownerID: 0
+  owner: {fileID: 0}
+--- !u!114 &8855103812589676555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898589676504919046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e5f3de4f6da8c4ba98907c611bdb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
