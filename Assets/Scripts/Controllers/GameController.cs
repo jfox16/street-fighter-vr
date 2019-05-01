@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera miniMapCamera;
     //[SerializeField] GameObject playerPrefab;
     private GameObject playerPrefab;
+    public GameObject defaultPlayer;
     [SerializeField] GameObject healthbar;
     [SerializeField] GameObject healthbartop;
     [SerializeField] ParticleSystem sparkles;
@@ -20,7 +21,12 @@ public class GameController : MonoBehaviour
     void Start() {
         g = GameObject.Find("Player Selector");
         playerSelection = g.gameObject.GetComponent<PrefabSelection>();
-        playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
+        //playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
+        Debug.Log(playerPrefab);
+        if(playerPrefab == null)
+        {
+            playerPrefab = defaultPlayer;
+        }
         SpawnPlayer();
         playSound(SceneManager.GetActiveScene().buildIndex);
     }

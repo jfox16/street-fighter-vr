@@ -61,6 +61,10 @@ MonoBehaviour:
   damage: 20
   sparkPrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
     type: 3}
+  hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
+    type: 3}
+  ownerID: 0
+  owner: {fileID: 0}
 --- !u!114 &8855103812589676555
 MonoBehaviour:
   m_ObjectHideFlags: 0

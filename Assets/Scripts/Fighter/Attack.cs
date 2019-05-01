@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float damage = 20;
-    //[SerializeField] GameObject debugHitboxPrefab;
+    public float damage = 1;
     [SerializeField] GameObject sparkPrefab;
-    private int ownerID;
+    [SerializeField] GameObject hitParticlePrefab;
+    public int ownerID;
+    public GameObject owner = null;
     
     void Awake() {
         // Destroy(gameObject, 2f);
@@ -15,23 +16,24 @@ public class Attack : MonoBehaviour
         if (GetComponentInParent<Fighter>() != null)
         {
             ownerID = gameObject.GetComponentInParent<Fighter>().gameObject.GetInstanceID();
+            owner = gameObject.GetComponentInParent<Fighter>().gameObject;
         }
     }
 
     protected void OnTriggerEnter(Collider other)
     {
         Unit _unit = other.gameObject.GetComponent<Unit>();
-        // Creates a visual representation of the hitbox
-        //GameObject dhp = Instantiate(debugHitboxPrefab, transform);
-        //dhp.transform.localScale = new Vector3(1, 1, 1) * radius;
-        //Debug.Log("Hurt " + other.gameObject.ToString() + " for " + damage + " damage!");
         if (_unit != null && _unit.gameObject.GetInstanceID() != ownerID)
             {
+            Instantiate(hitParticlePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
                 // fix a bug
                 if(Time.timeSinceLevelLoad > 2)
                 {
-                    Instantiate(sparkPrefab, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), new Quaternion(0, 0, 0, 0));
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", gameObject.GetComponentInParent<Fighter>().gameObject.transform.position);
+                if (sparkPrefab != null)
+                    {
+                        Instantiate(sparkPrefab, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), new Quaternion(0, 0, 0, 0));
+                    }
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", owner.transform.position);
                     _unit.Hurt(damage);
                     gameObject.GetComponent<Collider>().enabled = false;
                 }

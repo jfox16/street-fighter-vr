@@ -5120,7 +5120,7 @@ GameObject:
   - component: {fileID: 1526373212}
   - component: {fileID: 1526373213}
   - component: {fileID: 6997074758515764105}
-  - component: {fileID: 2545036184493795322}
+  - component: {fileID: 7261299424631656523}
   m_Layer: 0
   m_Name: Unity-chan
   m_TagString: Player
@@ -5224,13 +5224,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  punchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
-    type: 3}
-  kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
-    type: 3}
-  projectilePrefab: {fileID: 942323585990836030, guid: 6b573382422fb48d4aa9e29b262ffabd,
-    type: 3}
-  maxProjectiles: 3
+  special: 100000
+  specialCost: 10
+  fighterid: 0
+  damageModifier: 1
   projectilePoint: {fileID: 9033437222606234604}
   cooldown: 3
 --- !u!143 &6997074758515764105
@@ -5251,7 +5248,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &2545036184493795322
+--- !u!114 &7261299424631656523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5260,22 +5257,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1526373210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27720498c537fc24a9b8ae90c4106128, type: 3}
+  m_Script: {fileID: 11500000, guid: 83470e98117aed64bb6cb3e91d92d5cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1526373214}
-  lightPunchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
+  FireballParticle: {fileID: 942323585990836030, guid: 6b573382422fb48d4aa9e29b262ffabd,
     type: 3}
-  HeavyPunchPrefab: {fileID: 4079520877943686556, guid: 16ca810c9b3360944911276824f51514,
-    type: 3}
-  kickPrefab: {fileID: 6489008120489928299, guid: 84261fada4f1f4eb7a5952967b95f7d9,
-    type: 3}
-  specialPrefab: {fileID: 942323585990836030, guid: 6b573382422fb48d4aa9e29b262ffabd,
-    type: 3}
-  lightPunchTransform: {fileID: 1576766651}
-  HeavyPunchTransform: {fileID: 1576766651}
-  SpecialTransform: {fileID: 2417454959142937349}
-  cooldown: 0
 --- !u!1 &1572032875
 GameObject:
   m_ObjectHideFlags: 0
