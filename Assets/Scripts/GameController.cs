@@ -11,11 +11,9 @@ public class GameController : MonoBehaviourPunCallbacks, IInRoomCallbacks
     public static GameController Instance;
 
     [SerializeField] Vector3 playerSpawnPosition = new Vector3(0, 0, -10);
-    [SerializeField] string roomName = "Test Room";
+    [SerializeField] public string roomName = "Test Room";
     [SerializeField] GameObject spawnButtons;
     [SerializeField] GameObject healthbar;
-    private PhotonView photon;
-
 
     GameObject offlinePlayerPrefab;
 
@@ -126,14 +124,28 @@ public class GameController : MonoBehaviourPunCallbacks, IInRoomCallbacks
         reference, this method takes the name of the prefab as a string, and the prefab will 
         be retrieved from the Assets/Resources folder. */
         GameObject player;
+        if (PhotonNetwork.IsMasterClient)
+        {
+            if (PlayerInfo.PI.selectedCharacter == 0)
+                player = PhotonNetwork.Instantiate("Network Red Guy", new Vector3(5, 0, -10), Quaternion.Euler(0, -90, 0));
 
-        if (PlayerInfo.PI.selectedCharacter == 0)
-            player = PhotonNetwork.Instantiate("Network Red Guy", new Vector3(5, 0, -10), Quaternion.Euler(0, -90, 0));
+            else if (PlayerInfo.PI.selectedCharacter == 1)
+                player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
 
-        else if (PlayerInfo.PI.selectedCharacter == 1)
-            player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
+            else
+                player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
+        }
         else
-            player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
+        {
+            if (PlayerInfo.PI.selectedCharacter == 0)
+                player = PhotonNetwork.Instantiate("Network Red Guy", new Vector3(5, 0, -10), Quaternion.Euler(0, -90, 0));
+
+            else if (PlayerInfo.PI.selectedCharacter == 1)
+                player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
+
+            else
+                player = PhotonNetwork.Instantiate("Network Blue Guy", new Vector3(-5, 0, -10), Quaternion.Euler(0, 90, 0));
+        }
         
         Debug.Log("Player spawned!");
         // Attach main camera to player's as first person view

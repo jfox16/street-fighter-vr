@@ -16,7 +16,7 @@ MonoBehaviour:
     AppIdRealtime: fbc02056-0d03-4d9f-bf8e-b5e27c03821f
     AppIdChat: 
     AppIdVoice: 
-    AppVersion: 0
+    AppVersion: 
     UseNameServer: 1
     FixedRegion: 
     Server: 
@@ -34,5 +34,6 @@ MonoBehaviour:
   - RespawnSpaceship
   - ClientHurt
   - RPC_AddCharacter
+  - RPC_AddCharacrter
   DisableAutoOpenWizard: 1
   ShowSettings: 1

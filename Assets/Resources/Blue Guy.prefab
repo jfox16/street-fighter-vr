@@ -643,6 +643,7 @@ GameObject:
   - component: {fileID: 5898750511507801563}
   - component: {fileID: 5898750511507801562}
   - component: {fileID: 7524407524462930628}
+  - component: {fileID: 7606049266812333060}
   m_Layer: 9
   m_Name: Blue Guy
   m_TagString: Untagged
@@ -781,6 +782,20 @@ MonoBehaviour:
   spawners: []
   currentScene: 0
   room: 0
+--- !u!114 &7606049266812333060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898750511507801556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d44004e2d08bf64e88b2aa414a83a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  myCharacter: {fileID: 0}
 --- !u!1 &5898750511539505607
 GameObject:
   m_ObjectHideFlags: 0

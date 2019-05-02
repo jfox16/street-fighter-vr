@@ -9,7 +9,7 @@ public class PhotonLobby : GameController
     // Start is called before the first frame update
 
     [SerializeField] public static PhotonLobby lobby;
-
+    private string newRoom = "Test Room";
     [SerializeField] public GameObject button;
     [SerializeField] public GameObject cancelButton;
 
@@ -46,7 +46,8 @@ public class PhotonLobby : GameController
     {
         int randomRoomName = Random.Range(0, 10000);
         RoomOptions roomOPs = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = 2 };
-        PhotonNetwork.CreateRoom("Test Room" + 99999, roomOPs);
+        PhotonNetwork.JoinOrCreateRoom(newRoom,
+            roomOPs, Photon.Realtime.TypedLobby.Default);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
