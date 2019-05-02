@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.5594735, g: 0.5864528, b: 0.64416695, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -461,6 +461,12 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 692672507}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &692672510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 852413810021657705, guid: 7853f257cb7c14559b65cd4a065e11e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 692672507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &758471763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -472,6 +478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220758447725106596, guid: 07ea4b18970a14142a2a665c7e512d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3220758447725106592, guid: 07ea4b18970a14142a2a665c7e512d3e,
         type: 3}
@@ -595,12 +606,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07ea4b18970a14142a2a665c7e512d3e, type: 3}
---- !u!1 &758471764 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1252493584085377724, guid: 07ea4b18970a14142a2a665c7e512d3e,
-    type: 3}
-  m_PrefabInstance: {fileID: 758471763}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050636546
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +864,7 @@ PrefabInstance:
         type: 3}
       propertyPath: healthbar
       value: 
-      objectReference: {fileID: 758471764}
+      objectReference: {fileID: 692672510}
     - target: {fileID: 7219899273550653979, guid: d7a526efd7a334a0395728577278ba70,
         type: 3}
       propertyPath: miniMapCamera
@@ -870,16 +875,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7220515762217103556, guid: d7a526efd7a334a0395728577278ba70,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7219899273025275521, guid: d7a526efd7a334a0395728577278ba70,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7220515762217103556, guid: d7a526efd7a334a0395728577278ba70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219899272365774701, guid: d7a526efd7a334a0395728577278ba70,
+        type: 3}
+      propertyPath: UnityChan
+      value: 
+      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
+        type: 3}
     - target: {fileID: 7219899272017559765, guid: d7a526efd7a334a0395728577278ba70,
         type: 3}
       propertyPath: fighterPrefab

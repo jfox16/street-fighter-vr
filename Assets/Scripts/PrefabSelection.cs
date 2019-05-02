@@ -18,7 +18,7 @@ public class PrefabSelection : MonoBehaviour
             { "Fighter", Fighter }
         };
 
-        PlayerPrefs.SetString("CharacterSelection", "Mecha");
+        //PlayerPrefs.SetString("CharacterSelection", "Mecha");
     }
 
     // Update is called once per frame
