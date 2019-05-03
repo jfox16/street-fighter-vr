@@ -10,14 +10,10 @@ public class FPMovement : MonoBehaviour
     bool canMove;
     [SerializeField] float moveSpeed = 2;
     private float epsilon = 0.000001f;
-    FMOD.Studio.EventInstance footSteps;
-    FMOD.Studio.PLAYBACK_STATE playbackState;
 
     void Awake() {
         _animator = GetComponent<Animator>();
         canMove = true;
-        footSteps = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Characters/Mecha/Footsteps");
-        //footSteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(this.gameObject.transform));
     }
     void FixedUpdate() {
         // Read input to _inputVec.
@@ -41,12 +37,6 @@ public class FPMovement : MonoBehaviour
             {
                 _animator.SetBool("isWalking", true);
 
-                // check if the previous footstep sound finished
-                //footSteps.getPlaybackState(out playbackState);
-                //if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
-                //{
-                //    footSteps.start();
-                //}
             }
             else
             {

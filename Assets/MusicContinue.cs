@@ -25,12 +25,12 @@ public class MusicContinue : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    //private void Update()
-    //{
-    //    if (SceneManager.GetActiveScene().buildIndex > 0 && SceneManager.GetActiveScene().buildIndex != 5)
-    //    {
-    //        Destroy(this.gameObject);
-    //    }
-    //}
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex > 0 && SceneManager.GetActiveScene().buildIndex != 5)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
 }
