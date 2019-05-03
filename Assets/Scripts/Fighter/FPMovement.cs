@@ -36,7 +36,6 @@ public class FPMovement : MonoBehaviour
             if (controller.velocity != Vector3.zero)
             {
                 _animator.SetBool("isWalking", true);
-
             }
             else
             {

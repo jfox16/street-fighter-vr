@@ -33,10 +33,17 @@ public class Attack : MonoBehaviour
                     {
                         Instantiate(sparkPrefab, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), new Quaternion(0, 0, 0, 0));
                     }
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", owner.transform.position);
+                    Debug.Log(this.gameObject.name);
                     _unit.Hurt(damage);
                     gameObject.GetComponent<Collider>().enabled = false;
                 }
             }
+        if(other.gameObject != owner)
+        {
+            if (this.gameObject.name.Equals("LeftArmCollider"))
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", owner.transform.position);
+            else if (this.gameObject.name.Equals("RightLegCollider"))
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Kick", owner.transform.position);
+        }
     }
 }
