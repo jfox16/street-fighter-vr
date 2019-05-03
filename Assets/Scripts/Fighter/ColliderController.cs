@@ -10,6 +10,16 @@ public class ColliderController : MonoBehaviour
     [SerializeField] Collider rightLegCollider;
     [SerializeField] Collider leftLegCollider;
     [SerializeField] Collider hurtBox;
+
+    public int leftArmDamage;
+    public int RightArmDamage;
+    public int leftLegDamage;
+    public int RightLegDamage;
+
+    private Attack leftArmAttack;
+    private Attack leftLegAttack;
+    private Attack RightArmAttack;
+    private Attack RightLegAttack;
     Animator _animator;
 
     void Awake()
@@ -19,77 +29,69 @@ public class ColliderController : MonoBehaviour
         rightLegCollider.enabled = false;
         leftLegCollider.enabled = false;
         _animator = gameObject.GetComponent<Animator>();
+
+        leftArmAttack = leftArmCollider.gameObject.GetComponent<Attack>();
+        leftLegAttack = leftLegCollider.gameObject.GetComponent<Attack>();
+        RightArmAttack = rightArmCollider.gameObject.GetComponent<Attack>();
+        RightLegAttack = rightLegCollider.gameObject.GetComponent<Attack>();
+
+        leftArmAttack.damage = leftArmDamage;
+        leftLegAttack.damage = leftLegDamage;
+        RightArmAttack.damage = RightArmDamage;
+        RightLegAttack.damage = RightLegDamage;
+
+    }
+    private void Start()
+    {
+       
     }
     // Update is called once per frame
     void Update()
     {
         
     }
-    public void EnableRightArm()
+    public void EnableRightArmAttack(int damage)
     {
         rightArmCollider.enabled = true;
+        RightArmAttack.damage = damage;
     }
     private void DisableRightArm()
     {
         rightArmCollider.enabled = false;
     }
-    public void EnableLeftArm()
+    public void EnableLeftArmAttack(int damage)
     {
         leftArmCollider.enabled = true;
+        leftArmAttack.damage = damage;
     }
     private void DisableLeftArm()
     {
         leftArmCollider.enabled = false;
     }
-    public void EnableLeftLeg()
+    public void EnableLeftLegAttack(int damage)
     {
         leftLegCollider.enabled = true;
+        leftLegAttack.damage = damage;
     }
     private void DisableLeftLeg()
     {
         leftLegCollider.enabled = false;
     }
-    public void EnableRightLeg()
+    public void EnableRightLegAttack(int damage)
     {
        rightLegCollider.enabled = true;
+        RightLegAttack.damage = damage;
     }
     private void DisableRightLeg()
     {
         rightLegCollider.enabled = false;
     }
-    //Will be decoupled later
-    private void EnableMechaLightPunch()
-    {
-        leftArmCollider.enabled = true;
-    }
-    private void DisableMechaLightPunch()
-    {
-        leftArmCollider.enabled = false;
-    }
-    private void EnableMechaHeavyPunch()
-    {
-        rightArmCollider.enabled = true;
-    }
-    private void DisableMechaHeavyPunch()
-    {
-        rightArmCollider.enabled = false;
-    }
-    private void EnableMechaKick()
-    {
-        rightLegCollider.enabled = true;
-    }
-    private void DisableMechaKick()
-    {
-        rightLegCollider.enabled = false;
-    }
     private void IsAttacking()
     {
-        Debug.Log("Attacking");
         _animator.SetBool("isAttacking", true);
     }
     private void NotAttacking()
     {
-        //Debug.Log("Notattacking");
         _animator.SetBool("isAttacking", false);
     }
 }

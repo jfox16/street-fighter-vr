@@ -31,7 +31,7 @@ public class Destruction : MonoBehaviour
         blue = new Color(0.0f, 0.0f, 1.0f, 1.0f);
         text = WinOrLose.gameObject.GetComponent<Text>();
         text.color = trans;
-        text.text = "Winner Winner Chicken Dinner!";
+        text.text = "Winner Winner!";
 
     }
 
