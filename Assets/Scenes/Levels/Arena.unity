@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -296,12 +296,6 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1638515847}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &632895487 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1252493584085377724, guid: 07ea4b18970a14142a2a665c7e512d3e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1705896992}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &943514243 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5523474772461898271, guid: 7853f257cb7c14559b65cd4a065e11e4,
@@ -384,7 +378,7 @@ PrefabInstance:
         type: 3}
       propertyPath: healthbar
       value: 
-      objectReference: {fileID: 632895487}
+      objectReference: {fileID: 1638515848}
     - target: {fileID: 7219899273550653979, guid: d7a526efd7a334a0395728577278ba70,
         type: 3}
       propertyPath: miniMapCamera
@@ -405,6 +399,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7219899272365774701, guid: d7a526efd7a334a0395728577278ba70,
+        type: 3}
+      propertyPath: UnityChan
+      value: 
+      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a526efd7a334a0395728577278ba70, type: 3}
 --- !u!1001 &1638515847
@@ -481,6 +481,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7853f257cb7c14559b65cd4a065e11e4, type: 3}
+--- !u!1 &1638515848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 852413810021657705, guid: 7853f257cb7c14559b65cd4a065e11e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1638515847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1705896992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -492,6 +498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220758447725106596, guid: 07ea4b18970a14142a2a665c7e512d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3220758447725106592, guid: 07ea4b18970a14142a2a665c7e512d3e,
         type: 3}

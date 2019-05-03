@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
-  m_IndirectSpecularColor: {r: 0.36832896, g: 0.3741018, b: 0.34908098, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.36832973, g: 0.37410218, b: 0.3490813, a: 1}
->>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
+  m_IndirectSpecularColor: {r: 0.36832917, g: 0.37410185, b: 0.34908092, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -895,6 +891,73 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &846716752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846716754}
+  - component: {fileID: 846716753}
+  - component: {fileID: 846716755}
+  m_Layer: 0
+  m_Name: MainMenuMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &846716753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846716752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Music/MenuMusic
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &846716754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846716752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &846716755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846716752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb48b325f49e041ea89a0818d744a65c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &872056435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5145369286801029757, guid: 938635c81f4cb4308ad4b2eedc98a1f6,
@@ -1258,26 +1321,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 7219899271869495526, guid: d7a526efd7a334a0395728577278ba70,
         type: 3}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
-=======
-    - target: {fileID: 7219899272017559765, guid: d7a526efd7a334a0395728577278ba70,
-        type: 3}
-      propertyPath: fighterPrefab
-      value: 
-      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
-        type: 3}
-    - target: {fileID: 7219899272017559765, guid: d7a526efd7a334a0395728577278ba70,
-        type: 3}
-      propertyPath: test
-      value: 
-      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
-        type: 3}
->>>>>>> cac90dffd3fb6d3269f2fd1287a9699797eec59a
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a526efd7a334a0395728577278ba70, type: 3}
 --- !u!1 &1210440390

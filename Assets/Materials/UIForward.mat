@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UIForward
-  m_Shader: {fileID: 4800000, guid: a1a00a58a77bc764ca0f32e0e74c1abd, type: 3}
+  m_Shader: {fileID: 4800000, guid: 93196c86afff74c3aa9b8d6f1c3bb55f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

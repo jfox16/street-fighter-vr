@@ -1198,6 +1198,10 @@ MonoBehaviour:
   rightLegCollider: {fileID: 1462619179817218257}
   leftLegCollider: {fileID: 6945559046429839829}
   hurtBox: {fileID: 7601177543029722833}
+  leftArmDamage: 0
+  RightArmDamage: 0
+  leftLegDamage: 0
+  RightLegDamage: 0
 --- !u!143 &6391998554441634063
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3497,15 +3501,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee82df68aab4ad24696cf142bd8b887a, type: 3}
---- !u!1 &5925887845857554518 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1040981086949070910, guid: ee82df68aab4ad24696cf142bd8b887a,
-    type: 3}
-  m_PrefabInstance: {fileID: 6651453062900295784}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1505295920710725625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5236938680565073809, guid: ee82df68aab4ad24696cf142bd8b887a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6651453062900295784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5925887845857554518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1040981086949070910, guid: ee82df68aab4ad24696cf142bd8b887a,
     type: 3}
   m_PrefabInstance: {fileID: 6651453062900295784}
   m_PrefabAsset: {fileID: 0}
