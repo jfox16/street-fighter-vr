@@ -6,11 +6,12 @@ using System;
 public class FighterVRMovement : MonoBehaviour
 {
     [SerializeField] GameObject moveCursorPrefab;
-    static float maxMoveRange = 2;
-    static float moveCursorSpeed = 0.2f;
+    [SerializeField] float maxMoveRange = 2;
+    [SerializeField] float moveCursorSpeed = 0.2f;
 
     GameObject moveCursor = null;
     Rigidbody rigidbody = null;
+    Animator animator = null;
 
     [SerializeField] float turnDelay = 1;
     Timer turnTimer = new Timer();

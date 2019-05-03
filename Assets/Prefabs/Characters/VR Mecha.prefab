@@ -1266,6 +1266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveCursorPrefab: {fileID: 6852846381440743450, guid: 4e6858b9e978c1842afd54847af93ec7,
     type: 3}
+  maxMoveRange: 3
+  moveCursorSpeed: 0.3
   turnDelay: 0.3
 --- !u!1 &926383555
 GameObject:

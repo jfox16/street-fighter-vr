@@ -11,8 +11,10 @@ public class Attack : MonoBehaviour
     
     [SerializeField] GameObject sparkPrefab;
     [SerializeField] GameObject hitParticlePrefab;
+    GameObject hitSpark;
     
     void Awake() {
+        hitSpark = (GameObject)Resources.Load("Particles/HitSpark");
         // Destroy(gameObject, 2f);
         // null ptr when dummy attacks
         if (GetComponentInParent<Fighter>() != null)
@@ -29,13 +31,14 @@ public class Attack : MonoBehaviour
         Unit _unit = other.gameObject.GetComponent<Unit>();
         if (_unit != null && _unit.gameObject.GetInstanceID() != ownerID)
             {
-            Instantiate(hitParticlePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            // Instantiate(hitParticlePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            Instantiate(hitSpark, transform.position, transform.rotation);
                 // fix a bug
                 if(Time.timeSinceLevelLoad > 2)
                 {
                 if (sparkPrefab != null)
                     {
-                        Instantiate(sparkPrefab, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), new Quaternion(0, 0, 0, 0));
+                        // Instantiate(sparkPrefab, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), new Quaternion(0, 0, 0, 0));
                     }
                     FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", owner.transform.position);
                     _unit.Hurt(damage);

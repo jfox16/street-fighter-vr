@@ -37,7 +37,7 @@ public class VRInputHandler : MonoBehaviour
             && Input.GetButtonDown("B")
             && Input.GetButtonDown("Y") ) 
         {
-            SceneManager.LoadScene("Start VR");
+            SceneManager.LoadScene("VR Start");
         }
     }
 

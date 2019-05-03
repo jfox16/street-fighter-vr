@@ -25194,7 +25194,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.3
+  - time: 0.26666668
     functionName: DisableLimbCollider
     data: 
     objectReferenceParameter: {fileID: 0}

@@ -8,7 +8,7 @@ public class CarTimer : MonoBehaviour
     private float seconds, maxTime;
     public GameObject myText, WinOrLose, score, car, carParts;
     private GameObject soundPlayer;
-    private Text text;
+    private TextMesh text;
     private bool carDead, loserPlayed;
     private Destruction s;
     Color trans, red;
@@ -25,7 +25,7 @@ public class CarTimer : MonoBehaviour
 
         trans = new Color(0.0f, 0.0f, 1.0f, 0.0f);
         red = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-        text = WinOrLose.gameObject.GetComponent<Text>();
+        text = WinOrLose.gameObject.GetComponent<TextMesh>();
         text.color = trans;
     }
 
@@ -41,7 +41,7 @@ public class CarTimer : MonoBehaviour
             text.text = "Nice Try!";
             text.color = Color.Lerp(text.color, red, 2.0f * Time.deltaTime);
             int playerScore = s.getScore();
-            score.GetComponent<Text>().text = "Player Score: " + playerScore.ToString();
+            score.GetComponent<TextMesh>().text = "Player Score: " + playerScore.ToString();
             s.enabled = false;
             if (!loserPlayed)
             {
@@ -49,7 +49,7 @@ public class CarTimer : MonoBehaviour
                 loserPlayed = true;
             }
         }
-        myText.GetComponent<Text>().text = ((int)(maxTime - seconds)).ToString();
+        myText.GetComponent<TextMesh>().text = ((int)(maxTime - seconds)).ToString();
     }
 
     public void setCarDead(bool carDead)

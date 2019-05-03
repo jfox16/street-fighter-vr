@@ -7,8 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[WRN] OutputWASAPI::mixerThread                : Starvation detected in WASAPI output buffer!
-[LOG] AsyncManager::init                       : manager 000000003BD44318 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000068AC7538 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,16 +15,933 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082931F78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Select', format=2, channels=2, frequency=48000, lengthbytes=6784, lengthpcm=29999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000001D2918)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Select (0000000086154B58)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082931F78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Select', format=2, channels=2, frequency=48000, lengthbytes=6784, lengthpcm=29999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000001D3328)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Select (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292D748
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Select', format=2, channels=2, frequency=48000, lengthbytes=6784, lengthpcm=29999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000001D3048)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Select (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292CCF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Cancel', format=2, channels=2, frequency=48000, lengthbytes=7584, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000001D2918)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Cancel (0000000086154B58)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082934078
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Cancel', format=2, channels=2, frequency=48000, lengthbytes=7584, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000001D2918)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Cancel (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000068C9E0E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Cancel', format=2, channels=2, frequency=48000, lengthbytes=7584, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000001D3328)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Cancel (000000007D56F218)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292E9D8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Cancel', format=2, channels=2, frequency=48000, lengthbytes=7584, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000001D3048)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Cancel (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = D:\Unity\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E2A09D8 : node = 000000006CA081E0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000535DC6B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E2A09D8
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Unity\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006CA082F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SFVR_Music_Menu', format=2, channels=2, frequency=48000, lengthbytes=763872, lengthpcm=2730666, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.729828.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E2A09D8
+[LOG] SoundI::getSubSound                      : sound 000000003E2A09D8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : SFVR_Music_Menu (000000003E2A09D8)
+[LOG] SoundI::release                          :     SFVR_Music_Menu (00000000861549B8)
+[LOG] SoundI::release                          :     SFVR_Music_Menu (000000003E2A0B88)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = D:\Unity\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E2A09D8 : node = 000000006CA08330
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000535DC6B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E2A09D8
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Unity\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006CA08448
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SFVR_Music_Menu', format=2, channels=2, frequency=48000, lengthbytes=763872, lengthpcm=2730666, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.729828.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E2A09D8
+[LOG] SoundI::getSubSound                      : sound 000000003E2A09D8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = D:\Unity\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000006CA08A38 : node = 0000000010DD0250
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000535DC6B8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006CA08A38
+[LOG] SystemI::createSoundInternal             :     Create name='D:\Unity\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000010DD0368
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SFVR_Music_Menu', format=2, channels=2, frequency=48000, lengthbytes=763872, lengthpcm=2730666, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.729828.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006CA08A38
+[LOG] SoundI::getSubSound                      : sound 000000006CA08A38.  Subsound index 0 / 1
+[LOG] SoundI::release                          : SFVR_Music_Menu (000000003E2A09D8)
+[LOG] SoundI::release                          :     SFVR_Music_Menu (00000000535DC228)
+[LOG] SoundI::release                          :     SFVR_Music_Menu (000000003E2A0B88)
+[LOG] SoundI::release                          : SFVR_Music_Menu (000000006CA08A38)
+[LOG] SoundI::release                          :     SFVR_Music_Menu (00000000535DC088)
+[LOG] SoundI::release                          :     SFVR_Music_Menu (000000006CA090F8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6E2B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_MetalHit_03', format=2, channels=1, frequency=48000, lengthbytes=7776, lengthpcm=41159, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.744873.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6E2B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_MetalHit_02', format=2, channels=1, frequency=48000, lengthbytes=15616, lengthpcm=92548, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.617859.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6E2B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_MetalHit_01', format=2, channels=1, frequency=48000, lengthbytes=5664, lengthpcm=29505, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.620850.
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_MetalHit_01 (00000000584A5B38)
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_MetalHit_02 (00000000584A4958)
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_MetalHit_03 (00000000584A47B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292FE78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292FE78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292FE78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (0000000086154B58)
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (0000000067EDAFD8)
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082932BD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082932BD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082932BD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (0000000086154B58)
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (000000006CA08BC8)
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292D748
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292D748
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292D748
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (0000000086154B58)
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (000000006CA08888)
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000068CA1EC8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000068CA1EC8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000068CA1EC8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (000000007D56F558)
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (000000007D56F078)
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (000000007D56F218)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292E9D8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_MetalHit_03', format=2, channels=1, frequency=48000, lengthbytes=7776, lengthpcm=41159, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.744873.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292E9D8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_MetalHit_02', format=2, channels=1, frequency=48000, lengthbytes=15616, lengthpcm=92548, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.617859.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292E9D8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_MetalHit_01', format=2, channels=1, frequency=48000, lengthbytes=5664, lengthpcm=29505, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.620850.
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_MetalHit_01 (000000006CA093E8)
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_MetalHit_02 (0000000086154B58)
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_MetalHit_03 (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6D238
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6D238
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6D238
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (00000000584A4C98)
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (00000000584A5658)
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (00000000584A7538)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6E8E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6E8E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6E8E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (00000000584A4618)
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (00000000584A7EF8)
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (00000000584A5CD8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6FF98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6FF98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6FF98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (00000000584A4FD8)
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (00000000584A69D8)
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (00000000584A6B78)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6FF98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6FF98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000ADD6FF98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (00000000584A5CD8)
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (00000000584A7EF8)
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (00000000584A6698)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000685851E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Cancel', format=2, channels=2, frequency=48000, lengthbytes=7584, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Cancel (00000000535DC8A8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292E9D8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Select', format=2, channels=2, frequency=48000, lengthbytes=6784, lengthpcm=29999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Select (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082932188
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Select', format=2, channels=2, frequency=48000, lengthbytes=6784, lengthpcm=29999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000433F21A8)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Select (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082931738
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Select', format=2, channels=2, frequency=48000, lengthbytes=6784, lengthpcm=29999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000433F2038)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Select (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008292DF88
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Select', format=2, channels=2, frequency=48000, lengthbytes=6784, lengthpcm=29999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Select (00000000861549B8)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3098240
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 56992
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D4E6F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9D8B80D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9D8B80D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9D8B80E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9D8B80F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000082931738
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_UI_Cancel', format=2, channels=2, frequency=48000, lengthbytes=7584, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SoundI::release                          :  (00000000433F1BE8)
+[LOG] SoundI::release                          :     SFVR_SFX_UI_Cancel (00000000861549B8)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
