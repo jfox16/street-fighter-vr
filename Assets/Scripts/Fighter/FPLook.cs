@@ -17,7 +17,8 @@ public class FPLook : MonoBehaviour
     void Update() {
         if (fpCameraTransform != null) {
             // Rotate character left and right
-            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+            float turnRate = Input.GetAxis("Mouse X") + Input.GetAxis("Right Horizontal");
+            transform.Rotate(0, turnRate * sensitivityHor, 0);
 
             // Rotate first person camera up and down
             rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;

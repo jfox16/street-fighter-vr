@@ -41,28 +41,28 @@ public class VRHand : MonoBehaviour
             handRenderers.Add(_r);
         }
 
-        lastPos = transform.position; // initialize lastPos
+        lastPos = transform.localPosition; // initialize lastPos
     }
 
     void Update() {
         UpdatePowerVec();
         SetHandColor();
 
-        Debug.Log("punchPowerVec magnitude: " + punchPowerVec.magnitude);
-
-        if (punchPowerVec.magnitude > 0.5f) {
-            VRInputHandler.InputPunch(punchPowerVec);
+        // Debug.Log("PUNCH POWER: " + punchPowerVec.magnitude);
+        if (punchPowerVec.magnitude > punchThreshold
+        && Vector3.Angle(punchPowerVec, transform.localPosition) > 90) {
+            // Debug.Log("PUNCHHHHHHHHHHHHH!");
+            VRInputHandler.InputPunch(hand, punchPowerVec);
             punchPowerVec = Vector3.zero;
         }
     }
 
     void LateUpdate() {
-        lastPos = transform.position;
+        lastPos = transform.localPosition;
     }
 
     void OnTriggerEnter(Collider other) {
         int _damage = (int) (punchPowerVec.magnitude * 10);
-        // Debug.Log("PUNCH POWER: " + punchPowerVec.magnitude);
 
         if (punchPowerVec.magnitude > 0.5f) {
 
@@ -73,12 +73,6 @@ public class VRHand : MonoBehaviour
             _unit.Hurt(_damage);
 
             // Rumble on hit
-            if (hand == Hand.Left) {
-                InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).SendHapticImpulse(1, 0.8f, 0.2f);
-            }
-            else {
-                InputDevices.GetDeviceAtXRNode(XRNode.RightHand).SendHapticImpulse(1, 0.8f, 0.2f);
-            }
         }
     }
 
@@ -91,7 +85,8 @@ public class VRHand : MonoBehaviour
     /* UpdatePowerVec calculates a new punchPowerVec based on the 
     distance and direction traversed by PlayerHand this frame. */
     void UpdatePowerVec() {
-        Vector3 _diffVec = (lastPos-transform.position)*Time.deltaTime*1800; // Distance PlayerHand traveled this frame
+        // diffVec is the distance PlayerHand traveled this frame
+        Vector3 _diffVec = (lastPos-transform.localPosition)*Time.deltaTime*1500; 
         _diffVec = Vector3.ClampMagnitude(_diffVec, 1); // Keep diffVec between 0 and 1
         /* Average punchPowerVec and _diffVec, but weight punchPowerVec with punchDistanceModifier. 
         The higher punchDistanceModifier is, the more the average will be skewed towards the current punchPowerVec. */

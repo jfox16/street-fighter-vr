@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Minimap : MonoBehaviour
 {
-    public Fighter fighter;
+    public Fighter fighter = null;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class Minimap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (fighter == null) return;
         transform.position = new Vector3(fighter.transform.position.x, fighter.transform.position.y + 50, fighter.transform.position.z);
        
     }

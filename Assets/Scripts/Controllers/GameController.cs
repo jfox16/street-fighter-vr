@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     private GameObject g;
     private Fighter fighter;
     [SerializeField] GameObject Sphere;
+    [SerializeField] GameObject mecha;
 
     void Awake() {
         Instance = this;
@@ -28,7 +29,9 @@ public class GameController : MonoBehaviour
         g = GameObject.Find("Player Selector");
         playerSelection = g.gameObject.GetComponent<PrefabSelection>();
         // gives me bug
-        playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
+        // playerPrefab = playerSelection.getRoster()[PlayerPrefs.GetString("CharacterSelection", "Mecha")];
+        // playerPrefab = playerSelection.getRoster()["Mecha"];
+        playerPrefab = mecha;
         Debug.Log(playerPrefab);
         if(playerPrefab == null)
         {

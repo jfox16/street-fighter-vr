@@ -23,8 +23,8 @@ public class FPMovement : MonoBehaviour
         {
 
 
-            float _xInput = Input.GetAxis("Horizontal");
-            float _yInput = Input.GetAxis("Vertical");
+            float _xInput = Input.GetAxis("Horizontal") + Input.GetAxis("Left Horizontal");
+            float _yInput = Input.GetAxis("Vertical") + Input.GetAxis("Left Vertical");
             Vector3 _inputVec = new Vector3(_xInput, 0, _yInput).normalized;
 
             // Get _moveVec by multiplying by moveSpeed and deltaTime.
