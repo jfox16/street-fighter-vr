@@ -9,7 +9,7 @@ public class Scoreboard : MonoBehaviour
 
     public GameObject HiScore1, HiScore2, HiScore3, HiScore4, HiScore5;
     public Destruction d;
-    public Timer t;
+    public CarTimer t;
     private int[] scores;
     private bool Checked;
 

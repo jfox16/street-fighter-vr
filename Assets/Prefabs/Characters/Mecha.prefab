@@ -1079,9 +1079,9 @@ GameObject:
   - component: {fileID: 3369916053255180619}
   - component: {fileID: 2046109878963802823}
   - component: {fileID: 1693374820388219871}
-  - component: {fileID: 2074092175318949555}
   - component: {fileID: 6391998554441634063}
-  - component: {fileID: 3207201023828277592}
+  - component: {fileID: 4960154347820173269}
+  - component: {fileID: 5699925300419229091}
   m_Layer: 0
   m_Name: Mecha
   m_TagString: Player
@@ -1143,6 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592a030d5ae5cd94096cc9670de3118b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 0
   health: 100
   special: 100
   specialCost: 10
@@ -1181,23 +1182,6 @@ MonoBehaviour:
   fpCameraAttachPoint: {fileID: 7028433210901136019}
   minimumVert: -45
   maximumVert: 45
---- !u!114 &2074092175318949555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862671726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b681e7056342a848ada7d0f081e7a62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightArmCollider: {fileID: 527638502530578247}
-  leftArmCollider: {fileID: 2612031688367182471}
-  rightLegCollider: {fileID: 1462619179817218257}
-  leftLegCollider: {fileID: 6945559046429839829}
-  hurtBox: {fileID: 7601177543029722833}
 --- !u!143 &6391998554441634063
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1216,7 +1200,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &3207201023828277592
+--- !u!114 &4960154347820173269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862671726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f37b3bd81918e44a722bc94bc85d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftArmAttack: {fileID: 846692053949071283}
+  rightArmAttack: {fileID: 8831487366622667129}
+  leftLegAttack: {fileID: 6489645334276877046}
+  rightLegAttack: {fileID: 6748684613008874274}
+--- !u!114 &5699925300419229091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2871,12 +2871,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  ownerID: 0
+  owner: {fileID: 0}
+  collider: {fileID: 0}
   sparkPrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
     type: 3}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
     type: 3}
-  ownerID: 0
-  owner: {fileID: 0}
 --- !u!1 &3737046008593521853
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,12 +2969,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  ownerID: 0
+  owner: {fileID: 0}
+  collider: {fileID: 0}
   sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
     type: 3}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
     type: 3}
-  ownerID: 0
-  owner: {fileID: 0}
 --- !u!1 &6448568871122850565
 GameObject:
   m_ObjectHideFlags: 0
@@ -3033,11 +3035,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  ownerID: 0
+  owner: {fileID: 0}
+  collider: {fileID: 0}
   sparkPrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
     type: 3}
-  ownerID: 0
-  owner: {fileID: 0}
 --- !u!1 &6479161994433136838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,11 +3100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  ownerID: 0
+  owner: {fileID: 0}
+  collider: {fileID: 0}
   sparkPrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
     type: 3}
-  ownerID: 0
-  owner: {fileID: 0}
 --- !u!1 &7212064245090964688
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class Destruction : MonoBehaviour
     public GameObject scoreText, WinOrLose, cheer, explosion, smoke;
     private Text text;
     private CarParts s;
-    private Timer timer;
+    private CarTimer timer;
     private GameObject test;
     private bool brokenAlready;
     Color trans, blue;
@@ -24,7 +24,7 @@ public class Destruction : MonoBehaviour
         soundPlayer = GameObject.Find("SoundPlayer");
         carHealth = 30.0f;
         s = g.gameObject.GetComponent<CarParts>();
-        timer = g1.gameObject.GetComponent<Timer>();
+        timer = g1.gameObject.GetComponent<CarTimer>();
         playerScore = 0;
         brokenAlready = false;
         trans = new Color(0.0f, 0.0f, 1.0f, 0.0f);

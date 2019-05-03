@@ -5,10 +5,12 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public float damage = 1;
-    [SerializeField] GameObject sparkPrefab;
-    [SerializeField] GameObject hitParticlePrefab;
     public int ownerID;
     public GameObject owner = null;
+    public Collider collider;
+    
+    [SerializeField] GameObject sparkPrefab;
+    [SerializeField] GameObject hitParticlePrefab;
     
     void Awake() {
         // Destroy(gameObject, 2f);
@@ -18,6 +20,8 @@ public class Attack : MonoBehaviour
             ownerID = gameObject.GetComponentInParent<Fighter>().gameObject.GetInstanceID();
             owner = gameObject.GetComponentInParent<Fighter>().gameObject;
         }
+
+        collider = GetComponent<Collider>();
     }
 
     protected void OnTriggerEnter(Collider other)

@@ -37,12 +37,16 @@ public abstract class FighterInput : MonoBehaviour
             if (VRInputHandler.GetInput("Right Smash")) {
                 _animator.SetTrigger("Right Smash");
             }
-            else if (VRInputHandler.GetInput("Right Punch")) {
+            else if (VRInputHandler.GetInput("Kick")) {
+                _animator.SetTrigger("Kick");
+            }
+            else if (VRInputHandler.GetInput("Right Punch") || Input.GetButton("Right Punch")) {
                 _animator.SetTrigger("Right Punch");
             }
-            else if (VRInputHandler.GetInput("Left Punch")) {
+            else if (VRInputHandler.GetInput("Left Punch") || Input.GetButton("Left Punch")) {
                 _animator.SetTrigger("Left Punch");
             }
+
 
 
             else if (Input.GetKeyDown(LightPunch))

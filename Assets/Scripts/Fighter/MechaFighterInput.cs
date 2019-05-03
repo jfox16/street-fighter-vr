@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class MechaFighterInput : FighterInput
 {
-    // Start is called before the first frame update
-
-    // Update is called once per frame
-
     public Attack LeftArmCollider;
     public Attack RightArmCollider;
     public Attack LeftLegCollider;

@@ -3,40 +3,66 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.SceneManagement;
 
 public class VRInputHandler : MonoBehaviour
 {
-    static VRInputHandler Instance = null; 
+    public static VRInputHandler Instance = null; 
 
     Dictionary<string, bool> inputDict = new Dictionary<string, bool>();
 
     void Awake() {
-        Instance = this;
+        if (Instance == null) {
+            // Set this as Instance and don't destroy it across scenes.
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else {
+            // If an instance of this already exists, destroy this one.
+            Destroy(gameObject);
+        }
 
         // Initialize inputDict
         inputDict.Add("Left Punch", false);
         inputDict.Add("Right Punch", false);
         inputDict.Add("Right Smash", false);
+        inputDict.Add("Kick", false);
+
+    }
+
+    void Update() {
+        // Secret input that restarts the game
+        if (   Input.GetAxisRaw("Left Index Trigger") > 0.5f
+            && Input.GetAxisRaw("Right Index Trigger") > 0.5f
+            && Input.GetButtonDown("B")
+            && Input.GetButtonDown("Y") ) 
+        {
+            SceneManager.LoadScene("Start VR");
+        }
     }
 
     void LateUpdate() {
-        // Set all inputs to false at the end of the frame
+        // Set all inputs to false at the end of each frame
         foreach (var key in inputDict.Keys.ToList()) {
             inputDict[key] = false;
         }
     }
 
-    public static void InputPunch(VRHand.Hand hand, Vector3 dirVec) {
+    public static void InputPunch(VRHand.Hand hand, Vector3 dirVec) 
+    {
         if (hand == VRHand.Hand.Right) {
-            SendHapticImpulse(VRHand.Hand.Right, 0.1f, 0.1f);
+            SendHapticImpulse(VRHand.Hand.Right, 0.5f, 0.5f);
             if (Input.GetButton("B")) 
                 Instance.inputDict["Right Smash"] = true;
             else 
                 Instance.inputDict["Right Punch"] = true;
         }
         else {
-            SendHapticImpulse(VRHand.Hand.Left, 0.1f, 0.1f);
-            Instance.inputDict["Left Punch"] = true;
+            SendHapticImpulse(VRHand.Hand.Left, 0.5f, 0.5f);
+            if (Input.GetButton("Y")) 
+                Instance.inputDict["Kick"] = true;
+            else 
+                Instance.inputDict["Left Punch"] = true;
         }
     }
 

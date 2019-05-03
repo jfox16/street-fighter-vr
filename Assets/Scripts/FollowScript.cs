@@ -6,13 +6,14 @@ public class FollowScript : MonoBehaviour
 {
     [SerializeField] Vector3 offsetVec = new Vector3(0, 0, -10);
 
-    void Update() {
-        if (GameController.clientPlayer != null) {
-            Follow(GameController.clientPlayer);
+    void LateUpdate() {
+        if (GameControllerDDOL.spawnedFighter != null) {
+            Follow(GameControllerDDOL.spawnedFighter);
         }
     }
 
     void Follow(GameObject target) {
-        transform.position = target.transform.position + offsetVec;
+        transform.position = target.transform.position + target.transform.rotation*offsetVec;
+        transform.rotation = target.transform.rotation;
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColliderController : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     [SerializeField] Collider rightArmCollider;
     [SerializeField] Collider leftArmCollider;
@@ -19,11 +20,6 @@ public class ColliderController : MonoBehaviour
         rightLegCollider.enabled = false;
         leftLegCollider.enabled = false;
         _animator = gameObject.GetComponent<Animator>();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void EnableRightArm()
     {
