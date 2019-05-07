@@ -12,17 +12,15 @@ public class Timer
         }
     }
 
-    public float timeLeft {
-        get {
-            return Mathf.Max(endTime - Time.time, 0);
-        }
-    }
-
     public Timer() {
         endTime = 0;
     }
 
     public void SetTime(float time) {
         endTime = Time.time + time;
+    }
+
+    public float GetTime() {
+        return Mathf.Max(endTime - Time.time, 0);
     }
 }

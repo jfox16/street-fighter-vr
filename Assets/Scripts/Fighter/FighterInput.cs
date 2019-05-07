@@ -1,74 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
+/**
+ * FighterInput 
+ */
 public abstract class FighterInput : MonoBehaviour
 {
     // Start is called before the first frame update
-    KeyCode LightPunch;
-    KeyCode HeavyPunch;
-    KeyCode Kick;
-    KeyCode Special;
-    KeyCode Dodge;
-    KeyCode Block;
-    KeyCode Crouch;
+    // KeyCode LightPunch;
+    // KeyCode HeavyPunch;
+    // KeyCode Kick;
+    // KeyCode Special;
+    // KeyCode Dodge;
+    // KeyCode Block;
+    // KeyCode Crouch;
+    // protected Fighter _fighter;
 
-    public Animator _animator;
-    protected Fighter _fighter;
+    public Fighter fighter;
+    public Animator animator;
+    PhotonView photonView;
 
-    void Start()
-    {
-        _fighter = this.gameObject.GetComponent<Fighter>();
-        LightPunch = KeyCode.Mouse0;
-        HeavyPunch = KeyCode.Mouse1;
-        Kick = KeyCode.LeftControl;
-        Special = KeyCode.Space;
-        Dodge = KeyCode.LeftShift;
-        Block = KeyCode.C;
-        Crouch = KeyCode.LeftShift;
-
+    protected void Awake() {
+        fighter = GetComponent<Fighter>();
+        animator = GetComponent<Animator>();
+        photonView = GetComponent<PhotonView>();
     }
 
-    // Update is called once per frame
     protected void Update()
     {
-        if (!_animator.GetBool("isAttacking") && !_animator.GetBool("isWalking"))
+        // Only read input if this Fighter belongs to the client.
+        if (!PhotonNetwork.IsConnected || photonView.IsMine) {
+            ReadAttackInput();
+        }
+    }
+
+    void ReadAttackInput() {
+        if (!animator.GetBool("isAttacking") && !animator.GetBool("isWalking"))
         {
             if (VRInputHandler.GetInput("Right Smash")) {
-                _animator.SetTrigger("Right Smash");
+                animator.SetTrigger("Right Smash");
             }
             else if (VRInputHandler.GetInput("Kick")) {
-                _animator.SetTrigger("Kick");
+                animator.SetTrigger("Kick");
             }
-            else if (VRInputHandler.GetInput("Right Punch") || Input.GetButton("Right Punch")) {
-                _animator.SetTrigger("Right Punch");
+            else if (VRInputHandler.GetInput("Right Punch") || Input.GetButton("Right Punch") || Input.GetMouseButton(1)) {
+                animator.SetTrigger("Right Punch");
             }
-            else if (VRInputHandler.GetInput("Left Punch") || Input.GetButton("Left Punch")) {
-                _animator.SetTrigger("Left Punch");
-            }
-
-
-
-            else if (Input.GetKeyDown(LightPunch))
-            {
-                punch();
-            }
-            else if (Input.GetKeyDown(Kick))
-            {
-                Debug.Log("kick");
-                kick();
-            }
-            else if (Input.GetKeyDown(Block))
-            {
-                _animator.SetBool("Block", true);
-            }
-            else if (Input.GetKeyUp(Block))
-            {
-                _animator.SetBool("Block", false);
-            }
-            else if (Input.GetKeyDown(Special))
-            {
-                special();
+            else if (VRInputHandler.GetInput("Left Punch") || Input.GetButton("Left Punch") || Input.GetMouseButton(0)) {
+                animator.SetTrigger("Left Punch");
             }
         }
     }

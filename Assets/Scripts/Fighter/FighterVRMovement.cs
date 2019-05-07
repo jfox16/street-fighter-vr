@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Photon.Pun;
 
 public class FighterVRMovement : MonoBehaviour
 {
@@ -9,18 +10,33 @@ public class FighterVRMovement : MonoBehaviour
     [SerializeField] float maxMoveRange = 2;
     [SerializeField] float moveCursorSpeed = 0.2f;
 
-    GameObject moveCursor = null;
     Rigidbody rigidbody = null;
+    CapsuleCollider collider = null;
     Animator animator = null;
+    PhotonView photonView = null;
+    
+    // This is the cursor that gets spawned when moving
+    GameObject moveCursor = null;
 
+    // turnDelay determines how frequently to turn when turn is held
     [SerializeField] float turnDelay = 1;
     Timer turnTimer = new Timer();
 
-    void Update() 
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
-        ReadMoveInput();
-        ReadTurnInput();
+        collider = GetComponent<CapsuleCollider>();
+        animator = GetComponent<Animator>();
+        photonView = GetComponent<PhotonView>();
+    }
+
+    void Update() 
+    {
+         // Only read input if this Fighter belongs to the client.
+        if (!PhotonNetwork.IsConnected || photonView.IsMine) {
+            ReadMoveInput();
+            ReadTurnInput();
+        }
     }
 
     void ReadMoveInput() {
@@ -30,6 +46,7 @@ public class FighterVRMovement : MonoBehaviour
 
         if (_moveInput.magnitude > 0.05f)
         {
+            // Move the move cursor in direction of move input.
             if (moveCursor == null) 
                 moveCursor = Instantiate(moveCursorPrefab, transform);
 
@@ -38,20 +55,40 @@ public class FighterVRMovement : MonoBehaviour
         }
         else 
         {
+            // When move input is let go, move to that location.
             if (moveCursor != null) {
-                // transform.position = moveCursor.transform.position;
-                rigidbody.MovePosition(moveCursor.transform.position);
+                // The SphereCast checks for any collisions between Fighter and the moveCursor point.
+                // If a collision is found, Fighter will just move to the collision point.
+                // Otherwise, move to moveCursor point.
+                RaycastHit _hit;
+                bool _wasHit = Physics.SphereCast(
+                    transform.position + new Vector3(0, collider.radius+0.1f, 0), 
+                    collider.radius, 
+                    moveCursor.transform.position - transform.position,
+                    out _hit, 
+                    (moveCursor.transform.position - transform.position).magnitude
+                );
+
+                if (_wasHit) {
+                    rigidbody.MovePosition(_hit.point - new Vector3(0, collider.radius+0.1f, 0));
+                }
+                else {
+                    rigidbody.MovePosition(moveCursor.transform.position);
+                }
+
+                animator.SetTrigger("Dash");
                 Destroy(moveCursor);
+                moveCursor = null;
             }
         }
     }
 
     void ReadTurnInput() {
-        float _keyboardTurnInput = Input.GetAxisRaw("Mouse X");
+        float _keyboardTurnInput = -Input.GetAxisRaw("Mouse X");
         float _controllerTurnInput = Input.GetAxisRaw("Right Horizontal");
         float _turnInput = _keyboardTurnInput + _controllerTurnInput;
 
-        if (Math.Abs(_turnInput) > 0.4f) {
+        if (Math.Abs(_turnInput) > 0.8f) {
             if (turnTimer.isDone) {
                 transform.Rotate(0, -45*Mathf.Sign(_turnInput), 0);
                 turnTimer.SetTime(turnDelay);

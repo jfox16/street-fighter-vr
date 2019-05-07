@@ -1,7 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
+/**
+ * FighterAnimationHandler is how the Animator interacts with the rest of the Fighter.
+ * These functions are called directly from animations.
+ * EnableLimbCollider and DisableLimbCollider are used in attack animations.
+ * Specific implementations for Fighters should be implemented in a child class.
+ * (Use MechaAnimationHandler as an example)
+ */
 public class FighterAnimationHandler : MonoBehaviour
 {    
     public enum Limb {LeftArm, RightArm, LeftLeg, RightLeg}
@@ -11,10 +19,12 @@ public class FighterAnimationHandler : MonoBehaviour
     [SerializeField] Attack leftLegAttack;
     [SerializeField] Attack rightLegAttack;
     Animator animator;
+    PhotonView photonView;
 
     void Awake()
     {
-        animator = gameObject.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+        photonView = GetComponent<PhotonView>();
         rightArmAttack.collider.enabled = false;
         leftArmAttack.collider.enabled = false;
         rightLegAttack.collider.enabled = false;
@@ -33,6 +43,11 @@ public class FighterAnimationHandler : MonoBehaviour
 
     public void EnableLimbCollider(Limb limb, float damage) 
     {
+        // Only do this if this Fighter belongs to the client.
+        if (PhotonNetwork.IsConnected && !photonView.IsMine) {
+            return;
+        }
+
         switch(limb) {
             case Limb.LeftArm:
                 leftArmAttack.collider.enabled = true;
@@ -55,6 +70,11 @@ public class FighterAnimationHandler : MonoBehaviour
 
     public void DisableLimbCollider(Limb limb) 
     {
+        // Only do this if this Fighter belongs to the client.
+        if (PhotonNetwork.IsConnected && !photonView.IsMine) {
+            return;
+        }
+        
         switch(limb) {
             case Limb.LeftArm:
                 leftArmAttack.collider.enabled = false;

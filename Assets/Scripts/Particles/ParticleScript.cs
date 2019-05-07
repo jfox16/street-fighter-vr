@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * ParticleScript can be put on any particle that needs to be destroyed after a period of time.
+ * Set lifeTime to how long you want the particle to stay alive.
+ */
 public class ParticleScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    [SerializeField] float lifeTime = 1.0f;
+    
     void Start()
     {
-        Destroy(gameObject, 0.5f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Destroy(gameObject, lifeTime);
     }
 }

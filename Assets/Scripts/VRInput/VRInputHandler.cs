@@ -13,7 +13,7 @@ public class VRInputHandler : MonoBehaviour
 
     void Awake() {
         if (Instance == null) {
-            // Set this as Instance and don't destroy it across scenes.
+            // Set this as Instance and keep it from being destroyed across scenes.
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }

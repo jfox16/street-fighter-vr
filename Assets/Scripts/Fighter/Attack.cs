@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Attack should be attached to a GameObject with a Collider.
+ * When it collides with a Unit child class, it checks to see
+ * if its a valid target and calls its Hurt function.
+ */
 public class Attack : MonoBehaviour
 {
     public float damage = 1;
@@ -14,9 +19,6 @@ public class Attack : MonoBehaviour
     GameObject hitSpark;
     
     void Awake() {
-        hitSpark = (GameObject)Resources.Load("Particles/HitSpark");
-        // Destroy(gameObject, 2f);
-        // null ptr when dummy attacks
         if (GetComponentInParent<Fighter>() != null)
         {
             ownerID = gameObject.GetComponentInParent<Fighter>().gameObject.GetInstanceID();
@@ -24,6 +26,7 @@ public class Attack : MonoBehaviour
         }
 
         collider = GetComponent<Collider>();
+        hitSpark = (GameObject)Resources.Load("Particles/HitSpark");
     }
 
     protected void OnTriggerEnter(Collider other)

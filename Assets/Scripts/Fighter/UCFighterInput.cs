@@ -16,21 +16,21 @@ public class UCFighterInput : FighterInput
     }
     public override void kick()
     {
-        _animator.SetTrigger("Kick");
+        animator.SetTrigger("Kick");
     }
 
     public override void punch()
     {
-        _animator.SetTrigger("Light_Punch");
+        animator.SetTrigger("Light_Punch");
     }
 
     public override void special()
     {
-        if (_fighter.special >= 25 && timestamp < Time.time)
+        if (fighter.special >= 25 && timestamp < Time.time)
         {
-            _fighter.special -= 1;
+            fighter.special -= 1;
             timestamp = Time.time + cooldown;
-            _animator.SetTrigger("Special");
+            animator.SetTrigger("Special");
         }
     }
     public void spawnFireball()

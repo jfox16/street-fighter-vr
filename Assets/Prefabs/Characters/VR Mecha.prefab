@@ -1079,11 +1079,13 @@ GameObject:
   - component: {fileID: 3766724012583880416}
   - component: {fileID: 4578368255154107509}
   - component: {fileID: 3369916053255180619}
-  - component: {fileID: 2046109878963802823}
   - component: {fileID: 1693374820388219871}
   - component: {fileID: 4960154347820173269}
   - component: {fileID: 5699925300419229091}
   - component: {fileID: 7341694867326826660}
+  - component: {fileID: 4089011377622651418}
+  - component: {fileID: 807446578901355451}
+  - component: {fileID: 2736659007129226266}
   m_Layer: 0
   m_Name: VR Mecha
   m_TagString: Player
@@ -1183,20 +1185,6 @@ MonoBehaviour:
   damageModifier: 1
   projectilePoint: {fileID: 0}
   cooldown: 0
---- !u!114 &2046109878963802823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862671726}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6f37d0dfbb33aa4caccf6e440874876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 0}
-  moveSpeed: 5
 --- !u!114 &1693374820388219871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,9 +1254,104 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveCursorPrefab: {fileID: 6852846381440743450, guid: 4e6858b9e978c1842afd54847af93ec7,
     type: 3}
-  maxMoveRange: 3
-  moveCursorSpeed: 0.3
+  maxMoveRange: 2
+  moveCursorSpeed: 0.2
   turnDelay: 0.3
+--- !u!114 &4089011377622651418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862671726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 807446578901355451}
+  - {fileID: 2736659007129226266}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &807446578901355451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862671726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+--- !u!114 &2736659007129226266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862671726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 9
+    SynchronizeType: 0
+    Name: Kick
+  - Type: 9
+    SynchronizeType: 0
+    Name: Heavy_Punch
+  - Type: 9
+    SynchronizeType: 0
+    Name: Special
+  - Type: 9
+    SynchronizeType: 0
+    Name: Light_Punch
+  - Type: 4
+    SynchronizeType: 0
+    Name: Crouch
+  - Type: 4
+    SynchronizeType: 0
+    Name: isWalking
+  - Type: 4
+    SynchronizeType: 0
+    Name: Block
+  - Type: 4
+    SynchronizeType: 0
+    Name: isAttacking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isBlocking
+  - Type: 9
+    SynchronizeType: 0
+    Name: Right Punch
+  - Type: 9
+    SynchronizeType: 0
+    Name: Left Punch
+  - Type: 9
+    SynchronizeType: 0
+    Name: Right Smash
+  - Type: 9
+    SynchronizeType: 0
+    Name: Dash
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
 --- !u!1 &926383555
 GameObject:
   m_ObjectHideFlags: 0

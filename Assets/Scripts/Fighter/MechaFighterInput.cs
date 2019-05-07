@@ -15,27 +15,28 @@ public class MechaFighterInput : FighterInput
     public GameObject AuraParticles;
 
 
-    private void Awake()
+    protected void Awake()
     {
+        base.Awake();
         DeactivateParticles();
     }
     public override void kick()
     {
-        _animator.SetTrigger("Kick");
+        animator.SetTrigger("Kick");
     }
 
     public override void punch()
     {
-        _animator.SetTrigger("Light_Punch");
+        animator.SetTrigger("Light_Punch");
     }
 
     public override void special()
     {
-        if(_fighter.special >= 100)
+        if(fighter.special >= 100)
         {
-            _fighter.special = 0;
+            fighter.special = 0;
             changeDamageMod(2.0f);
-            _animator.SetTrigger("Special");
+            animator.SetTrigger("Special");
             Invoke("StopSpecial", 20f);
         }
     }
