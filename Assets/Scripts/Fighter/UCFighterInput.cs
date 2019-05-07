@@ -47,4 +47,5 @@ public class UCFighterInput : FighterInput
         _ball.GetComponent<Attack>().ownerID = gameObject.GetInstanceID();
         _ball.GetComponent<Attack>().owner = gameObject;
     }
+
 }
