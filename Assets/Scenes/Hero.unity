@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45141298, g: 0.5008833, b: 0.57223237, a: 1}
+  m_IndirectSpecularColor: {r: 0.4514125, g: 0.5008821, b: 0.57223153, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2068,6 +2068,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2406754528688481698, guid: 7853f257cb7c14559b65cd4a065e11e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 852413809992217823, guid: 7853f257cb7c14559b65cd4a065e11e4,
         type: 3}
       propertyPath: m_Material
@@ -2572,12 +2577,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 862671726, guid: eedb125466ea04149ab16edc4d63b4b1,
         type: 3}
-    - target: {fileID: 7219899272365774701, guid: d7a526efd7a334a0395728577278ba70,
-        type: 3}
-      propertyPath: UnityChan
-      value: 
-      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
-        type: 3}
     - target: {fileID: 7219899272017559765, guid: d7a526efd7a334a0395728577278ba70,
         type: 3}
       propertyPath: fighterPrefab
@@ -2595,5 +2594,11 @@ PrefabInstance:
       propertyPath: charName
       value: unitychan_humanoid
       objectReference: {fileID: 0}
+    - target: {fileID: 7219899272365774701, guid: d7a526efd7a334a0395728577278ba70,
+        type: 3}
+      propertyPath: UnityChan
+      value: 
+      objectReference: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a526efd7a334a0395728577278ba70, type: 3}
