@@ -6,7 +6,7 @@ using Photon.Pun;
 
 public class FighterVRMovement : MonoBehaviour
 {
-    [SerializeField] GameObject moveCursorPrefab;
+    GameObject moveCursorPrefab;
     [SerializeField] float maxMoveRange = 2;
     [SerializeField] float moveCursorSpeed = 0.2f;
 
@@ -28,6 +28,7 @@ public class FighterVRMovement : MonoBehaviour
         collider = GetComponent<CapsuleCollider>();
         animator = GetComponent<Animator>();
         photonView = GetComponent<PhotonView>();
+        moveCursorPrefab = (GameObject)Resources.Load("Particles/MoveCursor");
     }
 
     void Update() 

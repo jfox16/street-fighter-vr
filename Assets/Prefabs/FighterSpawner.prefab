@@ -862,7 +862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mechaPrefab: {fileID: 862671726, guid: 032f26b224406c644b768894f61c110a, type: 3}
-  unitychanPrefab: {fileID: 0}
+  unitychanPrefab: {fileID: 551310717093462008, guid: dc608e2a91ac0e24a958ca7f6bfa5563,
+    type: 3}
 --- !u!1 &7792977623912102123
 GameObject:
   m_ObjectHideFlags: 0
