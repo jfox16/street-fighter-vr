@@ -828,8 +828,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8134082384204280484}
   - component: {fileID: 8134082384204280489}
-  - component: {fileID: 8134082384204280486}
   - component: {fileID: 8134082384204280487}
+  - component: {fileID: 8460888493775128558}
   m_Layer: 0
   m_Name: Head w/ Camera
   m_TagString: Untagged
@@ -893,14 +893,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &8134082384204280486
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8134082384204280485}
-  m_Enabled: 1
 --- !u!114 &8134082384204280487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,6 +911,19 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 1
+--- !u!114 &8460888493775128558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8134082384204280485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &8134082385642156446
 GameObject:
   m_ObjectHideFlags: 0

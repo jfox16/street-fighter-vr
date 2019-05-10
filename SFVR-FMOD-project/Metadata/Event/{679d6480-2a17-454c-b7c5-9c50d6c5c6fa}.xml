@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{679d6480-2a17-454c-b7c5-9c50d6c5c6fa}">
         <property name="name">
-            <value>Special</value>
+            <value>UseSpecial</value>
         </property>
         <property name="outputFormat">
             <value>2</value>
@@ -59,11 +59,18 @@
     <object class="EventAutomatableProperties" id="{26908f0f-2c89-4841-8494-bd1bfd2e44b8}"/>
     <object class="MarkerTrack" id="{0f7d53ff-5928-43eb-857d-1f19bea2a862}"/>
     <object class="GroupTrack" id="{3876ea18-fb69-4c42-812d-0b94a4522ecf}">
+        <relationship name="modules">
+            <destination>{7a8c5e9d-00cf-46be-b87d-853114dd654e}</destination>
+        </relationship>
         <relationship name="mixerGroup">
             <destination>{7005e0dc-bafa-47ab-a94b-591c3e6e7d13}</destination>
         </relationship>
     </object>
-    <object class="Timeline" id="{10198a75-fbd6-43b8-b195-5256c914088d}"/>
+    <object class="Timeline" id="{10198a75-fbd6-43b8-b195-5256c914088d}">
+        <relationship name="modules">
+            <destination>{7a8c5e9d-00cf-46be-b87d-853114dd654e}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerMaster" id="{31384bfb-04c8-4504-968e-c80f8cf136a0}">
         <relationship name="effectChain">
             <destination>{0cc32f2b-dfc3-4412-b76e-545b8b4239f4}</destination>
@@ -81,7 +88,18 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{5e7f7af4-3dd9-481a-8cdd-349367caaaff}"/>
+    <object class="SingleSound" id="{7a8c5e9d-00cf-46be-b87d-853114dd654e}">
+        <property name="length">
+            <value>0.8850340136054422</value>
+        </property>
+        <relationship name="audioFile">
+            <destination>{e51406d6-6599-40ef-bc40-e53142cb9735}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerGroup" id="{7005e0dc-bafa-47ab-a94b-591c3e6e7d13}">
+        <property name="volume">
+            <value>-7.5</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -106,10 +124,12 @@
     <object class="MixerBusEffectChain" id="{5399d89d-ed53-463c-9dbc-21462238df4b}">
         <relationship name="effects">
             <destination>{2cc76802-ebdd-4c8f-b9b7-57962d6e7a89}</destination>
+            <destination>{fb93a162-9a91-459a-b320-1767534bf54d}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{c5cfad22-9166-4738-83f4-f574c76c448e}"/>
     <object class="MixerBusFader" id="{19d7c87f-e1ed-47c6-bcdd-216c7ed8b8ba}"/>
     <object class="SpatialiserEffect" id="{411f95eb-9383-4463-a794-932c0fce454d}"/>
     <object class="MixerBusFader" id="{2cc76802-ebdd-4c8f-b9b7-57962d6e7a89}"/>
+    <object class="FlangerEffect" id="{fb93a162-9a91-459a-b320-1767534bf54d}"/>
 </objects>

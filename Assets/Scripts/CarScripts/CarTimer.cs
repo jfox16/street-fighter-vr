@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CarTimer : MonoBehaviour
 {
     private float seconds, maxTime;
-    public GameObject myText, WinOrLose, score, car, carParts;
+    public GameObject myText, WinOrLose, score, car;
     private GameObject soundPlayer;
     private TextMesh text;
     private bool carDead, loserPlayed;
@@ -40,8 +40,6 @@ public class CarTimer : MonoBehaviour
         {
             text.text = "Nice Try!";
             text.color = Color.Lerp(text.color, red, 2.0f * Time.deltaTime);
-            int playerScore = s.getScore();
-            score.GetComponent<TextMesh>().text = "Player Score: " + playerScore.ToString();
             s.enabled = false;
             if (!loserPlayed)
             {

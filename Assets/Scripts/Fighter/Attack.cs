@@ -33,7 +33,7 @@ public class Attack : MonoBehaviour
     {
         Unit _unit = other.gameObject.GetComponent<Unit>();
         if (_unit != null && _unit.gameObject.GetInstanceID() != ownerID)
-            {
+        {
             // Instantiate(hitParticlePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
             Instantiate(hitSpark, transform.position, transform.rotation);
                 // fix a bug
@@ -43,10 +43,17 @@ public class Attack : MonoBehaviour
                     {
                         // Instantiate(sparkPrefab, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), new Quaternion(0, 0, 0, 0));
                     }
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", owner.transform.position);
                     _unit.Hurt(damage);
                     gameObject.GetComponent<Collider>().enabled = false;
                 }
-            }
+        }
+
+        if (other.gameObject != owner)
+        {
+            if (this.gameObject.name.Equals("LeftArmCollider"))
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", owner.transform.position);
+            else if (this.gameObject.name.Equals("RightLegCollider"))
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Kick", owner.transform.position);
+        }
     }
 }

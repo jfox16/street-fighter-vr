@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/City.unity
     guid: 499afeba5855b4120a1b1ec519d692ac
   - enabled: 1
+    path: Assets/Scenes/VR Start.unity
+    guid: 0278b5dcc5662ae44a9aefc706383bd2
+  - enabled: 1
     path: Assets/Scenes/Levels/VR CarCrusher.unity
     guid: 2469ecf09b1a1d0498771f5ea5c7d917
   - enabled: 1
