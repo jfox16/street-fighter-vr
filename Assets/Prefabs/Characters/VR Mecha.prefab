@@ -1087,6 +1087,7 @@ GameObject:
   - component: {fileID: 807446578901355451}
   - component: {fileID: 2736659007129226266}
   - component: {fileID: 8792378796254389677}
+  - component: {fileID: 8717807233560633530}
   m_Layer: 0
   m_Name: VR Mecha
   m_TagString: Player
@@ -1254,8 +1255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058bf8d117b18b842951abfa3b14bb3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveCursorPrefab: {fileID: 6852846381440743450, guid: 4e6858b9e978c1842afd54847af93ec7,
-    type: 3}
   maxMoveRange: 2
   moveCursorSpeed: 0.2
   turnDelay: 0.3
@@ -1364,6 +1363,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86607298f2db4324d9a1a0a9cadf2148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinnerText: {fileID: 8527044739112820210, guid: fed4c065c45a26844b204f785d3699aa,
+    type: 3}
+  LoserText: {fileID: 57608313532400044, guid: 8e49da25f9a3db941bd7eaca8a8c7797, type: 3}
+  TieText: {fileID: 4345629524915808753, guid: 4096ba8b21ae6f2409802fdcc40ba6f6, type: 3}
+--- !u!114 &8717807233560633530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862671726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05cb41a854e4304881b7baf95139016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &926383555

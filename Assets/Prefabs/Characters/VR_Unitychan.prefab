@@ -6696,6 +6696,8 @@ GameObject:
   - component: {fileID: 5083159714405988058}
   - component: {fileID: 225768999553278719}
   - component: {fileID: 8393858938275216637}
+  - component: {fileID: 1103409591593020304}
+  - component: {fileID: 5194909989644483571}
   m_Layer: 0
   m_Name: VR_Unitychan
   m_TagString: Player
@@ -6979,6 +6981,34 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
+--- !u!114 &1103409591593020304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551310717093462008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86607298f2db4324d9a1a0a9cadf2148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinnerText: {fileID: 8527044739112820210, guid: fed4c065c45a26844b204f785d3699aa,
+    type: 3}
+  LoserText: {fileID: 57608313532400044, guid: 8e49da25f9a3db941bd7eaca8a8c7797, type: 3}
+  TieText: {fileID: 4345629524915808753, guid: 4096ba8b21ae6f2409802fdcc40ba6f6, type: 3}
+--- !u!114 &5194909989644483571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551310717093462008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05cb41a854e4304881b7baf95139016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &551310717093462010
 GameObject:
   m_ObjectHideFlags: 0

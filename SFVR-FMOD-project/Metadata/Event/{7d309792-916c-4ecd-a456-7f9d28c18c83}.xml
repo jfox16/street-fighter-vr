@@ -93,6 +93,9 @@
     </object>
     <object class="MixerBusPanner" id="{701076b3-6a1d-45da-b170-aff65a6afd7d}"/>
     <object class="SingleSound" id="{92c03ea0-768f-4627-978e-477230a95dfa}">
+        <property name="start">
+            <value>3</value>
+        </property>
         <property name="length">
             <value>56.888888888888886</value>
         </property>
@@ -102,7 +105,7 @@
     </object>
     <object class="EventMixerGroup" id="{b459754e-7452-4e9a-bb31-4231519d8000}">
         <property name="volume">
-            <value>-16</value>
+            <value>-13</value>
         </property>
         <property name="name">
             <value>Audio 1</value>
@@ -119,7 +122,7 @@
     </object>
     <object class="LoopRegion" id="{a0894bd8-5fa8-47da-a595-487b9677b636}">
         <property name="position">
-            <value>0</value>
+            <value>3</value>
         </property>
         <property name="length">
             <value>56.888888888888872</value>
@@ -133,7 +136,7 @@
     </object>
     <object class="TempoMarker" id="{4b8f6036-95f4-4337-bd52-42b3172a19c9}">
         <property name="position">
-            <value>0</value>
+            <value>3</value>
         </property>
         <property name="tempo">
             <value>135</value>

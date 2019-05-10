@@ -50,9 +50,9 @@ public class Attack : MonoBehaviour
 
         if (other.gameObject != owner)
         {
-            if (this.gameObject.name.Equals("LeftArmCollider"))
+            if (this.gameObject.name.Equals("LeftArmCollider") || this.gameObject.name.Equals("RightArmCollider"))
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", owner.transform.position);
-            else if (this.gameObject.name.Equals("RightLegCollider"))
+            else if (this.gameObject.name.Equals("RightLegCollider") || this.gameObject.name.Equals("RIghtLegCollider"))
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Kick", owner.transform.position);
         }
     }

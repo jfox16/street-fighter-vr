@@ -37,6 +37,7 @@ public class Destruction : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(carHealth);
         if(carHealth <= 0.0f && !brokenAlready)
         {
             breakAllParts();

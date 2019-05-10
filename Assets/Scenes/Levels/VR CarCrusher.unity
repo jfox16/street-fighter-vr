@@ -121,6 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9550750}
+  - component: {fileID: 9550749}
   m_Layer: 0
   m_Name: SoundPlayer
   m_TagString: Untagged
@@ -128,6 +129,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9550749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9550748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Music/BonusMusic
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &9550750
 Transform:
   m_ObjectHideFlags: 0
@@ -1706,6 +1730,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 909510679}
     m_Modifications:
+    - target: {fileID: 3716558504145743226, guid: 20345cb0c15021b4dbd948a937597d4f,
+        type: 3}
+      propertyPath: m_Name
+      value: Flash
+      objectReference: {fileID: 0}
     - target: {fileID: 3716558504145743229, guid: 20345cb0c15021b4dbd948a937597d4f,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -1800,11 +1829,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3716558504145743226, guid: 20345cb0c15021b4dbd948a937597d4f,
-        type: 3}
-      propertyPath: m_Name
-      value: Flash
       objectReference: {fileID: 0}
     - target: {fileID: 3716558504145743231, guid: 20345cb0c15021b4dbd948a937597d4f,
         type: 3}
@@ -4105,6 +4129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499252711}
   - component: {fileID: 1499252710}
+  - component: {fileID: 1499252712}
   m_Layer: 0
   m_Name: Cheers
   m_TagString: Untagged
@@ -4149,6 +4174,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1499252712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499252709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff29bde4978d8b43ac3a17c14be5bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1549124305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 038d698227cbe3541bbad6b1b4dc3d40,

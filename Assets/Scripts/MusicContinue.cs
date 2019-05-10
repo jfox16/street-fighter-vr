@@ -27,7 +27,7 @@ public class MusicContinue : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 5)
+        if (!SceneManager.GetActiveScene().name.Equals("VR Start") && !SceneManager.GetActiveScene().name.Equals("VR Hero"))
         {
             Destroy(this.gameObject);
         }

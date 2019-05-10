@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{466527e7-9126-4a10-b050-42560337f2cf}">
+        <property name="assetPath">
+            <value>SFVR_VO_Announcer_CharacterSelect.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>1.5263492063492063</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{a47d820e-4027-4ffd-b751-a122874883a4}</destination>
+        </relationship>
+    </object>
+</objects>
