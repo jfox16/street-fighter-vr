@@ -69,7 +69,7 @@ public class TrackPlayers : MonoBehaviour
         }
 
         // when a player lost all their health
-        if((p1.getHealth() <= 0 || p2.getHealth() <= 0) && !playKO)
+        if((p1.getHealth() <= 0 || p2.getHealth() <= 0) && !playKO && seconds < maxTime)
         {
             StartCoroutine(KOState());
         }

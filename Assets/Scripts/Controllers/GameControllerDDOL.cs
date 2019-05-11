@@ -12,8 +12,8 @@ public class GameControllerDDOL : MonoBehaviour
     public static GameControllerDDOL Instance = null;
 
     public enum Fighter{Default, Mecha, Unitychan}
-    public static GameControllerDDOL.Fighter selectedFighter = GameControllerDDOL.Fighter.Unitychan;
-    //public static GameControllerDDOL.Fighter selectedFighter = GameControllerDDOL.Fighter.Mecha;
+    //public static GameControllerDDOL.Fighter selectedFighter = GameControllerDDOL.Fighter.Unitychan;
+    public static GameControllerDDOL.Fighter selectedFighter = GameControllerDDOL.Fighter.Mecha;
     public static GameObject spawnedFighter = null;
 
     public static int collisionMask;

@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000000655297A8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000044ED6978 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,12 +15,220 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000005D4C1E48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Mecha_Footstep_01', format=2, channels=1, frequency=48000, lengthbytes=4992, lengthpcm=29400, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.882385.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000005D4C1E48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Mecha_Footstep_03', format=2, channels=1, frequency=48000, lengthbytes=5184, lengthpcm=31500, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.871490.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000005D4C1E48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Mecha_Footstep_02', format=2, channels=1, frequency=48000, lengthbytes=4864, lengthpcm=28385, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.904663.
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000040CD4948
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_03', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404999.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000040CD4948
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_01', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.505890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000040CD4948
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_SFX_Punch_02', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.499817.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000005D4C1E48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_VO_Announcer_KO_01', format=2, channels=1, frequency=48000, lengthbytes=11264, lengthpcm=66622, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.483338.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000005D4C1E48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_VO_Announcer_KO_02', format=2, channels=1, frequency=48000, lengthbytes=9024, lengthpcm=55472, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.628500.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000005D4C1E48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_VO_Announcer_KO_03', format=2, channels=1, frequency=48000, lengthbytes=11232, lengthpcm=63400, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.743202.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000040CD7CD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_VO_Announcer_YouLose', format=2, channels=1, frequency=48000, lengthbytes=12544, lengthpcm=74324, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.309575.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6977472
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 67232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000005AD3F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFBB1B40D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFBB1B40D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFBB1B40E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFBB1B40F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000040CD7CD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFVR_VO_Announcer_YouWin', format=2, channels=1, frequency=48000, lengthbytes=10304, lengthpcm=61041, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.523498.
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SoundI::release                          :  (00000000522E5578)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_01 (000000007BB7EB58)
+[LOG] SoundI::release                          :  (00000000522E4FB8)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_02 (000000007BB7E9B8)
+[LOG] SoundI::release                          :  (00000000522E5128)
+[LOG] SoundI::release                          :     SFVR_SFX_Punch_03 (000000007BB7E678)
+[LOG] SoundI::release                          :  (00000000522E6828)
+[LOG] SoundI::release                          :     SFVR_VO_Announcer_KO_01 (0000000052188598)
+[LOG] SoundI::release                          :  (00000000522E5858)
+[LOG] SoundI::release                          :     SFVR_VO_Announcer_KO_02 (000000004454B778)
+[LOG] SoundI::release                          :  (00000000522E59C8)
+[LOG] SoundI::release                          :     SFVR_VO_Announcer_KO_03 (000000004454B298)
+[LOG] SoundI::release                          :  (000000005D497DB8)
+[LOG] SoundI::release                          :     SFVR_VO_Announcer_YouWin (0000000016194548)
+[LOG] SoundI::release                          :  (000000005D497518)
+[LOG] SoundI::release                          :     SFVR_VO_Announcer_YouLose (0000000016194208)
+[LOG] SoundI::release                          :  (00000000522E5B38)
+[LOG] SoundI::release                          :     SFVR_SFX_Mecha_Footstep_01 (00000000521880B8)
+[LOG] SoundI::release                          :  (00000000522E6548)
+[LOG] SoundI::release                          :     SFVR_SFX_Mecha_Footstep_02 (00000000521883F8)
+[LOG] SoundI::release                          :  (00000000522E6268)
+[LOG] SoundI::release                          :     SFVR_SFX_Mecha_Footstep_03 (0000000052188258)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 

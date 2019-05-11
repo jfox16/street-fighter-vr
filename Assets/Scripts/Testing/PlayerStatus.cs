@@ -11,7 +11,7 @@ public class PlayerStatus : MonoBehaviour
     private GameStatus status;
     private bool playWinOrLose;
     private GameObject soundPlayer;
-    public GameObject WinnerText, LoserText, TieText;
+    public GameObject WinnerText, LoserText, TieText, fireworks;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +41,7 @@ public class PlayerStatus : MonoBehaviour
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/VO/Announcer/Winner", soundPlayer.gameObject.transform.position);
                 Instantiate(WinnerText, this.gameObject.transform);
+                Instantiate(fireworks, this.gameObject.transform);
                 playWinOrLose = true;
             }
         }
