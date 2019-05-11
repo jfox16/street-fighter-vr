@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.streetfightervr.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\JPL-DMS-VRLT-02\\Documents\\GitHub\\street-fighter-vr\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "street-fighter-vr [Testing]"
+        }
+      }
+    }
+  ]
+}
