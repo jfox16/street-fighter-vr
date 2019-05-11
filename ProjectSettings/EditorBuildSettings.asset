@@ -24,12 +24,15 @@ EditorBuildSettings:
     path: Assets/Scenes/VR Start.unity
     guid: 0278b5dcc5662ae44a9aefc706383bd2
   - enabled: 1
-    path: Assets/Scenes/Levels/VR CarCrusher.unity
-    guid: 2469ecf09b1a1d0498771f5ea5c7d917
+    path: Assets/Scenes/Multiplayer/MultiplayerRoom.unity
+    guid: bf64e2ab5d309ed4db0c4c9a6146f307
   - enabled: 1
     path: Assets/Scenes/Levels/VR Japan.unity
     guid: 34e51a4bb0eeaa5479302c20db906d34
   - enabled: 1
     path: Assets/Scenes/Levels/VR Arena.unity
     guid: 308aab0b415fe6a4a97c4fca46037cb0
+  - enabled: 1
+    path: Assets/Scenes/Levels/VR CarCrusher.unity
+    guid: 2469ecf09b1a1d0498771f5ea5c7d917
   m_configObjects: {}

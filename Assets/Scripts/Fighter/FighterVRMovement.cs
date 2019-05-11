@@ -10,13 +10,14 @@ public class FighterVRMovement : MonoBehaviour
     [SerializeField] float maxMoveRange = 2;
     [SerializeField] float moveCursorSpeed = 0.2f;
 
-    Rigidbody rigidbody = null;
-    CapsuleCollider collider = null;
-    Animator animator = null;
-    PhotonView photonView = null;
+    Fighter fighter;
+    Rigidbody rigidbody;
+    CapsuleCollider collider;
+    Animator animator;
+    PhotonView photonView;
     
     // This is the cursor that gets spawned when moving
-    GameObject moveCursor = null;
+    GameObject moveCursor;
 
     // turnDelay determines how frequently to turn when turn is held
     [SerializeField] float turnDelay = 1;
@@ -24,6 +25,7 @@ public class FighterVRMovement : MonoBehaviour
 
     void Awake()
     {
+        fighter = GetComponent<Fighter>();
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<CapsuleCollider>();
         animator = GetComponent<Animator>();
@@ -34,7 +36,7 @@ public class FighterVRMovement : MonoBehaviour
     void Update() 
     {
          // Only read input if this Fighter belongs to the client.
-        if (!PhotonNetwork.IsConnected || photonView.IsMine) {
+        if (fighter.isMine) {
             ReadMoveInput();
             ReadTurnInput();
         }

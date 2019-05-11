@@ -8,15 +8,6 @@ using Photon.Pun;
  */
 public abstract class FighterInput : MonoBehaviour
 {
-    // Start is called before the first frame update
-    // KeyCode LightPunch;
-    // KeyCode HeavyPunch;
-    // KeyCode Kick;
-    // KeyCode Special;
-    // KeyCode Dodge;
-    // KeyCode Block;
-    // KeyCode Crouch;
-    // protected Fighter _fighter;
 
     public Fighter fighter;
     public Animator animator;
@@ -31,7 +22,7 @@ public abstract class FighterInput : MonoBehaviour
     protected void Update()
     {
         // Only read input if this Fighter belongs to the client.
-        if (!PhotonNetwork.IsConnected || photonView.IsMine) {
+        if (fighter.isMine) {
             ReadAttackInput();
         }
     }

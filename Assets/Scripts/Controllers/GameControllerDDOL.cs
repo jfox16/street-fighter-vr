@@ -18,7 +18,8 @@ public class GameControllerDDOL : MonoBehaviour
 
     public static int collisionMask;
 
-    void Awake() {
+    void Awake() 
+    {
         if (Instance == null) {
             // Set this as Instance and keep it from being destroyed across scenes.
             Instance = this;
@@ -31,5 +32,15 @@ public class GameControllerDDOL : MonoBehaviour
         }
 
         collisionMask = LayerMask.NameToLayer("Collision");
+    }
+
+    void Update() 
+    {
+        if (Input.GetButtonDown("Cancel")) {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        if (Input.GetMouseButtonDown(0)) {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
     }
 }

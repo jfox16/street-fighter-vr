@@ -11,7 +11,8 @@ public class VRInputHandler : MonoBehaviour
 
     Dictionary<string, bool> inputDict = new Dictionary<string, bool>();
 
-    void Awake() {
+    void Awake() 
+    {
         if (Instance == null) {
             // Set this as Instance and keep it from being destroyed across scenes.
             Instance = this;
@@ -30,7 +31,8 @@ public class VRInputHandler : MonoBehaviour
 
     }
 
-    void Update() {
+    void Update() 
+    {
         // Secret input that restarts the game
         if (   Input.GetAxisRaw("Left Index Trigger") > 0.5f
             && Input.GetAxisRaw("Right Index Trigger") > 0.5f
@@ -41,7 +43,8 @@ public class VRInputHandler : MonoBehaviour
         }
     }
 
-    void LateUpdate() {
+    void LateUpdate() 
+    {
         // Set all inputs to false at the end of each frame
         foreach (var key in inputDict.Keys.ToList()) {
             inputDict[key] = false;
@@ -66,12 +69,14 @@ public class VRInputHandler : MonoBehaviour
         }
     }
 
-    public static bool GetInput(string inputKey) {
+    public static bool GetInput(string inputKey) 
+    {
         if (Instance == null) return false;
         return Instance.inputDict[inputKey];
     }
 
-    public static void SendHapticImpulse(VRHand.Hand hand, float intensity, float duration) {
+    public static void SendHapticImpulse(VRHand.Hand hand, float intensity, float duration) 
+    {
         if (hand == VRHand.Hand.Left)
             InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).SendHapticImpulse(1, intensity, duration);
         else
