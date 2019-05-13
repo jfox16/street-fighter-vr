@@ -27,6 +27,7 @@ public class VRInputHandler : MonoBehaviour
         inputDict.Add("Right Punch", false);
         inputDict.Add("Right Smash", false);
         inputDict.Add("Kick", false);
+        inputDict.Add("Special",false);
 
     }
 

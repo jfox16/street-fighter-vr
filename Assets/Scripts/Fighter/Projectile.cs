@@ -10,6 +10,8 @@ public class Projectile : Attack
     // Update is called once per frame
     private void Awake()
     {
+        base.Awake();
+        collider = gameObject.GetComponent<CapsuleCollider>();
         Invoke("DestroyMe",2.0f);
     }
     void Update()

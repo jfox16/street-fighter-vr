@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
     [SerializeField] GameObject hitParticlePrefab;
     GameObject hitSpark;
     
-    void Awake() {
+    protected void Awake() {
         if (GetComponentInParent<Fighter>() != null)
         {
             ownerID = gameObject.GetComponentInParent<Fighter>().gameObject.GetInstanceID();
