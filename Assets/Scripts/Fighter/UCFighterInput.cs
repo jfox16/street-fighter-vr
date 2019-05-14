@@ -44,6 +44,7 @@ public class UCFighterInput : FighterInput
         _ball.transform.rotation = spawnLocation.rotation;
         _ball.GetComponent<Attack>().ownerID = gameObject.GetInstanceID();
         _ball.GetComponent<Attack>().owner = gameObject;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Characters/Unity-chan/UseSpecial", this.gameObject.transform.position);
     }
 
 }
