@@ -23,15 +23,20 @@ public class Fighter : Unit
     public int cooldown;
     private float timestamp;
 
+    /**
+     * isMine is true if client is offline, or if client
+     * is online and this gameObject belongs to it.
+     */
     public bool isMine = false;
 
-    void Awake() {
+    void Awake() 
+    {
         animator   = GetComponent<Animator>();
         fpLook     = GetComponent<FPLook>();
         photonView = GetComponent<PhotonView>();
 
         punchPointTransform = transform.Find("Punch Point");
-        kickPointTransform = transform.Find("Kick Point");
+        kickPointTransform  = transform.Find("Kick Point");
     }
 
     void Start() {

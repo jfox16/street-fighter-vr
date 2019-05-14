@@ -27,7 +27,8 @@ public abstract class FighterInput : MonoBehaviour
         }
     }
 
-    void ReadAttackInput() {
+    void ReadAttackInput() 
+    {
         if (!animator.GetBool("isAttacking") && !animator.GetBool("isWalking"))
         {
             if (VRInputHandler.GetInput("Right Smash")) {

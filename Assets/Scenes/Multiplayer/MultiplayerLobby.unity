@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36832926, g: 0.37410182, b: 0.34908092, a: 1}
+  m_IndirectSpecularColor: {r: 0.36832926, g: 0.37410182, b: 0.34908086, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -222,7 +222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  roomName: Room 3
+  roomName: Colosseum
+  sceneIndex: 4
 --- !u!4 &307593289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5144727494690345535, guid: 938635c81f4cb4308ad4b2eedc98a1f6,
@@ -1021,7 +1022,7 @@ GameObject:
   - component: {fileID: 919900714}
   - component: {fileID: 919900713}
   m_Layer: 0
-  m_Name: Label
+  m_Name: MULTIPLAYER LOBBY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,7 +1036,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919900712}
-  m_Text: MULTIPLAYER
+  m_Text: MULTIPLAYER LOBBY
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1319,6 +1320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5811715415435979287, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1378,11 +1384,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ec4fcb0f3ffb9c44f9c397a3035d701d, type: 2}
+      objectReference: {fileID: 2100000, guid: ebb6acfc7de7da14aa611e0f1e02cca1, type: 2}
     - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_Text
-      value: Room 3
+      value: 'Room 3
+
+        (Colosseum)'
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a, type: 3}
@@ -2260,11 +2268,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ec4fcb0f3ffb9c44f9c397a3035d701d, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ea86230031d4cb4e9837860f7c373b5, type: 2}
     - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_Text
-      value: Room 1
+      value: 'Room 1
+
+        (Japan)'
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a, type: 3}
@@ -2536,7 +2546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  roomName: Room 2
+  roomName: City
+  sceneIndex: 3
 --- !u!1 &1819037319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,6 +2627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5811715415435979287, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2679,7 +2695,9 @@ PrefabInstance:
     - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_Text
-      value: Room 2
+      value: 'Room 2
+
+        (City)'
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a, type: 3}
@@ -2703,7 +2721,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  roomName: Room 1
+  roomName: Japan
+  sceneIndex: 2
 --- !u!1 &2117540922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,

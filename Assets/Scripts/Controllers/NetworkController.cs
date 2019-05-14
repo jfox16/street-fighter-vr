@@ -12,7 +12,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public static NetworkController Instance = null;
 
     string startRoomPath = "VR Start";
-    string multiplayerRoomPath = "Scenes/Multiplayer/MultiplayerRoom";
+    int createRoomSceneIndex = 2;
     
     //=================================================================================================================
 
@@ -54,9 +54,21 @@ public class NetworkController : MonoBehaviourPunCallbacks
         SceneManager.LoadScene(startRoomPath);
     }
 
-    override public void OnJoinedRoom() {
+    override public void OnCreatedRoom()
+    {
+        Debug.Log("NetworkController: Created " + PhotonNetwork.CurrentRoom.Name + "!");
+        PhotonNetwork.LoadLevel(createRoomSceneIndex);
+    }
+
+    override public void OnJoinedRoom() 
+    {
         Debug.Log("NetworkController: Joined " + PhotonNetwork.CurrentRoom.Name + "!");
-        PhotonNetwork.LoadLevel(2);
+    }
+
+    override public void OnLeftRoom() 
+    {
+        Debug.Log("NetworkController: Returning to lobby.");
+        PhotonNetwork.LoadLevel(1);
     }
 
     #endregion
@@ -77,13 +89,15 @@ public class NetworkController : MonoBehaviourPunCallbacks
         PhotonNetwork.Disconnect();
     }
 
-    public static void JoinRoom(string roomName) 
+    public static void JoinRoom(string roomName, int sceneIndex) 
     {
         Debug.Log("NetworkController: Joining " + roomName + "...");
 
+        Instance.createRoomSceneIndex = sceneIndex;
+
         RoomOptions roomOPs = new RoomOptions() {
-            IsVisible = true,
-            IsOpen = true,
+            IsVisible  = true,
+            IsOpen     = true,
             MaxPlayers = 2
         };
 
@@ -92,6 +106,12 @@ public class NetworkController : MonoBehaviourPunCallbacks
             roomOPs,
             Photon.Realtime.TypedLobby.Default
         );
+    }
+
+    public static void LeaveRoom()
+    {
+        Debug.Log("NetworkController: Leaving room.");
+        PhotonNetwork.LeaveRoom();
     }
 
     #endregion
