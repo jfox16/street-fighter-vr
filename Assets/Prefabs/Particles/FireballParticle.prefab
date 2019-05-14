@@ -107,10 +107,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  sparkPrefab: {fileID: 0}
-  hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
-    type: 3}
   ownerID: 0
+  owner: {fileID: 0}
+  collider: {fileID: 275891550210571375}
+  sparkPrefab: {fileID: 3981381447756053617, guid: b7f16f518632d424aad0cc5d0cd0c869,
+    type: 3}
+  hitParticlePrefab: {fileID: 3981381447756053617, guid: b7f16f518632d424aad0cc5d0cd0c869,
+    type: 3}
   speed: 10
   player: {fileID: 1526373210, guid: 1afb84105992dc4489402680af73eeda, type: 3}
 --- !u!198 &213802664445152203

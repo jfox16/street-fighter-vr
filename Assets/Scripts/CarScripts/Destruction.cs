@@ -9,7 +9,7 @@ public class Destruction : MonoBehaviour
     private float carHealth;
     private GameObject g, g1, soundPlayer;
     public GameObject scoreText, WinOrLose, cheer, explosion, smoke;
-    private Text text;
+    private TextMesh text;
     private CarParts s;
     private CarTimer timer;
     private GameObject test;
@@ -29,14 +29,15 @@ public class Destruction : MonoBehaviour
         brokenAlready = false;
         trans = new Color(0.0f, 0.0f, 1.0f, 0.0f);
         blue = new Color(0.0f, 0.0f, 1.0f, 1.0f);
-        text = WinOrLose.gameObject.GetComponent<Text>();
+        text = WinOrLose.gameObject.GetComponent<TextMesh>();
         text.color = trans;
-        text.text = "Winner Winner Chicken Dinner!";
+        text.text = "Winner Winner!";
 
     }
 
     private void Update()
     {
+        Debug.Log(carHealth);
         if(carHealth <= 0.0f && !brokenAlready)
         {
             breakAllParts();
@@ -46,7 +47,6 @@ public class Destruction : MonoBehaviour
         {
             text.color = Color.Lerp(text.color, blue, 2.0f * Time.deltaTime);
         }
-        scoreText.GetComponent<Text>().text = "Player Score: " + playerScore.ToString();
     }
 
     void breakAllParts()

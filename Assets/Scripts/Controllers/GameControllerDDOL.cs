@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 /**
  * GameControllerDDOL is a new implementation of the GameController. Other GameObjects
  * can access important data through its static methods and variables.
@@ -13,7 +12,8 @@ public class GameControllerDDOL : MonoBehaviour
     public static GameControllerDDOL Instance = null;
 
     public enum Fighter{Default, Mecha, Unitychan}
-    public static GameControllerDDOL.Fighter selectedFighter = GameControllerDDOL.Fighter.Mecha;
+    //public static GameControllerDDOL.Fighter selectedFighter = GameControllerDDOL.Fighter.Unitychan;
+    public static GameControllerDDOL.Fighter selectedFighter = GameControllerDDOL.Fighter.Unitychan;
     public static GameObject spawnedFighter = null;
 
     public static int collisionMask;

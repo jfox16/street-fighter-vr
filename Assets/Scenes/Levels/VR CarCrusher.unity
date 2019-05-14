@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.55944, g: 0.5863969, b: 0.6441261, a: 1}
+  m_IndirectSpecularColor: {r: 0.55963945, g: 0.58647287, b: 0.644329, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1716601132}
-  WinOrLose: {fileID: 1600132811}
+  WinOrLose: {fileID: 1984104187}
   cheer: {fileID: 1499252709}
   explosion: {fileID: 3552291093474458472, guid: 7ec364a687e7d43c9a2a07209707a705,
     type: 3}
@@ -2518,6 +2518,7 @@ GameObject:
   - component: {fileID: 860786866}
   - component: {fileID: 860786865}
   - component: {fileID: 860786864}
+  - component: {fileID: 860786867}
   m_Layer: 0
   m_Name: Score
   m_TagString: Untagged
@@ -2598,6 +2599,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -177.78801, z: 0}
+--- !u!114 &860786867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860786863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdae2bf30b2f709488e8050b85ef8998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 271628308}
+  score: {fileID: 860786863}
 --- !u!1 &862895388
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,6 +3222,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2079050818, guid: 90b18b51f7f00bf40bd410857d25dbc8, type: 3}
+      propertyPath: unitychanPrefab
+      value: 
+      objectReference: {fileID: 551310717093462008, guid: dc608e2a91ac0e24a958ca7f6bfa5563,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b18b51f7f00bf40bd410857d25dbc8, type: 3}
 --- !u!1 &1173708015 stripped
@@ -4109,6 +4129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499252711}
   - component: {fileID: 1499252710}
+  - component: {fileID: 1499252712}
   m_Layer: 0
   m_Name: Cheers
   m_TagString: Untagged
@@ -4128,7 +4149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/SFX/Environment/Ambience/ArenaAmb
+  Event: event:/SFX/Environment/VictoryCheering
   PlayEvent: 1
   StopEvent: 2
   CollisionTag: 
@@ -4153,6 +4174,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1499252712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499252709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff29bde4978d8b43ac3a17c14be5bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1549124305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 038d698227cbe3541bbad6b1b4dc3d40,
@@ -4680,7 +4713,6 @@ MonoBehaviour:
   WinOrLose: {fileID: 1984104187}
   score: {fileID: 860786863}
   car: {fileID: 271628308}
-  carParts: {fileID: 0}
 --- !u!1 &1716601132
 GameObject:
   m_ObjectHideFlags: 0

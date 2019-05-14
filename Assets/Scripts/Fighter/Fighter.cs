@@ -46,6 +46,12 @@ public class Fighter : Unit
         }
         if (health <= 0) Die();
     }
+
+    public float getHealth()
+    {
+        return health;
+    }
+
     void Die() {
         animator.SetTrigger("Die");
     }

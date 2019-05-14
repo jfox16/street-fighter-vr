@@ -1884,6 +1884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07d61c3824a61bf479e577cf181c6a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 0
 --- !u!136 &480257366
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6173,13 +6174,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 870286742}
   miniMapCamera: {fileID: 0}
-  defaultPlayer: {fileID: 551310717093462008, guid: b6962f3a074b66e43972a8186d5b17e0,
+  defaultPlayer: {fileID: 551310717093462008, guid: dc608e2a91ac0e24a958ca7f6bfa5563,
     type: 3}
   healthbar: {fileID: 724032415}
   healthbartop: {fileID: 4455096841541462767, guid: f68603b6912074c9da5a166d18c2d4dc,
     type: 3}
   sparkles: {fileID: 378159788545362333, guid: bdea04fdc98a7bd4896b6d3cde2a9a17, type: 3}
   Sphere: {fileID: 0}
+  mecha: {fileID: 0}
 --- !u!4 &1553777040
 Transform:
   m_ObjectHideFlags: 0
@@ -7942,13 +7944,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightFoot'\n\tTransform
-    'Character1_LeftFoot'\n\tTransform 'Character1_RightUpLeg'\n\tTransform 'Character1_LeftUpLeg'\n\tTransform
-    'Character1_RightShoulder'\n\tTransform 'Character1_LeftLeg'\n\tTransform 'Character1_LeftArm'\n\tTransform
-    'Character1_Neck'\n\tTransform 'Character1_RightLeg'\n\tand more ...\n\tFrom animation
-    clip 'HeavyP_2'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0

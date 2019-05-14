@@ -35,10 +35,8 @@ public class UCFighterInput : FighterInput
     }
     public void spawnFireball()
     {
-        Camera _camera;
-        GameObject controller = GameObject.Find("Game Controller");
+        GameObject controller = GameObject.Find("Game Controller (Don't Destroy on Load)");
         GameController g = controller.GetComponent<GameController>();
-        _camera = g.getCamera();
         GameObject _ball;
         timestamp = Time.time + cooldown;
         _ball = Instantiate(FireballParticle);
