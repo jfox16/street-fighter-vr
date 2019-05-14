@@ -37,7 +37,7 @@ public class MechaFighterInput : FighterInput
             fighter.special = 0;
             changeDamageMod(2.0f);
             animator.SetTrigger("Special");
-            Invoke("StopSpecial", 20f);
+            Invoke("StopSpecial", 5f);
         }
     }
 
@@ -66,5 +66,6 @@ public class MechaFighterInput : FighterInput
         LeftArmParticles.SetActive(true);
         RightArmParticles.SetActive(true);
         AuraParticles.SetActive(true);
+        Invoke("StopSpecial", 5f);
     }
 }
