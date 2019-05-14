@@ -20,11 +20,11 @@ public class Destruction : MonoBehaviour
     void Start()
     {
         g = GameObject.Find("CarParts");
-        g1 = GameObject.Find("Game Controller");
+        // g1 = GameObject.Find("Game Controller");
         soundPlayer = GameObject.Find("SoundPlayer");
         carHealth = 30.0f;
         s = g.gameObject.GetComponent<CarParts>();
-        timer = g1.gameObject.GetComponent<CarTimer>();
+        timer = GetComponent<CarTimer>();
         playerScore = 0;
         brokenAlready = false;
         trans = new Color(0.0f, 0.0f, 1.0f, 0.0f);

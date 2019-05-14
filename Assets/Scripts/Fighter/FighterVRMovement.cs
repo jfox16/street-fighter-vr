@@ -25,11 +25,12 @@ public class FighterVRMovement : MonoBehaviour
 
     void Awake()
     {
-        fighter = GetComponent<Fighter>();
-        rigidbody = GetComponent<Rigidbody>();
-        collider = GetComponent<CapsuleCollider>();
-        animator = GetComponent<Animator>();
+        fighter    = GetComponent<Fighter>();
+        rigidbody  = GetComponent<Rigidbody>();
+        collider   = GetComponent<CapsuleCollider>();
+        animator   = GetComponent<Animator>();
         photonView = GetComponent<PhotonView>();
+
         moveCursorPrefab = (GameObject)Resources.Load("Particles/MoveCursor");
     }
 
@@ -43,7 +44,7 @@ public class FighterVRMovement : MonoBehaviour
     }
 
     void ReadMoveInput() {
-        Vector3 _keyboardMoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        Vector3 _keyboardMoveInput   = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         Vector3 _controllerMoveInput = new Vector3(Input.GetAxisRaw("Left Horizontal"), 0, Input.GetAxisRaw("Left Vertical"));
         Vector3 _moveInput = Vector3.ClampMagnitude(_keyboardMoveInput + _controllerMoveInput, 1);
 
@@ -87,13 +88,13 @@ public class FighterVRMovement : MonoBehaviour
     }
 
     void ReadTurnInput() {
-        float _keyboardTurnInput = -Input.GetAxisRaw("Mouse X");
-        float _controllerTurnInput = Input.GetAxisRaw("Right Horizontal");
+        float _keyboardTurnInput = Input.GetAxisRaw("Mouse X") + Input.GetAxisRaw("Turn");
+        float _controllerTurnInput = -Input.GetAxisRaw("Right Horizontal");
         float _turnInput = _keyboardTurnInput + _controllerTurnInput;
 
         if (Math.Abs(_turnInput) > 0.8f) {
             if (turnTimer.isDone) {
-                transform.Rotate(0, -45*Mathf.Sign(_turnInput), 0);
+                transform.Rotate(0, 45*Mathf.Sign(_turnInput), 0);
                 turnTimer.SetTime(turnDelay);
             }
         }

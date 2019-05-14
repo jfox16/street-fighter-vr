@@ -1390,7 +1390,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Room 3
 
-        (Colosseum)'
+        Colosseum'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_LineSpacing
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a, type: 3}
@@ -2274,7 +2279,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Room 1
 
-        (Japan)'
+        Japan'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_LineSpacing
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a, type: 3}
@@ -2630,7 +2640,7 @@ PrefabInstance:
     - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5811715415435979287, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
@@ -2697,7 +2707,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Room 2
 
-        (City)'
+        City'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_LineSpacing
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a, type: 3}

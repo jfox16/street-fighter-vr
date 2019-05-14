@@ -10,7 +10,10 @@ using Photon.Pun;
  */
 public class FighterSpawner : MonoBehaviour
 {
-    string mechaPath = "Characters/VR_Mecha";
+    enum Player {One, Two}
+    [SerializeField] Player player;
+
+    string mechaPath     = "Characters/VR_Mecha";
     string unitychanPath = "Characters/VR_Unitychan";
 
     void Start() {
@@ -22,9 +25,11 @@ public class FighterSpawner : MonoBehaviour
         if (GameControllerDDOL.spawnedFighter != null) 
             return;
 
+        // If offline, spawn Fighter as normal.
         if (PhotonNetwork.CurrentRoom == null) 
         {
-            switch (GameControllerDDOL.selectedFighter) {
+            switch (GameControllerDDOL.selectedFighter) 
+            {
                 case GameControllerDDOL.Fighter.Mecha:
                     GameObject mechaPrefab = (GameObject)Resources.Load(mechaPath);
                     GameControllerDDOL.spawnedFighter = Instantiate(mechaPrefab, transform.position, transform.rotation);
@@ -38,9 +43,12 @@ public class FighterSpawner : MonoBehaviour
                     break;
             }
         }
-        else 
+        // If online, spawn Fighter on network if this is the right spawner.
+        else if ( PhotonNetwork.IsMasterClient && player == Player.One
+              || !PhotonNetwork.IsMasterClient && player == Player.Two )
         {
-            switch (GameControllerDDOL.selectedFighter) {
+            switch (GameControllerDDOL.selectedFighter) 
+            {
                 case GameControllerDDOL.Fighter.Mecha:
                     GameControllerDDOL.spawnedFighter = PhotonNetwork.Instantiate(mechaPath, transform.position, transform.rotation);
                     break;
