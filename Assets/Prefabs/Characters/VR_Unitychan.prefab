@@ -6971,9 +6971,6 @@ MonoBehaviour:
     Name: Special
   - Type: 9
     SynchronizeType: 0
-    Name: Kick
-  - Type: 9
-    SynchronizeType: 0
     Name: Left Punch
   - Type: 9
     SynchronizeType: 0
@@ -6981,6 +6978,12 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Dash
+  - Type: 9
+    SynchronizeType: 0
+    Name: Right Smash
+  - Type: 9
+    SynchronizeType: 0
+    Name: Left Smash
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
@@ -7000,7 +7003,8 @@ MonoBehaviour:
     type: 3}
   LoserText: {fileID: 57608313532400044, guid: 8e49da25f9a3db941bd7eaca8a8c7797, type: 3}
   TieText: {fileID: 4345629524915808753, guid: 4096ba8b21ae6f2409802fdcc40ba6f6, type: 3}
-  fireworks: {fileID: 0}
+  fireworks: {fileID: 6585246682759834829, guid: 657bad063e4725f4db1b3973f8a5db23,
+    type: 3}
 --- !u!114 &5194909989644483571
 MonoBehaviour:
   m_ObjectHideFlags: 0

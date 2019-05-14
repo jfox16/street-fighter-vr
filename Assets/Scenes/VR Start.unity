@@ -125,7 +125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2753175}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27ffdd244540096488dfba0eeb236409, type: 3}
   m_Name: 
@@ -138,10 +138,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
+    - target: {fileID: 1977851455349772962, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
-      propertyPath: m_Name
-      value: Japan Warp
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ea86230031d4cb4e9837860f7c373b5, type: 2}
+    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_Text
+      value: Japan
       objectReference: {fileID: 0}
     - target: {fileID: 5811715415435979287, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
@@ -213,20 +218,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_Name
+      value: Japan Warp
+      objectReference: {fileID: 0}
     - target: {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: destinationScene
       value: Scenes/Levels/VR Japan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1977851455349772962, guid: 1dc34358687661c4e810808a1367174a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6ea86230031d4cb4e9837860f7c373b5, type: 2}
-    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
-        type: 3}
-      propertyPath: m_Text
-      value: Japan
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dc34358687661c4e810808a1367174a, type: 3}
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308313636}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27ffdd244540096488dfba0eeb236409, type: 3}
   m_Name: 
@@ -1264,7 +1264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &872056435 stripped
 GameObject:
@@ -1545,10 +1545,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
+    - target: {fileID: 1977851455349772962, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
-      propertyPath: m_Name
-      value: Arena Warp
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ebb6acfc7de7da14aa611e0f1e02cca1, type: 2}
+    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_Text
+      value: Arena
       objectReference: {fileID: 0}
     - target: {fileID: 5811715415435979287, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
@@ -1620,20 +1625,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_Name
+      value: Arena Warp
+      objectReference: {fileID: 0}
     - target: {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: destinationScene
       value: Scenes/Levels/VR Arena
-      objectReference: {fileID: 0}
-    - target: {fileID: 1977851455349772962, guid: 1dc34358687661c4e810808a1367174a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ebb6acfc7de7da14aa611e0f1e02cca1, type: 2}
-    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
-        type: 3}
-      propertyPath: m_Text
-      value: Arena
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dc34358687661c4e810808a1367174a, type: 3}
@@ -7521,7 +7521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1819037322
 MonoBehaviour:
@@ -7991,7 +7991,7 @@ PrefabInstance:
     - target: {fileID: 8134082385642156419, guid: 676e21bdae626ff40b4814081cf43e8a,
         type: 3}
       propertyPath: offsetVec.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8134082385642156419, guid: 676e21bdae626ff40b4814081cf43e8a,
         type: 3}
@@ -8001,12 +8001,12 @@ PrefabInstance:
     - target: {fileID: 8134082384539983583, guid: 676e21bdae626ff40b4814081cf43e8a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8134082385441500163, guid: 676e21bdae626ff40b4814081cf43e8a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 676e21bdae626ff40b4814081cf43e8a, type: 3}
