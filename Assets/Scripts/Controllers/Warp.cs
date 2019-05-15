@@ -9,6 +9,7 @@ public class Warp : Unit
     [SerializeField] string destinationScene;
 
     public override void Hurt(float damage) {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI-SFX/UI-select", this.gameObject.transform.position);
         SceneManager.LoadScene(destinationScene);
     }
 }

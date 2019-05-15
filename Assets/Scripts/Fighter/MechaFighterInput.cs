@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MechaFighterInput : FighterInput
 {
+    [FMODUnity.EventRef]
+    FMOD.Studio.EventInstance specialSound;
+
     public Attack LeftArmCollider;
     public Attack RightArmCollider;
     public Attack LeftLegCollider;
@@ -19,6 +22,8 @@ public class MechaFighterInput : FighterInput
     {
         base.Awake();
         DeactivateParticles();
+        specialSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Characters/Mecha/UseSpecial");
+        specialSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
     }
     public override void kick()
     {
@@ -56,6 +61,7 @@ public class MechaFighterInput : FighterInput
     }
     private void DeactivateParticles()
     {
+        specialSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         LeftArmParticles.SetActive(false);
         RightArmParticles.SetActive(false);
         AuraParticles.SetActive(false);
@@ -66,6 +72,7 @@ public class MechaFighterInput : FighterInput
         LeftArmParticles.SetActive(true);
         RightArmParticles.SetActive(true);
         AuraParticles.SetActive(true);
-        Invoke("StopSpecial", 5f);
+        specialSound.start();
+        Invoke("StopSpecial", 20f);
     }
 }

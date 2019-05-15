@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{ff45d278-ddb7-4020-9b22-386da782337e}">
+        <property name="assetPath">
+            <value>SFVR_VO_Mecha_Grunt_01.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.71353741496598644</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{a47d820e-4027-4ffd-b751-a122874883a4}</destination>
+        </relationship>
+    </object>
+</objects>

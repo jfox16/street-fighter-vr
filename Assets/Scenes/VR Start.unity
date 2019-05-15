@@ -138,6 +138,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_Name
+      value: Japan Warp
+      objectReference: {fileID: 0}
     - target: {fileID: 1977851455349772962, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -217,11 +222,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
-        type: 3}
-      propertyPath: m_Name
-      value: Japan Warp
       objectReference: {fileID: 0}
     - target: {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
@@ -1545,6 +1545,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_Name
+      value: Arena Warp
+      objectReference: {fileID: 0}
     - target: {fileID: 1977851455349772962, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1624,11 +1629,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5997528137679759385, guid: 1dc34358687661c4e810808a1367174a,
-        type: 3}
-      propertyPath: m_Name
-      value: Arena Warp
       objectReference: {fileID: 0}
     - target: {fileID: 8996290860994784611, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}

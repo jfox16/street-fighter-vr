@@ -17,7 +17,7 @@ public class TrackPlayers : MonoBehaviour
     {
         soundPlayer = GameObject.Find("Sound Player");
         seconds = 0;
-        maxTime = 10;
+        maxTime = 20;
         playTimesUp = false;
         playKO = false;
     }
@@ -28,8 +28,14 @@ public class TrackPlayers : MonoBehaviour
         if(players == null)
         {
             players = GameObject.FindGameObjectsWithTag("Player");
+
+            // will probably have to change this when implementing to the network
             playerOne = players[1];
             playerTwo = players[2];
+
+            playerOne.gameObject.GetComponent<PlayerStatus>().enabled = true;
+            playerTwo.gameObject.GetComponent<PlayerStatus>().enabled = true;
+
             p1 = playerOne.gameObject.GetComponent<Fighter>();
             p2 = playerTwo.gameObject.GetComponent<Fighter>();
             s1 = playerOne.gameObject.GetComponent<PlayerStatus>();
@@ -100,5 +106,15 @@ public class TrackPlayers : MonoBehaviour
             s1.SetGameStatus(PlayerStatus.GameStatus.Loser);
             s2.SetGameStatus(PlayerStatus.GameStatus.Winner);
         }
+    }
+
+    public GameObject getPlayerOne()
+    {
+        return playerOne;
+    }
+
+    public GameObject getPlayerTwo()
+    {
+        return playerTwo;
     }
 }

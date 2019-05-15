@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.68525547, g: 0.38127786, b: 0.3664496, a: 1}
+  m_IndirectSpecularColor: {r: 0.419985, g: 0.118815124, b: 0.109179094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1132,6 +1132,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Back Warp
       objectReference: {fileID: 0}
+    - target: {fileID: 1977851455349772962, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c9299ef23fabd4a46a6b26d120751e93, type: 2}
+    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
+        type: 3}
+      propertyPath: m_Text
+      value: Back
+      objectReference: {fileID: 0}
     - target: {fileID: 5811715415435979287, guid: 1dc34358687661c4e810808a1367174a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1206,16 +1216,6 @@ PrefabInstance:
         type: 3}
       propertyPath: destinationScene
       value: VR Start
-      objectReference: {fileID: 0}
-    - target: {fileID: 1977851455349772962, guid: 1dc34358687661c4e810808a1367174a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c9299ef23fabd4a46a6b26d120751e93, type: 2}
-    - target: {fileID: 2599590075006449990, guid: 1dc34358687661c4e810808a1367174a,
-        type: 3}
-      propertyPath: m_Text
-      value: Back
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dc34358687661c4e810808a1367174a, type: 3}
@@ -2282,27 +2282,13 @@ GameObject:
   m_Component:
   - component: {fileID: 898019434}
   - component: {fileID: 898019433}
-  - component: {fileID: 898019432}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &898019432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898019431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
+  m_IsActive: 0
 --- !u!20 &898019433
 Camera:
   m_ObjectHideFlags: 0

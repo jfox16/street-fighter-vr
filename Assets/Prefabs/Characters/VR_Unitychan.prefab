@@ -6698,6 +6698,7 @@ GameObject:
   - component: {fileID: 8393858938275216637}
   - component: {fileID: 1103409591593020304}
   - component: {fileID: 5194909989644483571}
+  - component: {fileID: 2451180701641375263}
   m_Layer: 0
   m_Name: VR_Unitychan
   m_TagString: Player
@@ -6984,6 +6985,9 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Left Smash
+  - Type: 9
+    SynchronizeType: 0
+    Name: Die
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
@@ -6994,7 +6998,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551310717093462008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86607298f2db4324d9a1a0a9cadf2148, type: 3}
   m_Name: 
@@ -7015,6 +7019,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e05cb41a854e4304881b7baf95139016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2451180701641375263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551310717093462008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefd8ce261d9b6c4881d459919db01b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &551310717093462010

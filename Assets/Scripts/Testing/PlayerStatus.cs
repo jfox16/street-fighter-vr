@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -9,22 +10,40 @@ public class PlayerStatus : MonoBehaviour
         None, Winner, Loser, Tie
     }
     private GameStatus status;
-    private bool playWinOrLose;
+    private bool playWinOrLose, playIntro;
     private GameObject soundPlayer;
     public GameObject WinnerText, LoserText, TieText, fireworks;
+    private TrackPlayers trackPlayers;
 
     // Start is called before the first frame update
     void Start()
     {
         soundPlayer = GameObject.Find("Sound Player");
+        trackPlayers = GameObject.Find("PlayersTracker").GetComponent<TrackPlayers>();
+
         status = GameStatus.None;
         playWinOrLose = false;
+        playIntro = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(status == GameStatus.Tie)
+        // Check if time is greater than 2 seconds to remove an error
+        if (trackPlayers != null && !playIntro && Time.timeSinceLevelLoad >= 2.0)
+        {
+            if (trackPlayers.getPlayerOne().Equals(this.gameObject))
+            {
+                StartCoroutine(PlayerOneIntroSpeech());
+            }
+            else if (trackPlayers.getPlayerTwo().Equals(this.gameObject))
+            {
+                StartCoroutine(PlayerTwoIntroSpeech());
+            }
+            playIntro = true;
+        }
+
+        if (status == GameStatus.Tie)
         {
             Debug.Log("Tie");
             if (!playWinOrLose)
@@ -43,6 +62,7 @@ public class PlayerStatus : MonoBehaviour
                 Instantiate(WinnerText, this.gameObject.transform);
                 Instantiate(fireworks, this.gameObject.transform);
                 playWinOrLose = true;
+                StartCoroutine(VictorySpeech());
             }
         }
         else if(status == GameStatus.Loser)
@@ -64,5 +84,44 @@ public class PlayerStatus : MonoBehaviour
     public void SetGameStatus(GameStatus status)
     {
         this.status = status;
+    }
+
+    IEnumerator VictorySpeech()
+    {
+        yield return new WaitForSeconds(2.5f);
+        if (this.gameObject.GetComponent<MechaVO>() != null)
+        {
+            this.gameObject.GetComponent<MechaVO>().Victory();
+        }
+        else
+        {
+            this.gameObject.GetComponent<UCsVO>().Victory();
+        }
+    }
+
+    IEnumerator PlayerOneIntroSpeech()
+    {
+        yield return new WaitForSeconds(0.5f);
+        if (this.gameObject.GetComponent<MechaVO>() != null)
+        {
+            this.gameObject.GetComponent<MechaVO>().Intros();
+        }
+        else
+        {
+            this.gameObject.GetComponent<UCsVO>().Intros();
+        }
+    }
+
+    IEnumerator PlayerTwoIntroSpeech()
+    {
+        yield return new WaitForSeconds(2.5f);
+        if (this.gameObject.GetComponent<MechaVO>() != null)
+        {
+            this.gameObject.GetComponent<MechaVO>().Intros();
+        }
+        else
+        {
+            this.gameObject.GetComponent<UCsVO>().Intros();
+        }
     }
 }

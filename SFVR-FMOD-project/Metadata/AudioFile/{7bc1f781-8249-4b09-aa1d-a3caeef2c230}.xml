@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{7bc1f781-8249-4b09-aa1d-a3caeef2c230}">
+        <property name="assetPath">
+            <value>SFVR_VO_UnityChan_Grunt_02.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.46353741496598638</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{a47d820e-4027-4ffd-b751-a122874883a4}</destination>
+        </relationship>
+    </object>
+</objects>

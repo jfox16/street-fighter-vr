@@ -9,6 +9,7 @@ public class Fighter : Unit
     public float specialCost = 10;
     public int fighterid;
     public float damageModifier = 1.0f;
+    private Collider mCollider;
 
     Animator animator;
     FPLook fpLook;
@@ -26,7 +27,8 @@ public class Fighter : Unit
 
         punchPointTransform = transform.Find("Punch Point");
         kickPointTransform = transform.Find("Kick Point");
-        
+        mCollider = this.gameObject.GetComponent<Collider>();
+
     }
     public override void Hurt(float damage) {
         if (animator.GetBool("Block"))
@@ -54,6 +56,7 @@ public class Fighter : Unit
 
     void Die() {
         animator.SetTrigger("Die");
+        mCollider.enabled = !mCollider.enabled;
     }
     public void ResetFighterHealth()
     {
