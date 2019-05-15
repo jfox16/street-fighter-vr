@@ -7,7 +7,7 @@ public class Destruction : MonoBehaviour
 {
     private int playerScore;
     private float carHealth;
-    private GameObject g, g1, soundPlayer;
+    private GameObject g, soundPlayer;
     public GameObject scoreText, WinOrLose, cheer, explosion, smoke;
     private TextMesh text;
     private CarParts s;
@@ -20,11 +20,11 @@ public class Destruction : MonoBehaviour
     void Start()
     {
         g = GameObject.Find("CarParts");
-        g1 = GameObject.Find("Game Controller");
+        // g1 = GameObject.Find("Game Controller");
         soundPlayer = GameObject.Find("SoundPlayer");
         carHealth = 30.0f;
         s = g.gameObject.GetComponent<CarParts>();
-        timer = g1.gameObject.GetComponent<CarTimer>();
+        timer = GetComponent<CarTimer>();
         playerScore = 0;
         brokenAlready = false;
         trans = new Color(0.0f, 0.0f, 1.0f, 0.0f);

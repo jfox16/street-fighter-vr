@@ -31,7 +31,6 @@ public class FighterAnimationHandler : MonoBehaviour
 
     public void SetTeam(Unit.Team team) 
     {
-        fighter.team = team;
         leftArmAttack.ownerTeam  = team;
         rightArmAttack.ownerTeam = team;
         leftLegAttack.ownerTeam  = team;

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 /**
  * GameControllerDDOL is a new implementation of the GameController. Other GameObjects
  * can access important data through its static methods and variables.
@@ -30,5 +32,11 @@ public class GameControllerDDOL : MonoBehaviour
         }
 
         collisionMask = LayerMask.NameToLayer("Collision");
+    }
+
+    // Returns true if the current scene is a versus scene.
+    public bool CheckVersusScene() {
+        int _sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        return (_sceneIndex > 2 && _sceneIndex < 6);
     }
 }

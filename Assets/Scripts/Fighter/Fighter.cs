@@ -15,8 +15,9 @@ public class Fighter : Unit
 
     Animator animator;
     FPLook fpLook;
-    PhotonView photonView;
+    FighterAnimationHandler animHandler;
     CharacterVO charVO;
+    PhotonView photonView;
 
     Transform punchPointTransform;
     Transform kickPointTransform;
@@ -39,10 +40,11 @@ public class Fighter : Unit
     void Awake() 
     {
         isAlive = true;
-        animator   = GetComponent<Animator>();
-        fpLook     = GetComponent<FPLook>();
-        photonView = GetComponent<PhotonView>();
-        charVO     = GetComponent<CharacterVO>();
+        animator    = GetComponent<Animator>();
+        fpLook      = GetComponent<FPLook>();
+        animHandler = GetComponent<FighterAnimationHandler>();
+        photonView  = GetComponent<PhotonView>();
+        charVO      = GetComponent<CharacterVO>();
 
         punchPointTransform = transform.Find("Punch Point");
         kickPointTransform = transform.Find("Kick Point");
@@ -52,9 +54,16 @@ public class Fighter : Unit
     void Start() {
         if (PhotonNetwork.CurrentRoom == null || photonView.IsMine) {
             isMine = true;
+            team = Team.Red;
+            animHandler.SetTeam(Team.Red);
         }
-        if (PhotonNetwork.CurrentRoom != null) {
+
+        if (isMine && GameControllerDDOL.Instance.CheckVersusScene()) {
             charVO.Intros();
+            if (!PhotonNetwork.IsMasterClient) {
+                team = Team.Blue;
+                animHandler.SetTeam(Team.Blue);
+            }
         }
     }
 
@@ -135,11 +144,16 @@ public class Fighter : Unit
     }
 
     [PunRPC]
-    public void ClientDie() {
-        isAlive = false;
-        animator.SetTrigger("Die");
-        mCollider.enabled = !mCollider.enabled;
-        Invoke("Respawn", 5);
+    public void ClientDie() 
+    {
+        if (isAlive) {
+            isAlive = false;
+            animator.SetTrigger("Die");
+            mCollider.enabled = !mCollider.enabled;
+            if (isMine) {
+                Invoke("Respawn", 5);
+            }
+        }
     }
 
     [PunRPC]

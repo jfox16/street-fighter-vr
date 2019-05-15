@@ -6,7 +6,6 @@ using Photon.Pun;
 
 public class FighterVRMovement : MonoBehaviour
 {
-    GameObject moveCursorPrefab;
     [SerializeField] float maxMoveRange = 2;
     [SerializeField] float moveCursorSpeed = 0.2f;
 
@@ -31,7 +30,9 @@ public class FighterVRMovement : MonoBehaviour
         animator   = GetComponent<Animator>();
         photonView = GetComponent<PhotonView>();
 
-        moveCursorPrefab = (GameObject)Resources.Load("Particles/MoveCursor");
+        GameObject _moveCursorPrefab = (GameObject)Resources.Load("Particles/MoveCursor");
+        moveCursor = Instantiate(_moveCursorPrefab, transform);
+        moveCursor.SetActive(false);
     }
 
     void Update() 
@@ -51,38 +52,39 @@ public class FighterVRMovement : MonoBehaviour
         if (!animator.GetBool("isAttacking") && _moveInput.magnitude > 0.05f)
         {
             // Move the move cursor in direction of move input.
-            if (moveCursor == null) 
-                moveCursor = Instantiate(moveCursorPrefab, transform);
+            if (!moveCursor.active) {
+                moveCursor.SetActive(true);
+                moveCursor.transform.localPosition = Vector3.zero;
+            }
 
-            moveCursor.transform.Translate(_moveInput * moveCursorSpeed);
+            moveCursor.transform.Translate(_moveInput * moveCursorSpeed * Time.deltaTime * 10);
             moveCursor.transform.localPosition = Vector3.ClampMagnitude(moveCursor.transform.localPosition, maxMoveRange);
         }
         else 
         {
             // When move input is let go, move to that location.
-            if (moveCursor != null) {
+            if (moveCursor.active) {
                 // The SphereCast checks for any collisions between Fighter and the moveCursor point.
                 // If a collision is found, Fighter will just move to the collision point.
                 // Otherwise, move to moveCursor point.
-                RaycastHit _hit;
+                RaycastHit _rcHit;
                 bool _colliderHit = Physics.SphereCast(
                     transform.position + new Vector3(0, collider.radius+0.1f, 0), 
                     collider.radius, 
                     moveCursor.transform.position - transform.position,
-                    out _hit, 
+                    out _rcHit, 
                     (moveCursor.transform.position - transform.position).magnitude
                 );
 
                 if (_colliderHit) {
-                    rigidbody.MovePosition(_hit.point - new Vector3(0, collider.radius+0.1f, 0));
+                    rigidbody.MovePosition(_rcHit.point - new Vector3(0, collider.radius+0.1f, 0));
                 }
                 else {
                     rigidbody.MovePosition(moveCursor.transform.position);
                 }
 
                 animator.SetTrigger("Dash");
-                Destroy(moveCursor);
-                moveCursor = null;
+                moveCursor.SetActive(false);
             }
         }
     }

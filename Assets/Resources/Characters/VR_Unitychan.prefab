@@ -6874,8 +6874,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMoveRange: 2
-  moveCursorSpeed: 0.2
-  turnDelay: 1
+  moveCursorSpeed: 1.8
+  turnDelay: 0.3
 --- !u!114 &5780373535043129001
 MonoBehaviour:
   m_ObjectHideFlags: 0
