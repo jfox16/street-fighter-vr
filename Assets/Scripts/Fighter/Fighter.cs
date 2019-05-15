@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Fighter : Unit
 {
@@ -13,6 +14,7 @@ public class Fighter : Unit
 
     Animator animator;
     FPLook fpLook;
+    PhotonView photonView;
 
     Transform punchPointTransform;
     Transform kickPointTransform;
@@ -21,6 +23,13 @@ public class Fighter : Unit
     public static int numberOfProjectiles;
     public int cooldown;
     private float timestamp;
+
+    /**
+     * isMine is true if client is offline, or if client
+     * is online and this gameObject belongs to it.
+     */
+    public bool isMine = false;
+
     void Awake() {
         animator = GetComponent<Animator>();
         fpLook = GetComponent<FPLook>();
@@ -30,6 +39,13 @@ public class Fighter : Unit
         mCollider = this.gameObject.GetComponent<Collider>();
 
     }
+
+    void Start() {
+        if (PhotonNetwork.CurrentRoom == null || photonView.IsMine) {
+            isMine = true;
+        }
+    }
+
     public override void Hurt(float damage) {
         if (animator.GetBool("Block"))
         {

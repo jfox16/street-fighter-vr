@@ -8,16 +8,6 @@ using Photon.Pun;
  */
 public abstract class FighterInput : MonoBehaviour
 {
-    // Start is called before the first frame update
-    // KeyCode LightPunch;
-    // KeyCode HeavyPunch;
-    // KeyCode Kick;
-    // KeyCode Special;
-    // KeyCode Dodge;
-    // KeyCode Block;
-    // KeyCode Crouch;
-    // protected Fighter _fighter;
-
     public Fighter fighter;
     public Animator animator;
     PhotonView photonView;
@@ -31,25 +21,29 @@ public abstract class FighterInput : MonoBehaviour
     protected void Update()
     {
         // Only read input if this Fighter belongs to the client.
-        if (!PhotonNetwork.IsConnected || photonView.IsMine) {
+        if (fighter.isMine) {
             ReadAttackInput();
         }
     }
 
-    void ReadAttackInput() {
+    void ReadAttackInput() 
+    {
         if (!animator.GetBool("isAttacking") && !animator.GetBool("isWalking"))
         {
-            if (VRInputHandler.GetInput("Right Smash")) {
-                animator.SetTrigger("Right Smash");
+            if (VRInputHandler.GetInput("Special") || Input.GetButtonDown("Special")) {
+                animator.SetTrigger("Special");
             }
-            else if (VRInputHandler.GetInput("Kick")) {
+            else if (VRInputHandler.GetInput("Kick") || Input.GetButtonDown("Kick")) {
                 animator.SetTrigger("Kick");
             }
-            else if (VRInputHandler.GetInput("Right Punch") || Input.GetButton("Right Punch") || Input.GetMouseButton(1)) {
-                animator.SetTrigger("Right Punch");
+            else if (VRInputHandler.GetInput("Right Smash") || Input.GetButtonDown("Right Smash")) {
+                animator.SetTrigger("Right Smash");
             }
-            else if (VRInputHandler.GetInput("Left Punch") || Input.GetButton("Left Punch") || Input.GetMouseButton(0)) {
+            else if (VRInputHandler.GetInput("Left Punch") || Input.GetButtonDown("Left Punch") || Input.GetMouseButton(0)) {
                 animator.SetTrigger("Left Punch");
+            }
+            else if (VRInputHandler.GetInput("Right Punch") || Input.GetButtonDown("Right Punch") || Input.GetMouseButton(1)) {
+                animator.SetTrigger("Right Punch");
             }
         }
     }

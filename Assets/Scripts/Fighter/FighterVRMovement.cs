@@ -10,10 +10,11 @@ public class FighterVRMovement : MonoBehaviour
     [SerializeField] float maxMoveRange = 2;
     [SerializeField] float moveCursorSpeed = 0.2f;
 
-    Rigidbody rigidbody = null;
-    CapsuleCollider collider = null;
-    Animator animator = null;
-    PhotonView photonView = null;
+    Fighter fighter;
+    Rigidbody rigidbody;
+    CapsuleCollider collider;
+    Animator animator;
+    PhotonView photonView;
     
     // This is the cursor that gets spawned when moving
     GameObject moveCursor = null;
@@ -24,17 +25,19 @@ public class FighterVRMovement : MonoBehaviour
 
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
-        collider = GetComponent<CapsuleCollider>();
-        animator = GetComponent<Animator>();
+        fighter    = GetComponent<Fighter>();
+        rigidbody  = GetComponent<Rigidbody>();
+        collider   = GetComponent<CapsuleCollider>();
+        animator   = GetComponent<Animator>();
         photonView = GetComponent<PhotonView>();
+
         moveCursorPrefab = (GameObject)Resources.Load("Particles/MoveCursor");
     }
 
     void Update() 
     {
          // Only read input if this Fighter belongs to the client.
-        if (!PhotonNetwork.IsConnected || photonView.IsMine) {
+        if (fighter.isMine) {
             ReadMoveInput();
             ReadTurnInput();
         }
@@ -85,13 +88,13 @@ public class FighterVRMovement : MonoBehaviour
     }
 
     void ReadTurnInput() {
-        float _keyboardTurnInput = -Input.GetAxisRaw("Mouse X");
-        float _controllerTurnInput = Input.GetAxisRaw("Right Horizontal");
+        float _keyboardTurnInput = Input.GetAxisRaw("Mouse X") + Input.GetAxisRaw("Turn");
+        float _controllerTurnInput = -Input.GetAxisRaw("Right Horizontal");
         float _turnInput = _keyboardTurnInput + _controllerTurnInput;
 
         if (Math.Abs(_turnInput) > 0.8f) {
             if (turnTimer.isDone) {
-                transform.Rotate(0, -45*Mathf.Sign(_turnInput), 0);
+                transform.Rotate(0, 45*Mathf.Sign(_turnInput), 0);
                 turnTimer.SetTime(turnDelay);
             }
         }
