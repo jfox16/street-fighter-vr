@@ -8,7 +8,6 @@ using Photon.Pun;
 public class BackWarp : Unit
 {
     string startScene = "VR Start";
-    string lobbyScene = "Scenes/Multiplayer/MultiplayerLobby";
 
     public override void Hurt(float damage) {
         if (PhotonNetwork.CurrentRoom == null) {

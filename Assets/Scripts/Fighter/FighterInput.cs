@@ -28,7 +28,7 @@ public abstract class FighterInput : MonoBehaviour
 
     void ReadAttackInput() 
     {
-        if (!animator.GetBool("isAttacking") && !animator.GetBool("isWalking"))
+        if (!animator.GetBool("isAttacking") && !animator.GetBool("isWalking") && fighter.isAlive)
         {
             if (VRInputHandler.GetInput("Special") || Input.GetButtonDown("Special")) {
                 animator.SetTrigger("Special");

@@ -60,5 +60,13 @@ public class FighterSpawner : MonoBehaviour
                     break;
             }
         }
+
+        // Set Fighter team after spawning
+        if (player == Player.One) {
+            GameControllerDDOL.spawnedFighter.GetComponent<FighterAnimationHandler>().SetTeam(Unit.Team.Red);
+        }
+        else {
+            GameControllerDDOL.spawnedFighter.GetComponent<FighterAnimationHandler>().SetTeam(Unit.Team.Blue);
+        }
     }
 }

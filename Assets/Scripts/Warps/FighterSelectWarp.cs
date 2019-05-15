@@ -13,10 +13,10 @@ public class FighterSelectWarp : Unit
 
     public override void Hurt(float damage) 
     {
-        if (GameControllerDDOL.spawnedFighter == null) return;
+        if (GameControllerDDOL.spawnedFighter == null || GameControllerDDOL.selectedFighter == selectFighter) return;
         GameControllerDDOL.selectedFighter = selectFighter;
-        GameObject _currentFighter = GameControllerDDOL.spawnedFighter;
-        _currentFighter.SetActive(false);
+        GameObject _oldFighter = GameControllerDDOL.spawnedFighter;
+        _oldFighter.SetActive(false);
 
         switch (GameControllerDDOL.selectedFighter) 
         {
@@ -24,16 +24,16 @@ public class FighterSelectWarp : Unit
                 GameObject mechaPrefab = (GameObject)Resources.Load(mechaPath);
                 GameControllerDDOL.spawnedFighter = Instantiate(
                     mechaPrefab, 
-                    _currentFighter.transform.position, 
-                    _currentFighter.transform.rotation
+                    _oldFighter.transform.position, 
+                    _oldFighter.transform.rotation
                 );
                 break;
             case GameControllerDDOL.Fighter.Unitychan:
                 GameObject unitychanPrefab = (GameObject)Resources.Load(unitychanPath);
                 GameControllerDDOL.spawnedFighter = Instantiate(
                     unitychanPrefab, 
-                    _currentFighter.transform.position, 
-                    _currentFighter.transform.rotation
+                    _oldFighter.transform.position, 
+                    _oldFighter.transform.rotation
                 );
                 break;
             default:
@@ -41,6 +41,9 @@ public class FighterSelectWarp : Unit
                 break;
         }
 
-        Destroy(_currentFighter);
+        GameControllerDDOL.spawnedFighter.GetComponent<FighterAnimationHandler>().SetTeam(Unit.Team.Red);
+        GameControllerDDOL.spawnedFighter.GetComponent<CharacterVO>().Intros();
+        
+        Destroy(_oldFighter);
     }
 }

@@ -24,13 +24,18 @@ public class FighterAnimationHandler : MonoBehaviour
 
     void Awake()
     {
-        fighter = GetComponent<Fighter>();
-        animator = GetComponent<Animator>();
+        fighter    = GetComponent<Fighter>();
+        animator   = GetComponent<Animator>();
         photonView = GetComponent<PhotonView>();
-        rightArmAttack.collider.enabled = false;
-        leftArmAttack.collider.enabled = false;
-        rightLegAttack.collider.enabled = false;
-        leftLegAttack.collider.enabled = false;
+    }
+
+    public void SetTeam(Unit.Team team) 
+    {
+        fighter.team = team;
+        leftArmAttack.ownerTeam  = team;
+        rightArmAttack.ownerTeam = team;
+        leftLegAttack.ownerTeam  = team;
+        rightLegAttack.ownerTeam = team;
     }
 
     public void SetAttackingTrue() 
@@ -45,7 +50,7 @@ public class FighterAnimationHandler : MonoBehaviour
 
     public void EnableLimbCollider(Limb limb, float damage) 
     {
-        // Don't run unless this is your Fighter.
+        // Don't run unless this Fighter belongs to the client.
         if (!fighter.isMine) {
             return;
         }
@@ -72,7 +77,7 @@ public class FighterAnimationHandler : MonoBehaviour
 
     public void DisableLimbCollider(Limb limb) 
     {
-        // Don't run unless this is your Fighter.
+        // Don't run unless this Fighter belongs to the client.
         if (!fighter.isMine) {
             return;
         }

@@ -37,18 +37,18 @@ public class FighterVRMovement : MonoBehaviour
     void Update() 
     {
          // Only read input if this Fighter belongs to the client.
-        if (fighter.isMine) {
+        if (fighter.isMine && fighter.isAlive) {
             ReadMoveInput();
             ReadTurnInput();
         }
     }
 
     void ReadMoveInput() {
-        Vector3 _keyboardMoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        Vector3 _keyboardMoveInput  = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         Vector3 _controllerMoveInput = new Vector3(Input.GetAxisRaw("Left Horizontal"), 0, Input.GetAxisRaw("Left Vertical"));
         Vector3 _moveInput = Vector3.ClampMagnitude(_keyboardMoveInput + _controllerMoveInput, 1);
 
-        if (_moveInput.magnitude > 0.05f)
+        if (!animator.GetBool("isAttacking") && _moveInput.magnitude > 0.05f)
         {
             // Move the move cursor in direction of move input.
             if (moveCursor == null) 
@@ -65,7 +65,7 @@ public class FighterVRMovement : MonoBehaviour
                 // If a collision is found, Fighter will just move to the collision point.
                 // Otherwise, move to moveCursor point.
                 RaycastHit _hit;
-                bool _wasHit = Physics.SphereCast(
+                bool _colliderHit = Physics.SphereCast(
                     transform.position + new Vector3(0, collider.radius+0.1f, 0), 
                     collider.radius, 
                     moveCursor.transform.position - transform.position,
@@ -73,7 +73,7 @@ public class FighterVRMovement : MonoBehaviour
                     (moveCursor.transform.position - transform.position).magnitude
                 );
 
-                if (_wasHit) {
+                if (_colliderHit) {
                     rigidbody.MovePosition(_hit.point - new Vector3(0, collider.radius+0.1f, 0));
                 }
                 else {
@@ -92,7 +92,7 @@ public class FighterVRMovement : MonoBehaviour
         float _controllerTurnInput = -Input.GetAxisRaw("Right Horizontal");
         float _turnInput = _keyboardTurnInput + _controllerTurnInput;
 
-        if (Math.Abs(_turnInput) > 0.8f) {
+        if (!animator.GetBool("isAttacking") && Math.Abs(_turnInput) > 0.8f) {
             if (turnTimer.isDone) {
                 transform.Rotate(0, 45*Mathf.Sign(_turnInput), 0);
                 turnTimer.SetTime(turnDelay);

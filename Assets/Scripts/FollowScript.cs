@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FollowScript : MonoBehaviour
 {
-    [SerializeField] Vector3 offsetVec = new Vector3(0, 0, -10);
+    [SerializeField] Vector3 mechaOffsetVec = new Vector3(0, 2, -2);
+    [SerializeField] Vector3 ucOffsetVec = new Vector3(0, 2, -2);
 
     void LateUpdate() {
         if (GameControllerDDOL.spawnedFighter != null) {
@@ -12,8 +13,19 @@ public class FollowScript : MonoBehaviour
         }
     }
 
-    void Follow(GameObject target) {
-        transform.position = target.transform.position + target.transform.rotation*offsetVec;
+    void Follow(GameObject target) 
+    {
+        Vector3 _offsetVec = Vector3.zero;
+        switch(GameControllerDDOL.selectedFighter) {
+            case GameControllerDDOL.Fighter.Mecha:
+                _offsetVec = mechaOffsetVec;
+                break;
+            case GameControllerDDOL.Fighter.Unitychan:
+                _offsetVec = ucOffsetVec;
+                break;
+        }
+
+        transform.position = target.transform.position + target.transform.rotation*_offsetVec;
         transform.rotation = target.transform.rotation;
     }
 }

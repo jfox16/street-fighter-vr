@@ -12,7 +12,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public static NetworkController Instance = null;
 
     string startRoomPath = "VR Start";
-    int newRoomSceneIndex = 2;
+    int newRoomSceneIndex = 0;
     
     //=================================================================================================================
 
@@ -45,7 +45,8 @@ public class NetworkController : MonoBehaviourPunCallbacks
     {
         Debug.Log("NetworkController: Connected to " + PhotonNetwork.NetworkingClient.Server + "!");
         PhotonNetwork.AutomaticallySyncScene = true;
-        PhotonNetwork.LoadLevel(1);
+        // Switch Scene to Multiplayer Lobby
+        PhotonNetwork.LoadLevel(2);
     }
 
     override public void OnDisconnected(DisconnectCause cause) 
@@ -68,7 +69,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     override public void OnLeftRoom() 
     {
         Debug.Log("NetworkController: Returning to lobby.");
-        PhotonNetwork.LoadLevel(1);
+        PhotonNetwork.LoadLevel(2);
     }
 
     #endregion

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 /**
  * Attack should be attached to a GameObject with a Collider.
@@ -9,9 +10,8 @@ using UnityEngine;
  */
 public class Attack : MonoBehaviour
 {
+    public Unit.Team ownerTeam;
     public float damage = 1;
-    public int ownerID;
-    public GameObject owner = null;
     public Collider collider;
     
     [SerializeField] GameObject sparkPrefab;
@@ -19,41 +19,37 @@ public class Attack : MonoBehaviour
     GameObject hitSpark;
     
     protected void Awake() {
-        if (GetComponentInParent<Fighter>() != null)
-        {
-            ownerID = gameObject.GetComponentInParent<Fighter>().gameObject.GetInstanceID();
-            owner = gameObject.GetComponentInParent<Fighter>().gameObject;
-        }
-
         collider = GetComponent<Collider>();
+        collider.enabled = false;
         hitSpark = (GameObject)Resources.Load("Particles/HitSpark");
     }
 
     protected void OnTriggerEnter(Collider other)
     {
         Unit _unit = other.gameObject.GetComponent<Unit>();
-        if (_unit != null && _unit.gameObject.GetInstanceID() != ownerID)
+        if (_unit != null && _unit.team != ownerTeam)
         {
-            // Instantiate(hitParticlePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
-            Instantiate(hitSpark, transform.position, transform.rotation);
-                // fix a bug
-                if(Time.timeSinceLevelLoad > 2)
-                {
-                if (sparkPrefab != null)
-                    {
-                        // Instantiate(sparkPrefab, this.gameObject.transform.position + new Vector3(0, 0.5f, 0), new Quaternion(0, 0, 0, 0));
-                    }
-                    _unit.Hurt(damage);
-                    gameObject.GetComponent<Collider>().enabled = false;
-                }
-        }
-
-        if (other.gameObject != owner)
-        {
-            if (this.gameObject.name.Equals("LeftArmCollider") || this.gameObject.name.Equals("RightArmCollider"))
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", owner.transform.position);
-            else if (this.gameObject.name.Equals("RightLegCollider") || this.gameObject.name.Equals("RIghtLegCollider"))
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Kick", owner.transform.position);
+            Debug.Log("Hit a Unit for " + damage + " damage!");
+            _unit.Hurt(damage);
+            _unit.MakeHitParticle(transform.position);
+            _unit.PlayHitSound(transform.position);
+            gameObject.GetComponent<Collider>().enabled = false;
         }
     }
+
+    // void MakeHitSpark() {
+    //     if (PhotonNetwork.CurrentRoom == null) {
+    //         Instantiate(hitSpark, transform.position, transform.rotation);
+    //     }
+    //     else {
+            
+    //     }
+    // }
+
+    // void PlayHitSound() {
+    //     if (this.gameObject.name.Equals("LeftArmCollider") || this.gameObject.name.Equals("RightArmCollider"))
+    //         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Punch", transform.position);
+    //     else if (this.gameObject.name.Equals("RightLegCollider") || this.gameObject.name.Equals("RightLegCollider"))
+    //         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Kick", transform.position);
+    // }
 }

@@ -830,6 +830,7 @@ GameObject:
   - component: {fileID: 8134082384204280489}
   - component: {fileID: 8134082384204280487}
   - component: {fileID: 8460888493775128558}
+  - component: {fileID: 614799836}
   m_Layer: 0
   m_Name: Head w/ Camera
   m_TagString: Untagged
@@ -924,6 +925,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: 0
+--- !u!114 &614799836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8134082384204280485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95209d9e1c07c064c85b930a3a8d2e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 2
+  sensitivityHor: 9
+  sensitivityVert: 5
+  minimumVert: -45
+  maximumVert: 45
 --- !u!1 &8134082385642156446
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,4 +1001,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d54cc4346e23dc4ca764fca784f37f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetVec: {x: 0, y: 1.5, z: -2}
+  mechaOffsetVec: {x: 0, y: 2.5, z: -2}
+  ucOffsetVec: {x: 0, y: 2.3, z: -2}

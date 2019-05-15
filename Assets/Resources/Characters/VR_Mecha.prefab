@@ -1320,6 +1320,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
+  - {fileID: 467748520293504736}
   - {fileID: 5503289590469850272}
   viewIdField: 0
   InstantiationId: 0
@@ -3015,8 +3016,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 1
+  m_Radius: 0.4
+  m_Height: 1.5
   m_Direction: 0
   m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!114 &846692053949071283
@@ -3031,9 +3032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573308573deaaf4ca16d05701029b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTeam: 0
   damage: 1
-  ownerID: 0
-  owner: {fileID: 0}
   collider: {fileID: 0}
   sparkPrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
     type: 3}
@@ -3113,8 +3113,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 0.7
+  m_Radius: 0.4
+  m_Height: 1.5
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8831487366622667129
@@ -3129,9 +3129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573308573deaaf4ca16d05701029b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTeam: 0
   damage: 1
-  ownerID: 0
-  owner: {fileID: 0}
   collider: {fileID: 0}
   sparkPrefab: {fileID: 3115454383847692800, guid: ecea18406f8cce54ca23ddd775509093,
     type: 3}
@@ -3163,7 +3162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6448568871122850565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.542, y: 0, z: -0}
+  m_LocalPosition: {x: -0.5, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6610393}
@@ -3179,8 +3178,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.2
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6748684613008874274
@@ -3195,9 +3194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573308573deaaf4ca16d05701029b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTeam: 0
   damage: 1
-  ownerID: 0
-  owner: {fileID: 0}
   collider: {fileID: 0}
   sparkPrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
@@ -3228,7 +3226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6479161994433136838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.464, y: -0, z: -0}
+  m_LocalPosition: {x: -0.5, y: -0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1130215659}
@@ -3244,8 +3242,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.2
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6489645334276877046
@@ -3260,9 +3258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573308573deaaf4ca16d05701029b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTeam: 0
   damage: 1
-  ownerID: 0
-  owner: {fileID: 0}
   collider: {fileID: 0}
   sparkPrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
@@ -3600,6 +3597,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2112930800}
     m_Modifications:
+    - target: {fileID: 1040981086949070910, guid: ee82df68aab4ad24696cf142bd8b887a,
+        type: 3}
+      propertyPath: m_Name
+      value: Left_Arm_Electricity
+      objectReference: {fileID: 0}
     - target: {fileID: 5236938680565073809, guid: ee82df68aab4ad24696cf142bd8b887a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3654,11 +3656,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040981086949070910, guid: ee82df68aab4ad24696cf142bd8b887a,
-        type: 3}
-      propertyPath: m_Name
-      value: Left_Arm_Electricity
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee82df68aab4ad24696cf142bd8b887a, type: 3}

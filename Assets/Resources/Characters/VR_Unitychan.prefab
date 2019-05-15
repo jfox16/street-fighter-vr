@@ -6754,8 +6754,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 1.75
+  m_Radius: 0.4
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &482608679924352396
@@ -7027,10 +7027,10 @@ MonoBehaviour:
     Name: Right Smash
   - Type: 9
     SynchronizeType: 1
-    Name: Left Smash
+    Name: Die
   - Type: 9
     SynchronizeType: 1
-    Name: Die
+    Name: Kick
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
@@ -7271,8 +7271,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.5
+  m_Radius: 0.2
+  m_Height: 1
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3157074918978061638
@@ -7287,9 +7287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573308573deaaf4ca16d05701029b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTeam: 0
   damage: 1
-  ownerID: 0
-  owner: {fileID: 0}
   collider: {fileID: 0}
   sparkPrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
@@ -7336,8 +7335,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.06
-  m_Height: 0.5
+  m_Radius: 0.3
+  m_Height: 1
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3416652171598099417
@@ -7352,9 +7351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573308573deaaf4ca16d05701029b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTeam: 0
   damage: 1
-  ownerID: 0
-  owner: {fileID: 0}
   collider: {fileID: 0}
   sparkPrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
@@ -7401,8 +7399,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.5
+  m_Radius: 0.2
+  m_Height: 1
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8504675816072234975
@@ -7417,9 +7415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573308573deaaf4ca16d05701029b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTeam: 0
   damage: 1
-  ownerID: 0
-  owner: {fileID: 0}
   collider: {fileID: 0}
   sparkPrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
@@ -7496,8 +7493,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.5
+  m_Radius: 0.3
+  m_Height: 1
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4210228912525129351
@@ -7512,9 +7509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573308573deaaf4ca16d05701029b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTeam: 0
   damage: 1
-  ownerID: 0
-  owner: {fileID: 0}
   collider: {fileID: 0}
   sparkPrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 7586264156832069049, guid: 191aa15b4c1f5044d80b6ef719fdb5f4,
