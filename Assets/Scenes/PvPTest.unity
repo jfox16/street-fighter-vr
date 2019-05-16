@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Mecha
       objectReference: {fileID: 0}
+    - target: {fileID: 862671726, guid: 032f26b224406c644b768894f61c110a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 862671728, guid: 032f26b224406c644b768894f61c110a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -278,26 +282,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4089011377622651418, guid: 032f26b224406c644b768894f61c110a,
-        type: 3}
-      propertyPath: viewIdField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089011377622651418, guid: 032f26b224406c644b768894f61c110a,
-        type: 3}
-      propertyPath: InstantiationId
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 807446578901355451, guid: 032f26b224406c644b768894f61c110a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736659007129226266, guid: 032f26b224406c644b768894f61c110a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8792378796254389677, guid: 032f26b224406c644b768894f61c110a,
         type: 3}
       propertyPath: TieText1
@@ -316,6 +300,26 @@ PrefabInstance:
     - target: {fileID: 2363267801611208047, guid: 032f26b224406c644b768894f61c110a,
         type: 3}
       propertyPath: InstantiationId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089011377622651418, guid: 032f26b224406c644b768894f61c110a,
+        type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089011377622651418, guid: 032f26b224406c644b768894f61c110a,
+        type: 3}
+      propertyPath: InstantiationId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 807446578901355451, guid: 032f26b224406c644b768894f61c110a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736659007129226266, guid: 032f26b224406c644b768894f61c110a,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

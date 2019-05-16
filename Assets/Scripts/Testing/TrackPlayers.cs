@@ -10,7 +10,7 @@ public class TrackPlayers : MonoBehaviour
     private GameObject[] players;
     private Fighter p1, p2;
     private PlayerStatus s1, s2;
-    private bool playTimesUp, playKO;
+    private bool playTimesUp, playKO, checkedPlayers;
 
     // Start is called before the first frame update
     void Start()
@@ -20,18 +20,20 @@ public class TrackPlayers : MonoBehaviour
         maxTime = 20;
         playTimesUp = false;
         playKO = false;
+        checkedPlayers = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(players == null)
+        if(GameObject.FindGameObjectsWithTag("Player").Length == 4 && !checkedPlayers)
         {
             players = GameObject.FindGameObjectsWithTag("Player");
 
             // will probably have to change this when implementing to the network
-            playerOne = players[1];
-            playerTwo = players[2];
+            // players[2] and players[3] are the players
+            playerOne = players[2];
+            playerTwo = players[3];
 
             playerOne.gameObject.GetComponent<PlayerStatus>().enabled = true;
             playerTwo.gameObject.GetComponent<PlayerStatus>().enabled = true;
@@ -40,47 +42,51 @@ public class TrackPlayers : MonoBehaviour
             p2 = playerTwo.gameObject.GetComponent<Fighter>();
             s1 = playerOne.gameObject.GetComponent<PlayerStatus>();
             s2 = playerTwo.gameObject.GetComponent<PlayerStatus>();
+            checkedPlayers = true;
         }
-        if (p1.getHealth() > 0 && p2.getHealth() > 0 && seconds < maxTime)
+        else if(checkedPlayers)
         {
-            seconds += Time.deltaTime;
-        }
-        // when time ran out but no player lost all their health
-        else if (seconds >= maxTime)
-        {
-            if (!playTimesUp)
+            if (p1.getHealth() > 0 && p2.getHealth() > 0 && seconds < maxTime)
             {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/TimeUp", soundPlayer.gameObject.transform.position);
-                playTimesUp = true;
+                seconds += Time.deltaTime;
+            }
+            // when time ran out but no player lost all their health
+            else if (seconds >= maxTime)
+            {
+                if (!playTimesUp)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/TimeUp", soundPlayer.gameObject.transform.position);
+                    playTimesUp = true;
+                }
+
+                // in case of a tie
+                if (p1.getHealth() == p2.getHealth())
+                {
+                    s1.SetGameStatus(PlayerStatus.GameStatus.Tie);
+                    s2.SetGameStatus(PlayerStatus.GameStatus.Tie);
+                }
+                // player 1 wins
+                else if (p1.getHealth() > p2.getHealth())
+                {
+                    s1.SetGameStatus(PlayerStatus.GameStatus.Winner);
+                    s2.SetGameStatus(PlayerStatus.GameStatus.Loser);
+                }
+                // player 2 wins
+                else if (p1.getHealth() < p2.getHealth())
+                {
+                    s1.SetGameStatus(PlayerStatus.GameStatus.Loser);
+                    s2.SetGameStatus(PlayerStatus.GameStatus.Winner);
+                }
             }
 
-            // in case of a tie
-            if (p1.getHealth() == p2.getHealth())
+            // when a player lost all their health
+            if ((p1.getHealth() <= 0 || p2.getHealth() <= 0) && !playKO && seconds < maxTime)
             {
-                s1.SetGameStatus(PlayerStatus.GameStatus.Tie);
-                s2.SetGameStatus(PlayerStatus.GameStatus.Tie);
+                StartCoroutine(KOState());
             }
-            // player 1 wins
-            else if (p1.getHealth() > p2.getHealth())
-            {
-                s1.SetGameStatus(PlayerStatus.GameStatus.Winner);
-                s2.SetGameStatus(PlayerStatus.GameStatus.Loser);
-            }
-            // player 2 wins
-            else if (p1.getHealth() < p2.getHealth())
-            {
-                s1.SetGameStatus(PlayerStatus.GameStatus.Loser);
-                s2.SetGameStatus(PlayerStatus.GameStatus.Winner);
-            }
+            timer1.GetComponent<TextMesh>().text = "Time Left: " + ((int)(maxTime - seconds)).ToString();
+            timer2.GetComponent<TextMesh>().text = "Time Left: " + ((int)(maxTime - seconds)).ToString();
         }
-
-        // when a player lost all their health
-        if((p1.getHealth() <= 0 || p2.getHealth() <= 0) && !playKO && seconds < maxTime)
-        {
-            StartCoroutine(KOState());
-        }
-        timer1.GetComponent<TextMesh>().text = "Time Left: " + ((int)(maxTime - seconds)).ToString();
-        timer2.GetComponent<TextMesh>().text = "Time Left: " + ((int)(maxTime - seconds)).ToString();
     }
 
     IEnumerator KOState()
