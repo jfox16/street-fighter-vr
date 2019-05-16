@@ -308,6 +308,16 @@ PrefabInstance:
       propertyPath: mechaVO
       value: 
       objectReference: {fileID: 1566599589}
+    - target: {fileID: 2363267801611208047, guid: 032f26b224406c644b768894f61c110a,
+        type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363267801611208047, guid: 032f26b224406c644b768894f61c110a,
+        type: 3}
+      propertyPath: InstantiationId
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 032f26b224406c644b768894f61c110a, type: 3}
 --- !u!1 &208639180

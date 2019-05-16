@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4199742, g: 0.11880767, b: 0.10917521, a: 1}
+  m_IndirectSpecularColor: {r: 0.419985, g: 0.118815124, b: 0.109179094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3155,6 +3155,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Two Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5349452728728956260, guid: 90b18b51f7f00bf40bd410857d25dbc8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5349452728728956261, guid: 90b18b51f7f00bf40bd410857d25dbc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4022,6 +4027,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player One Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349452728728956260, guid: 90b18b51f7f00bf40bd410857d25dbc8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5349452728728956261, guid: 90b18b51f7f00bf40bd410857d25dbc8,
         type: 3}

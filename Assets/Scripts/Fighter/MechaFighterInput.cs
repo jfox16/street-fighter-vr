@@ -42,7 +42,7 @@ public class MechaFighterInput : FighterInput
             fighter.special = 0;
             changeDamageMod(2.0f);
             animator.SetTrigger("Special");
-            Invoke("StopSpecial", 5f);
+            Invoke("StopSpecial", 20f);
         }
     }
 
@@ -74,5 +74,10 @@ public class MechaFighterInput : FighterInput
         AuraParticles.SetActive(true);
         specialSound.start();
         Invoke("StopSpecial", 20f);
+    }
+
+    private void OnDestroy()
+    {
+        specialSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }
