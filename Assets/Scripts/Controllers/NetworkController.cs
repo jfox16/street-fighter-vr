@@ -86,22 +86,27 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     public static void DisconnectFromServer() 
     {
+        if (PhotonNetwork.NetworkingClient.Server != ServerConnection.MasterServer) return;
         Debug.Log("NetworkController: Disconnecting...");
         PhotonNetwork.Disconnect();
     }
 
     public static void JoinRoom(string roomName, int sceneIndex) 
     {
+        if (PhotonNetwork.NetworkingClient.Server != ServerConnection.MasterServer) return;
+
         Debug.Log("NetworkController: Joining " + roomName + "...");
 
+        // If a new room is created, newRoomSceneIndex will determine which scene it uses.
         Instance.newRoomSceneIndex = sceneIndex;
 
+        // These RoomOptions limit the amount of players per room to 2.
         RoomOptions roomOPs = new RoomOptions() {
             IsVisible  = true,
             IsOpen     = true,
             MaxPlayers = 2
         };
-
+        // Tries to Join a room named roomName. If it is not found, creates one instead.
         PhotonNetwork.JoinOrCreateRoom(
             roomName,
             roomOPs,
@@ -111,6 +116,8 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     public static void LeaveRoom()
     {
+        if (PhotonNetwork.NetworkingClient.Server != ServerConnection.GameServer) return;
+        Debug.Log(PhotonNetwork.NetworkingClient.Server);
         Debug.Log("NetworkController: Leaving room.");
         PhotonNetwork.LeaveRoom();
     }
