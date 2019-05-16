@@ -11,11 +11,13 @@ public abstract class FighterInput : MonoBehaviour
     public Fighter fighter;
     public Animator animator;
     PhotonView photonView;
+    private Attack attack;
 
     protected void Awake() {
         fighter = GetComponent<Fighter>();
         animator = GetComponent<Animator>();
         photonView = GetComponent<PhotonView>();
+        attack = GetComponentInChildren<Attack>();
     }
 
     protected void Update()
@@ -46,6 +48,13 @@ public abstract class FighterInput : MonoBehaviour
                 animator.SetTrigger("Right Punch");
             }
         }
+    }
+
+    public void PlayWoosh()
+    {
+        // not sure why it doesnt work on Unity-chan thus I put an if statement
+        if(this.gameObject.GetComponentInParent<MechaFighterInput>() != null)
+            attack.PlayWoosh();
     }
 
     public abstract void punch();

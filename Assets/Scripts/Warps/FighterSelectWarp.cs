@@ -13,11 +13,14 @@ public class FighterSelectWarp : Unit
 
     public override void Hurt(float damage) 
     {
-        if (GameControllerDDOL.spawnedFighter == null || GameControllerDDOL.selectedFighter == selectFighter) return;
+        if (GameControllerDDOL.spawnedFighter == null || GameControllerDDOL.selectedFighter == selectFighter)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI-SFX/UI-cancel", this.gameObject.transform.position);
+            return;
+        }
         GameControllerDDOL.selectedFighter = selectFighter;
         GameObject _oldFighter = GameControllerDDOL.spawnedFighter;
         _oldFighter.SetActive(false);
-
         switch (GameControllerDDOL.selectedFighter) 
         {
             case GameControllerDDOL.Fighter.Mecha:
@@ -41,6 +44,7 @@ public class FighterSelectWarp : Unit
                 break;
         }
 
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI-SFX/UI-select", this.gameObject.transform.position);
         GameControllerDDOL.spawnedFighter.GetComponent<FighterAnimationHandler>().SetTeam(Unit.Team.Red);
         GameControllerDDOL.spawnedFighter.GetComponent<CharacterVO>().Intros();
         

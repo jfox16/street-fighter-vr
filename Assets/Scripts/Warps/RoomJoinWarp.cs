@@ -10,6 +10,7 @@ public class RoomJoinWarp : Unit
     [SerializeField] int sceneIndex = 0;
 
     public override void Hurt(float damage) {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI-SFX/UI-select", this.gameObject.transform.position);
         NetworkController.JoinRoom(photonRoomName, sceneIndex);
     }
 }

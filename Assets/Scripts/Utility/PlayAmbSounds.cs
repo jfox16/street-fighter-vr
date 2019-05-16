@@ -7,15 +7,18 @@ public class PlayAmbSounds : MonoBehaviour
 {
     [FMODUnity.EventRef]
     FMOD.Studio.EventInstance soundEvent;
-    private bool playedCheering;
+    private bool playedCheering, playedStreet;
     // Start is called before the first frame update
     void Start()
     {
         playedCheering = false;
+        playedStreet = false;
         if (SceneManager.GetActiveScene().name.Equals("VR Japan"))
             soundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Environment/Ambience/JapanAmb");
         else if(SceneManager.GetActiveScene().name.Equals("VR Arena"))
             soundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Environment/Ambience/ArenaAmb");
+        else if(SceneManager.GetActiveScene().name.Equals("VR City"))
+            soundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Environment/Ambience/CityAmb");
     }
 
     // Update is called once per frame
@@ -28,6 +31,9 @@ public class PlayAmbSounds : MonoBehaviour
         {
             soundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
+
+        if (SceneManager.GetActiveScene().name.Equals("VR City") && !playedStreet)
+            playStreet();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,6 +56,12 @@ public class PlayAmbSounds : MonoBehaviour
     {
         soundEvent.start();
         playedCheering = true;
+    }
+
+    private void playStreet()
+    {
+        soundEvent.start();
+        playedStreet = true;
     }
 
     private void OnDestroy()

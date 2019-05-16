@@ -17,6 +17,7 @@ public class Attack : MonoBehaviour
     [SerializeField] GameObject sparkPrefab;
     [SerializeField] GameObject hitParticlePrefab;
     GameObject hitSpark;
+    private bool hitMiss = true;
     
     protected void Awake() {
         collider = GetComponent<Collider>();
@@ -26,6 +27,7 @@ public class Attack : MonoBehaviour
 
     protected void OnTriggerEnter(Collider other)
     {
+        hitMiss = false;
         Unit _unit = other.gameObject.GetComponent<Unit>();
         if (_unit != null && _unit.team != ownerTeam)
         {
@@ -35,6 +37,15 @@ public class Attack : MonoBehaviour
             _unit.PlayHitSound(transform.position);
             gameObject.GetComponent<Collider>().enabled = false;
         }
+    }
+
+    public void PlayWoosh()
+    {
+        if (hitMiss)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Environment/Fighting/Whoosh", this.gameObject.transform.position);
+        }
+        hitMiss = true;
     }
 
     // void MakeHitSpark() {

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ServerConnectWarp : Unit
 {
     public override void Hurt(float damage) {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI-SFX/UI-select", this.gameObject.transform.position);
         NetworkController.ConnectToServer();
     }
 }

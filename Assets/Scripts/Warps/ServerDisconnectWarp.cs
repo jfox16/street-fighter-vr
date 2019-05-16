@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ServerDisconnectWarp : Unit
 {
     public override void Hurt(float damage) {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/UI-SFX/UI-cancel", this.gameObject.transform.position);
         NetworkController.DisconnectFromServer();
     }
 }

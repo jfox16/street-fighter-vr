@@ -57,11 +57,13 @@ MonoBehaviour:
   - {fileID: 114293979784915536}
   - {fileID: 114412378865943798}
   - {fileID: 114864618123101104}
+  - {fileID: 114823728866499010}
+  - {fileID: 114373754373608970}
   MasterBanks:
   - {fileID: 114598986019318790}
   StringsBanks:
   - {fileID: 114902139977993856}
-  stringsBankWriteTime: 636934578351822186
+  stringsBankWriteTime: 636935538102944519
   cacheVersion: 3
 --- !u!114 &114009246512633484
 MonoBehaviour:
@@ -325,7 +327,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 2100
 --- !u!114 &114058230702675278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1185,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1666
+  Length: 1766
 --- !u!114 &114185101730883910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,7 +1702,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1250
+  Length: 1310
 --- !u!114 &114297991493437020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2087,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &114373754373608970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Environment/Fireworks
+  guid: efc7da221e58f149b85b49cacedb8923
+  Banks:
+  - {fileID: 114598986019318790}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8773
 --- !u!114 &114385643522280268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2288,7 +2313,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 2100
 --- !u!114 &114431256555310388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3184,11 +3209,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: B:\UnityProjects\SFVR Project\street-fighter-vr\SFVR-FMOD-project\Build\Desktop\Master
     Bank.bank
-  lastModified: 636934578351772202
+  lastModified: 636935538102904530
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 6830208
+    Value: 7190816
   Exists: 1
 --- !u!114 &114608837701025194
 MonoBehaviour:
@@ -4130,6 +4155,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2036
+--- !u!114 &114823728866499010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Environment/Fighting/Whoosh
+  guid: 5e3740fa59f08a4d86ed7d00555f5054
+  Banks:
+  - {fileID: 114598986019318790}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125
 --- !u!114 &114827424517050036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4666,11 +4714,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: SFVR-FMOD-project\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636934578351822186
+  lastModified: 636935538102944519
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2596
+    Value: 2684
   Exists: 1
 --- !u!114 &114904498865961512
 MonoBehaviour:
