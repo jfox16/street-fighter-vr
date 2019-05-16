@@ -33,12 +33,22 @@ public class VRInputHandler : MonoBehaviour
 
     void Update() {
         // Secret input that restarts the game
-        if (   Input.GetAxisRaw("Left Index Trigger") > 0.5f
-            && Input.GetAxisRaw("Right Index Trigger") > 0.5f
-            && Input.GetButtonDown("B")
-            && Input.GetButtonDown("Y") ) 
-        {
+        bool secretInputVR =   Input.GetAxisRaw("Left Index Trigger") > 0.5f
+                            && Input.GetAxisRaw("Right Index Trigger") > 0.5f
+                            && Input.GetButton("B")
+                            && Input.GetButton("Y");
+                            
+        bool secretInputKB =   Input.GetKey(KeyCode.LeftControl) 
+                            && Input.GetKey(KeyCode.Escape);
+
+        if (secretInputVR || secretInputKB)
             SceneManager.LoadScene("VR Start");
+
+        // Check special
+        if ( Input.GetAxisRaw("Left Index Trigger") > 0.5f
+            && Input.GetAxisRaw("Right Index Trigger") > 0.5f )
+        {
+            Instance.inputDict["Special"] = true;
         }
     }
 

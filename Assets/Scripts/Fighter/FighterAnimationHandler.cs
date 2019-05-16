@@ -18,17 +18,23 @@ public class FighterAnimationHandler : MonoBehaviour
     [SerializeField] Attack rightArmAttack;
     [SerializeField] Attack leftLegAttack;
     [SerializeField] Attack rightLegAttack;
+    Fighter fighter;
     Animator animator;
     PhotonView photonView;
 
     void Awake()
     {
-        animator = GetComponent<Animator>();
+        fighter    = GetComponent<Fighter>();
+        animator   = GetComponent<Animator>();
         photonView = GetComponent<PhotonView>();
-        rightArmAttack.collider.enabled = false;
-        leftArmAttack.collider.enabled = false;
-        rightLegAttack.collider.enabled = false;
-        leftLegAttack.collider.enabled = false;
+    }
+
+    public void SetTeam(Unit.Team team) 
+    {
+        leftArmAttack.ownerTeam  = team;
+        rightArmAttack.ownerTeam = team;
+        leftLegAttack.ownerTeam  = team;
+        rightLegAttack.ownerTeam = team;
     }
 
     public void SetAttackingTrue() 
@@ -43,8 +49,8 @@ public class FighterAnimationHandler : MonoBehaviour
 
     public void EnableLimbCollider(Limb limb, float damage) 
     {
-        // Only do this if this Fighter belongs to the client.
-        if (PhotonNetwork.IsConnected && !photonView.IsMine) {
+        // Don't run unless this Fighter belongs to the client.
+        if (!fighter.isMine) {
             return;
         }
 
@@ -70,8 +76,8 @@ public class FighterAnimationHandler : MonoBehaviour
 
     public void DisableLimbCollider(Limb limb) 
     {
-        // Only do this if this Fighter belongs to the client.
-        if (PhotonNetwork.IsConnected && !photonView.IsMine) {
+        // Don't run unless this Fighter belongs to the client.
+        if (!fighter.isMine) {
             return;
         }
         

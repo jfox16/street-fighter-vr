@@ -42,8 +42,7 @@ public class UCFighterInput : FighterInput
         _ball = Instantiate(FireballParticle);
         _ball.transform.position = spawnLocation.position;
         _ball.transform.rotation = spawnLocation.rotation;
-        _ball.GetComponent<Attack>().ownerID = gameObject.GetInstanceID();
-        _ball.GetComponent<Attack>().owner = gameObject;
+        _ball.GetComponent<Attack>().ownerTeam = fighter.team;
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Characters/Unity-chan/UseSpecial", this.gameObject.transform.position);
     }
 

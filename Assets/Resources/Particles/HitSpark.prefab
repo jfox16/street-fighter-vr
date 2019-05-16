@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7894857518355677742}
   - component: {fileID: 5695673954833033918}
   m_Layer: 0
-  m_Name: Particle System (1)
+  m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -990,8 +990,17 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.8840959
-          value: 1
+          time: 0.14956793
+          value: 0.51163167
+          inSlope: -0.044080157
+          outSlope: -0.044080157
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.359243
+        - serializedVersion: 3
+          time: 1
+          value: 0.8614502
           inSlope: -0.048189253
           outSlope: -0.048189253
           tangentMode: 0
@@ -4756,7 +4765,7 @@ GameObject:
   - component: {fileID: 3044531619161245045}
   - component: {fileID: 4071517484880904641}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Bits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5410,7 +5419,7 @@ ParticleSystem:
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 0, y: 180, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
