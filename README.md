@@ -1,6 +1,6 @@
 # Street Fighter VR
 
-Street Fighter-style gameplay in virtual reality online multiplayer action!
+Street Fighter-style gameplay in virtual reality online multiplayer action! Created in the Spring semester of 2019 for our Multiplayer Game Development course.
 
 **Programming Team:** Jonathan Fox, Alex Ha, Carolyn Chen, Hashim Jacobs, Jessica Sendejo, Paul Uhlenkott, Philip Chen
 
